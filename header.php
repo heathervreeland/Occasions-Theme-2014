@@ -67,15 +67,15 @@
         </div>
 
         <ul>
-          <li>Local Blogs</li>
+          <li><a hred="#">Local Blogs</a></li>
           <li>&#8226;</li>
-          <li>Planning Checklists</li>
+          <li><a hred="#">Planning Checklists</a></li>
           <li>&#8226;</li>
-          <li>Editor's Blog</li>
+          <li><a hred="#">Editor's Blog</a></li>
           <li>&#8226;</li>
-          <li>Get Featured</li>
+          <li><a hred="#">Get Featured</a></li>
           <li>&#8226;</li>
-          <li>Advertise</li>
+          <li><a hred="#">Advertise</a></li>
         </ul>
 
       </div>

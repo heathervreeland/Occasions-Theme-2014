@@ -30,6 +30,15 @@ License: GNU General Public License v2 or later
  *
  *************************************/
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #46c8bc !important;
+}
+
 ul {
 	-webkit-padding-start: 0px;
 	list-style-type: none;
@@ -58,7 +67,7 @@ body {
 	color: #46c8bc;
 }
 
-.parties h2 {
+.parties h2, .parties-and-celebrations h2 {
 	color: #fcb4a8;
 }
 
@@ -84,7 +93,7 @@ body {
 	background-color: #46c8bc !important;
 }
 
-.parties .nice-button {
+.parties .nice-button, .parties-and-celebrations .nice-button {
 	background-color: #fcb4a8 !important;
 }
 
@@ -110,7 +119,7 @@ body {
 	border-color: #46c8bc !important;
 }
 
-.parties .featured-meta {
+.parties .featured-meta, .parties-and-celebrations .featured-meta {
 	border-color: #fcb4a8 !important;
 }
 
@@ -173,6 +182,7 @@ h2 {
 }
 
 .nice-button:hover {
+	color: #fff !important;
 	text-decoration: none !important;
 }
 
@@ -204,6 +214,11 @@ h2 {
 	float: left;
 	padding-left: 6px;
 	padding-right: 6px;
+}
+
+#top-bar ul li a {
+	color: #ddd;
+	cursor: pointer;
 }
 
 #top-bar ul li:first-child {
@@ -426,7 +441,7 @@ ul#main-nav li.vendors span {
 	color: #46c8bc;
 }
 
-.main-nav.parties .preview-window h2 {
+.main-nav.parties .preview-window h2, .main-nav.parties-and-celebrations .preview-window h2 {
 	color: #fcb4a8;
 }
 
@@ -504,6 +519,10 @@ ul#main-nav li.vendors span {
 	margin-bottom: 30px;
 }
 
+.submenu_categories ul li a {
+	color: #a6a19d;
+}
+
 /************************************
  *
  * INDEX
@@ -548,7 +567,8 @@ ul#main-nav li.vendors span {
 	top: 100px;
 }
 
-#featured-carousel .featured-meta h1 {
+#featured-carousel .featured-meta h1 a {
+	color: #000;
 	font-family: "Antic Didone";
 	font-size: 30px;
 	width: 900px;
@@ -979,6 +999,11 @@ text-decoration:underline;
 	margin-bottom: 80px;
 }
 
+#index_recent_posts .post-image img {
+	width: 100%;
+	height: auto;
+}
+
 #index_recent_posts .col-md-4 {
 	padding-top: 15px;
 	text-align: center;
@@ -1018,6 +1043,10 @@ text-decoration:underline;
 	font-size: 2em;
 }
 
+#index_recent_posts .col-md-4 .content h1 a {
+	color: #010101;
+}
+
 #index_recent_posts .col-md-4 .post-meta {
 	display: block;
 	text-align: left;
@@ -1036,11 +1065,11 @@ text-decoration:underline;
 	background: #46c8bc;
 }
 
-#index_recent_posts .col-md-4.parties .nice-button {
+#index_recent_posts .col-md-4.parties .nice-button, #index_recent_posts .col-md-4.parties-and-celebrations .nice-button {
 	background: #fcb4a8;
 }
 
-#index_recent_posts .col-md-4.entertaining .nice-button {
+#index_recent_posts .col-md-4.entertaining .nice-button, #index_recent_posts .col-md-4.entertaining-and-holidays .nice-button {
 	background: #86bd7a;
 }
 
@@ -1048,11 +1077,11 @@ text-decoration:underline;
 	color: #46c8bc;
 }
 
-#index_recent_posts .col-md-4.parties .post-meta .date {
+#index_recent_posts .col-md-4.parties .post-meta .date, #index_recent_posts .col-md-4.parties-and-celebrations .post-meta .date {
 	color: #fcb4a8;
 }
 
-#index_recent_posts .col-md-4.entertaining .post-meta .date {
+#index_recent_posts .col-md-4.entertaining .post-meta .date, #index_recent_posts .col-md-4.entertaining-and-holidays .post-meta .date {
 	color: #86bd7a;
 }
 
@@ -1198,6 +1227,14 @@ footer ul#footer-nav h2 {
 footer ul#footer-nav h2.brand {
 	text-indent: -9999px;
 	background: url("images/OccOnline_logo_g.png") no-repeat -7px -8px;
+}
+
+footer ul#footer-nav li a {
+	color: #eee;
+}
+
+footer ul#footer-nav li a:hover {
+	text-decoration: none;
 }
 
 footer ul#footer-nav li.col-md-3 {

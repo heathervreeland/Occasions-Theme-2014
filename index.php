@@ -149,33 +149,36 @@
 	</div>
 
 	<div id="index_recent_posts">
-		<div class="col-md-4 weddings">
-			<span class="nice-button dept">Rehearsal Dinners</span>
-			<div class="post-image">
-			</div>
-			<div class="content">
-				<h1>Bluffton, South Carolina Wedding at The Inn at Palmetto Bluff by Chia and Hon Photography</h1>
-			</div>
-			<p class="post-meta">Posted <span class="date">March 11, 2014</span> by <span class="author">Holly Sewell</span></p>
-		</div>
-		<div class="col-md-4 weddings">
-			<span class="nice-button dept">Rehearsal Dinners</span>
-			<div class="post-image">
-			</div>
-			<div class="content">
-				<h1>Turquoise and Brown Lowcountry Rehearsal Dinner</h1>
-			</div>
-			<p class="post-meta">Posted <span class="date">March 11, 2014</span> by <span class="author">Holly Sewell</span></p>
-		</div>
-		<div class="col-md-4 entertaining last">
-			<span class="nice-button dept">Food &amp; Drink</span>
-			<div class="post-image">
-			</div>
-			<div class="content">
-				<h1>A Warm Welcome + One of the Best Southern Cocktails</h1>
-			</div>
-			<p class="post-meta">Posted <span class="date">March 11, 2014</span> by <span class="author">Holly Sewell</span></p>
-		</div>
+
+		<?php
+			
+			// Get the latest featured posts
+			$recent_posts = new WP_Query( "post_type=post&posts_per_page=3&post_status=publish&orderby=date&order=DESC" );
+			if($recent_posts->have_posts()) : 
+				$counter = 0;
+				while($recent_posts->have_posts()) : 
+					$recent_posts->the_post();
+					$counter++;
+					foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
+		?>
+
+				<div class="col-md-4 <?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">
+					<span class="nice-button dept"><?php echo $post_cat; ?></span>
+					<div class="post-image">
+						<?php the_post_thumbnail("medium"); ?>
+					</div>
+					<div class="content">
+						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					</div>
+					<p class="post-meta">Posted <span class="date"><?php the_date("F j, Y"); ?></span> by <span class="author"><?php the_author(); ?></span></p>
+				</div>
+
+      
+		<?php
+				endwhile;
+			endif;
+		?>
+
 	</div>
 
 </div>

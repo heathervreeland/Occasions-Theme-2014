@@ -42,18 +42,18 @@
 					<h2 class="brand">Occasions</h2>
 
 					<ul>
-						<li>Home</li>
-						<li>About</li>
-						<li>Careers</li>
-						<li>Print Advertising</li>
-						<li>Editorial</li>
-						<li>Link to Us</li>
-						<li>Purchase Copies</li>
-						<li>Support</li>
-						<li>Privacy Policy</li>
-						<li>Terms of Use</li>
-						<li>Get Featured</li>
-						<li>Update Address</li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Print Advertising</a></li>
+						<li><a href="#">Editorial</a></li>
+						<li><a href="#">Link to Us</a></li>
+						<li><a href="#">Purchase Copies</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Get Featured</a></li>
+						<li><a href="#">Update Address</a></li>
 					</ul>
 
 				</li>
@@ -62,21 +62,21 @@
 					<h2>Weddings</h2>
 
 					<ul>
-						<li>Real Weddings</li>
-						<li>Bridal Showers</li>
-						<li>Rehearsal Dinners</li>
-						<li>Destination Weddings</li>
-						<li>Planning &amp; Advice</li>
-						<li>Colors &amp; Themes</li>
-						<li>Invitations &amp; Stationery</li>
-						<li>Photography &amp; Videography</li>
-						<li>Fashion &amp; Accessories</li>
-						<li>Floral &amp; Decoration</li>
-						<li>Cakes &amp; Dessert</li>
-						<li>Catering &amp; Recipes</li>
-						<li>Music &amp; Entertainment</li>
-						<li>Rentals &amp; Event Design</li>
-						<li>Venues &amp; Reception Sites</li>
+						<li><a href="#">Real Weddings</a></li>
+						<li><a href="#">Bridal Showers</a></li>
+						<li><a href="#">Rehearsal Dinners</a></li>
+						<li><a href="#">Destination Weddings</a></li>
+						<li><a href="#">Planning &amp; Advice</a></li>
+						<li><a href="#">Colors &amp; Themes</a></li>
+						<li><a href="#">Invitations &amp; Stationery</a></li>
+						<li><a href="#">Photography &amp; Videography</a></li>
+						<li><a href="#">Fashion &amp; Accessories</a></li>
+						<li><a href="#">Floral &amp; Decoration</a></li>
+						<li><a href="#">Cakes &amp; Dessert</a></li>
+						<li><a href="#">Catering &amp; Recipes</a></li>
+						<li><a href="#">Music &amp; Entertainment</a></li>
+						<li><a href="#">Rentals &amp; Event Design</a></li>
+						<li><a href="#">Venues &amp; Reception Sites</a></li>
 					</ul>
 
 				</li>
@@ -85,22 +85,22 @@
 					<h2>Parties &amp; Celebrations</h2>
 
 					<ul>
-						<li>Birthday Parties</li>
-						<li>Kids Parties</li>
-						<li>For Girls</li>
-						<li>Themes &amp; Ideas</li>
-						<li>Baby Showers</li>
-						<li>DIY &amp; Tutorials</li>
-						<li>Themed Parties</li>
-						<li>Real Mitzvahs</li>
-						<li>Adult Parties</li>
-						<li>Bridal Showers</li>
-						<li>Sweet 16</li>
-						<li>Quincea&Ntilde;eras</li>
-						<li>For Boys</li>
-						<li>For Business</li>
-						<li>Anniversaries</li>
-						<li>Decorations</li>
+						<li><a href="#">Birthday Parties</a></li>
+						<li><a href="#">Kids Parties</a></li>
+						<li><a href="#">For Girls</a></li>
+						<li><a href="#">Themes &amp; Ideas</a></li>
+						<li><a href="#">Baby Showers</a></li>
+						<li><a href="#">DIY &amp; Tutorials</a></li>
+						<li><a href="#">Themed Parties</a></li>
+						<li><a href="#">Real Mitzvahs</a></li>
+						<li><a href="#">Adult Parties</a></li>
+						<li><a href="#">Bridal Showers</a></li>
+						<li><a href="#">Sweet 16</a></li>
+						<li><a href="#">Quincea&Ntilde;eras</a></li>
+						<li><a href="#">For Boys</a></li>
+						<li><a href="#">For Business</a></li>
+						<li><a href="#">Anniversaries</a></li>
+						<li><a href="#">Decorations</a></li>
 					</ul>
 
 				</li>
@@ -109,23 +109,23 @@
 					<h2>Entertaining &amp; Holidays</h2>
 
 					<ul>
-						<li>Food &amp; Drink</li>
-						<li>Outdoor</li>
-						<li>Dinner Parties</li>
-						<li>Products</li>
-						<li>Holiday Parties</li>
-						<li>Decor &amp; Centerpieces</li>
-						<li>Seasonal Settings</li>
-						<li>Sports Themed</li>
-						<li>Themes &amp; Ideas</li>
-						<li>DIY &amp; Tutorials</li>
+						<li><a href="#">Food &amp; Drink</a></li>
+						<li><a href="#">Outdoor</a></li>
+						<li><a href="#">Dinner Parties</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Holiday Parties</a></li>
+						<li><a href="#">Decor &amp; Centerpieces</a></li>
+						<li><a href="#">Seasonal Settings</a></li>
+						<li><a href="#">Sports Themed</a></li>
+						<li><a href="#">Themes &amp; Ideas</a></li>
+						<li><a href="#">DIY &amp; Tutorials</a></li>
 					</ul>
 
 					<h2>Local Editions</h2>
 
 					<ul>
-						<li>Florida</li>
-						<li>Georgia</li>
+						<li><a href="#">Florida</a></li>
+						<li><a href="#">Georgia</a></li>
 					</ul>
 
 				</li>
