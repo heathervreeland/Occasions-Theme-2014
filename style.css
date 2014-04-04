@@ -1,0 +1,1248 @@
+/*
+Theme Name: Occasions Magazine 2014
+Theme URI: http://www.occasiosnonline.com
+Author: Mentel Inc.
+Author URI: http://www.mentel.com
+Description: Occasions Online Wordpress Theme New for 2014
+Version: 1.0
+License: GNU General Public License v2 or later
+*/
+
+/************************************
+ *
+ * WORDPRESS
+ *
+ *************************************/
+
+#wpadminbar { display: block !important; }
+
+/************************************
+ *
+ * Bootstrap size override
+ *
+ *************************************/
+
+@media (min-width: 1200px) {
+
+
+	.container {
+		width: 1058px;
+	}
+
+}
+
+/************************************
+ *
+ * GENERAL
+ *
+ *************************************/
+
+
+html {
+
+}
+
+ul {
+	-webkit-padding-start: 0px;
+	list-style-type: none;
+}
+
+body {
+	font-family: 'Raleway';
+}
+
+/* Colors */
+
+.pink {
+	color: #ffaba9;
+}
+
+
+
+/************************************
+ *
+ * CATEGORY COLORS
+ *
+ *************************************/
+
+
+.weddings h2 {
+	color: #46c8bc;
+}
+
+.parties h2 {
+	color: #fcb4a8;
+}
+
+.entertaining  h2 {
+	color: #86bd7a;
+}
+
+.galleries h2 {
+	color: #a2c7e4;
+}
+
+.cities h2 {
+	color: #f7c97c;
+}
+
+.vendors h2 {
+	color: #afa4ce;
+}
+
+/* nice-button's */
+
+.weddings .nice-button {
+	background-color: #46c8bc !important;
+}
+
+.parties .nice-button {
+	background-color: #fcb4a8 !important;
+}
+
+.entertaining  .nice-button, .entertaining-and-holidays .nice-button {
+	background-color: #86bd7a !important;
+}
+
+.galleries .nice-button {
+	background-color: #a2c7e4 !important;
+}
+
+.cities .nice-button {
+	background-color: #f7c97c !important;
+}
+
+.vendors .nice-button {
+	background-color: #afa4ce !important;
+}
+
+/* featured meta border */
+
+.weddings .featured-meta {
+	border-color: #46c8bc !important;
+}
+
+.parties .featured-meta {
+	border-color: #fcb4a8 !important;
+}
+
+.entertaining  .featured-meta, .entertaining-and-holidays .featured-meta {
+	border-color: #86bd7a !important;
+}
+
+.galleries .featured-meta {
+	border-color: #a2c7e4 !important;
+}
+
+.cities .featured-meta {
+	border-color: #f7c97c !important;
+}
+
+.vendors .featured-meta {
+	border-color: #afa4ce !important;
+}
+
+
+/************************************
+ *
+ * Headings H1, H2, H3, H4, H5, etc.
+ *
+ *************************************/
+
+h1, h2, h3, h4 {
+	-webkit-margin-before: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+h2 {
+	color: #46c8bc;
+	font-weight: 300;
+	font-family: "Oswald";
+	font-size: 1.7em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+/************************************
+ *
+ * Buttons
+ *
+ *************************************/
+
+.nice-button {
+	background: #46c8bc;
+	padding: 4px 30px;
+	font-family: "Raleway";
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.nice-button:hover {
+	text-decoration: none !important;
+}
+
+/************************************
+ *
+ * HEADER
+ *
+ *************************************/
+
+/* Top Bar */
+
+#top-bar {
+	background: #262827;
+	height: 46px;
+	width: 100%;
+}
+
+#top-bar ul {
+	margin: 15px 0 0 0;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: 11px;
+	overflow: hidden;
+	-webkit-padding-start: 0px;
+}
+
+#top-bar ul li {
+	color: #ddd;
+	float: left;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#top-bar ul li:first-child {
+	padding-left: 0;
+}
+
+#search, #top-social {
+	float: right;
+	margin-top: 8px;
+}
+
+#top-social ul {
+	margin: 1px 13px 0 0;
+}
+
+#top-social ul li {
+	margin: 0;
+}
+
+#top-social ul li a {
+	background: url("images/social_media_icons.png") no-repeat;
+	width: 27px;
+	height: 27px;
+	display: block;
+}
+
+#top-social .facebook {
+	background-position: 0 0;
+}
+
+#top-social .twitter {
+	background-position: -27px 0;
+}
+
+#top-social .pinterest {
+	background-position: -54px 0;
+}
+
+#top-social .rss {
+	background-position: -81px 0;
+}
+
+#search_terms {
+	width: 200px;
+	height: 28px;
+	border: 0;
+	padding: 0 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	font-size: 13px;
+}
+
+#search_go {
+	padding: 0 3px;
+	font-size: 15px;
+	color: #fff;
+}
+
+#search_go:hover {
+	text-decoration: none;
+}
+
+/************************************
+ *
+ * NAVIGATION
+ *
+ *************************************/
+
+#main-navigation {
+	height: 94px;
+	background: #fff;
+	border: 0 !important;
+	position: relative;
+}
+
+#main-navigation .navbar-brand {
+	padding: 0;
+	margin: 20px 0;
+	text-indent: -9999px;
+	background: url('images/OccOnline_logo.png') no-repeat;
+	width: 254px;
+	height: 64px;
+	position: relative;
+	z-index: 10;
+}
+
+.navbar-collapse {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+ul#main-nav {
+	width: 100%;
+	list-style-type: none;
+	font-family: "Antic Didone";
+	font-size: 17px;
+	position: absolute;
+	top: 0;
+}
+
+ul#main-nav li.dept {
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 18px 24px 15px 24px;
+	overflow: hidden;
+}
+
+ul#main-nav li.dept span {
+	width: 60px;
+	height: 56px;
+	display: block;
+	margin: 0 auto;
+	background: url('images/icons_sections.png') no-repeat;
+}
+
+ul#main-nav li.weddings span {
+	background-position: 0 0;
+}
+
+ul#main-nav li.parties span {
+	background-position: -60px 0;
+}
+
+ul#main-nav li.entertaining span {
+	background-position: -120px 0;
+}
+
+ul#main-nav li.galleries span {
+	background-position: -180px 0;
+}
+
+ul#main-nav li.cities span {
+	background-position: -240px 0;
+}
+
+ul#main-nav li.vendors span {
+	background-position: -300px 0;
+}
+
+.main-nav a.hv:hover {
+	text-decoration: none;
+}
+
+.main-nav.weddings a.hv {
+	color: #46c8bc;
+}
+
+.main-nav.parties a.hv {
+	color: #fcb4a8;
+}
+
+.main-nav.entertaining a.hv {
+	color: #86bd7a;
+}
+
+.main-nav.galleries a.hv {
+	color: #a2c7e4;
+}
+
+.main-nav.cities a.hv {
+	color: #f7c97c;
+}
+
+.main-nav.vendors a.hv {
+	color: #afa4ce;
+}
+
+.main-nav.weddings .nice-button {
+	background-color: #46c8bc;
+}
+
+.main-nav.parties .nice-button {
+	background-color: #fcb4a8;
+}
+
+.main-nav.entertaining .nice-button {
+	background-color: #86bd7a;
+}
+
+.main-nav.galleries .nice-button {
+	background-color: #a2c7e4;
+}
+
+.main-nav.cities .nice-button {
+	background-color: #f7c97c;
+}
+
+.main-nav.vendors .nice-button {
+	background-color: #afa4ce;
+}
+
+#main-navigation .preview-window {
+	width: 100%;
+	height: 493px;
+	border: 1px solid #9d9d9d;
+	z-index: 50;
+	position: absolute;
+	top: 114px;
+	margin-top: 12px;
+	left: 0;
+	background: #fff;
+	text-align: left;
+	display: none;
+}
+
+
+#main-navigation .preview-window h2 {
+	font-family: "Oswald";
+	font-size: 25px;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+.main-nav.weddings .preview-window h2 {
+	color: #46c8bc;
+}
+
+.main-nav.parties .preview-window h2 {
+	color: #fcb4a8;
+}
+
+.main-nav.entertaining .preview-window h2, .main-nav.entertaining-and-holidays .preview-window h2 {
+	color: #86bd7a;
+}
+
+.main-nav.galleries .preview-window h2 {
+	color: #a2c7e4;
+}
+
+.main-nav.cities .preview-window h2 {
+	color: #f7c97c;
+}
+
+.main-nav.vendors .preview-window h2 {
+	color: #afa4ce;
+}
+
+#main-navigation .preview-window .menu-arrow {
+	background: url("images/arrow_menu.png") no-repeat;
+	width: 38px;
+	height: 18px;
+	position: absolute;
+	top: -18px;
+}
+
+.main-nav.weddings .preview-window .menu-arrow {
+	left: 353px;
+}
+
+.main-nav.parties .preview-window .menu-arrow {
+	left: 471px;
+}
+
+.main-nav.entertaining .preview-window .menu-arrow {
+	left: 602px;
+}
+
+.main-nav.galleries .preview-window .menu-arrow {
+	left: 733px;
+}
+
+.main-nav.cities .preview-window .menu-arrow {
+	left: 844px;
+}
+
+.main-nav.vendors .preview-window .menu-arrow {
+	left: 956px;
+}
+
+.submenu_categories {
+	display: block;
+	float: left;
+	height: 100%;
+	border-right: 1px solid #ccc;
+}
+
+.preview-window .sub_container {
+	padding: 25px;
+}
+
+.submenu_categories .sub_container {
+	width: 250px;
+}
+
+.submenu_categories ul {
+	font-family: "Raleway";
+	text-transform: uppercase;
+	list-style-type: none;
+	font-size: .6em;
+	line-height: 22px;
+	color: #a6a19d;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+/************************************
+ *
+ * INDEX
+ *
+ *************************************/
+
+/* Featured Carousel */
+#featured-carousel {
+	height: 645px;
+	width: 100%;
+	background: #fff;
+}
+
+.skdslider-wrapper {
+    position: relative;
+}
+
+#featured-carousel .featured-image {
+	width: 100%;
+	height: 645px;
+	margin-bottom: 10px;
+}
+
+#featured-carousel .featured-image img {
+}
+
+#featured-carousel .featured-meta {
+	z-index: 5;
+	width: 100%;
+	height: 130px;
+	border-top: 4px solid #46c8bc;
+	position: absolute;
+	background: url("images/featured_meta_bg.png") repeat-x transparent;
+	bottom: 0;
+	text-align: center;
+}
+
+#featured-carousel .featured-meta .nice-button {
+	position: relative;
+	z-index: 5;
+	top: 100px;
+}
+
+#featured-carousel .featured-meta h1 {
+	font-family: "Antic Didone";
+	font-size: 30px;
+	width: 900px;
+	text-align: center;
+	margin: 15px auto;
+	position: relative;
+	top: -20px;
+}
+
+/* Sections Carousel */
+
+#sections-carousel-container {
+	height: 519px;
+	width: 334px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#sections-carousel {
+	height: 519px;
+	width: 334px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#sections-carousel .featured-image {
+	width: 334px;
+	overflow: hidden;
+	margin: auto;
+}
+
+#sections-carousel-container .skdslider a.prev, #sections-carousel-container .skdslider a.next {
+	top: 235px !important;
+}
+
+#sections-carousel-container .sections-slide-overlay {
+	width: 318px;
+	height: 502px;
+	margin: 8px 8px;
+	border: 1px solid #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/** Carousel **/
+
+.skdslider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 645px;
+}
+
+/* skdslider styles */
+
+
+.skdslider:after {
+    content: '';
+    padding-top: 50%; 
+    display: block;
+}
+
+.skdslider ul.slides li {
+	position: relative;
+}
+
+.skdslider ul.slides{ margin:0; padding:0; list-style-type:none;}
+.skdslider ul.slides li
+{
+   display: none;
+}
+.skdslider ul.slides li img{
+    width: 100% !important;
+    height: auto !important;
+	border:0;
+}
+
+.skdslider ul.slide-navs {
+    bottom: 20px;
+    left: 50%;
+    position: absolute;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.skdslider ul.slide-navs li {
+    float: left;
+	background: url("images/slide-bg.png") no-repeat scroll 0 0 transparent;
+	height:12px;
+	width:12px;
+	margin-right:4px;
+	cursor:pointer;
+}
+.skdslider ul.slide-navs li.current-slide {
+  background: url("images/slide-bg-active.png") no-repeat scroll 0 0 transparent;
+}
+
+.skdslider .slide-desc {
+    background: url("images/slide_desc.png") repeat scroll 0 0 transparent;
+    left: 0;
+    padding: 0 15px 0 15px;
+    position: absolute;
+    bottom: 15%;
+    max-width: 85%;
+	display:inline-block;
+}
+.skdslider .slide-desc > h2 {
+    color: #CFDB0C;
+    font-family: 'Oswald';
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.skdslider .slide-desc > p {
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.skdslider .slide-desc > p a.more {
+    color:#990000;
+	font-size:20px;
+	text-decoration:none;
+}
+.skdslider .slide-desc > p a.more:hover {
+text-decoration:underline;
+}
+
+.skdslider a.prev, .skdslider a.next {
+	width:43px;
+	height:80px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top: 275px;
+	margin-top:-17px;
+}
+
+.skdslider a.prev{
+    background: url("images/arrow_prev.png") no-repeat scroll 0 0 transparent;
+	left:0;
+}
+
+.skdslider a.next{
+    background: url("images/arrow_next.png") no-repeat scroll 0 0 transparent;
+	right:0;
+}
+.skdslider a.prev:hover{
+  
+}
+.skdslider a.next:hover{
+  
+}
+
+.skdslider a.play{
+    background: url("images/play.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+
+.skdslider a.pause{
+    background: url("images/pause.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+/*Some Responsive CSS */
+@media screen and (max-width:767px) {
+	.skdslider .slide-desc > h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	
+	.skdslider .slide-desc > p {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top: 5px;
+	}
+	.skdslider .slide-desc > p a.more {
+		font-size:14px;
+	}
+}
+
+
+
+/* Section Dividers */
+
+.section-divider {
+	position: relative;
+	text-align: center;
+	height: 120px;
+	width: 100%;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.section-divider .line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 59px;
+	width: 100%;
+	border-bottom: 1px solid #000;
+}
+
+.section-divider span {
+	position: relative;
+	top: 28px;
+}
+
+.section-divider span.before {
+	right: -9px;
+}
+
+.section-divider span.after {
+	left: -9px;
+}
+
+.section-divider span.heading {
+	margin: 0 auto;
+	font-family: "Antic Didone";
+	font-size: 37px;
+	color: #000;
+	background: #fff;
+	position: relative;
+	top: 30px;
+	padding: 0 30px;
+}
+
+/* Index section 1 */
+
+#index-sections {
+	margin-top: 60px;
+	margin-bottom: 27px;
+	overflow: hidden;
+}
+
+#index-sections .col-md-4 {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+#index-sections .tile {
+	position: relative;
+	width: 335px;
+	height: 247px;
+	margin-bottom: 25px;
+	background: #ccc;
+}
+
+#index-sections .tile .title-cont {
+	display: table;
+	text-align: center;
+	font-family: "Oswald";
+	font-weight: 400;
+	color: #52534e;
+	text-transform: uppercase;
+	font-size: 26px;
+	position: absolute;
+	z-index: 10;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 86px;
+	background: url("images/white_borde_top_sections.png") no-repeat;
+}
+
+#index-sections .tile .title {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#index-sections .tile .title span {
+	font-size: 16px;
+	display: block;
+}
+
+/* Venue & Vendors */
+
+#index_vv {
+	width: 100%;
+	height: 388px;
+	background: #dff2f0;
+	margin: 10px 0 30px 0;
+	position: relative;
+}
+
+#index_vv_map {
+	position: absolute;
+	left: 0;
+	top: -26px;
+}
+
+#index_vv_celebration {
+	float: right;
+	width: 533px;
+	margin: 20px 60px 0 0;
+	text-align: center;
+}
+
+#index_vv_celebration h2 {
+	text-indent: -9999px;
+	width: 242px;
+	height: 128px;
+	margin: 0 auto;
+	background: url("images/celebration_society.png") no-repeat;
+}
+
+#index_vv_celebration .cele1, #index_vv_celebration .cele2, #index_vv_celebration .cele3 {
+	display: block;
+	margin: 8px 0;
+}
+
+#index_vv_celebration .cele1 {
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+#index_vv_celebration .cele2 {
+	font-size: 13px;
+}
+
+#index_vv_celebration a.nice-button {
+	background: #000;
+	margin: 25px auto;
+	display: block;
+	width: 200px;
+	height: 34px;
+	line-height: 28px;
+	font-size: 15px;
+}
+
+#index_vv_celebration a.nice-button:hover {
+	color: #ffaba9;
+}
+
+#index_vv_celebration .cele3 {
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+/* Departments */
+
+#index_dept_grid {
+	height: 795px;
+}
+
+#index_dept_grid div.col-md-3 {
+	height: 264px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#index_dept_grid div.col-md-3.cont {
+	background: #f5f3f4;
+	text-align: center;
+	font-size: 14px;
+	color: #53544f;
+}
+
+#index_dept_grid div.col-md-3.cont:hover {
+	background: #e6f5f2;
+}
+
+#index_dept_grid div.col-md-3.cont span {
+	display: block;
+	width: 200px;
+	margin: 80px auto 0 auto;
+	font-family: "Oswald";
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#index_dept_grid div.col-md-3.cont p {
+	padding: 15px 0;
+}
+
+#index_dept_grid .two {
+	background: url("images/pic_galleries.jpg") no-repeat;
+}
+
+#index_dept_grid .four {
+	background: url("images/pic_weddings.jpg") no-repeat;
+}
+
+#index_dept_grid .five {
+	background: url("images/pic_tools.jpg") no-repeat;
+}
+
+#index_dept_grid .seven {
+	background: url("images/pic_holiday.jpg") no-repeat;
+}
+
+#index_dept_grid .ten {
+	background: url("images/pic_party.jpg") no-repeat;
+}
+
+#index_dept_grid .twelve {
+	background: url("images/pic_editors.jpg") no-repeat;
+}
+
+/* Recent posts */
+
+#index_recent_posts {
+	margin-bottom: 80px;
+}
+
+#index_recent_posts .col-md-4 {
+	padding-top: 15px;
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 25px;
+	overflow: hidden;
+	height: 470px;
+}
+
+#index_recent_posts .col-md-4.last {
+	padding-right: 0px;
+}
+
+#index_recent_posts .col-md-4 span.dept {
+	position: relative;
+	z-index: 10;
+}
+
+#index_recent_posts .col-md-4 .post-image {
+	position: relative;
+	top: -11px;
+	width: 100%;
+	height: 190px;
+	background: #ccc;
+	overflow: hidden;
+}
+
+#index_recent_posts .col-md-4 .content {
+	text-align: left;
+	color: #787274;
+	padding: 18px;
+}
+
+#index_recent_posts .col-md-4 .content h1 {
+	color: #010101;
+	font-family: "Antic Didone";
+	font-size: 2em;
+}
+
+#index_recent_posts .col-md-4 .post-meta {
+	display: block;
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 18px;
+}
+
+#index_recent_posts .col-md-4 .post-meta .date, #index_recent_posts .col-md-4 .post-meta .author {
+	font-weight: bold;
+}
+
+
+#index_recent_posts .col-md-4.weddings .nice-button {
+	background: #46c8bc;
+}
+
+#index_recent_posts .col-md-4.parties .nice-button {
+	background: #fcb4a8;
+}
+
+#index_recent_posts .col-md-4.entertaining .nice-button {
+	background: #86bd7a;
+}
+
+#index_recent_posts .col-md-4.weddings .post-meta .date {
+	color: #46c8bc;
+}
+
+#index_recent_posts .col-md-4.parties .post-meta .date {
+	color: #fcb4a8;
+}
+
+#index_recent_posts .col-md-4.entertaining .post-meta .date {
+	color: #86bd7a;
+}
+
+/************************************
+ *
+ * Footer
+ *
+ *************************************/
+
+/* Footer Top Bar */
+
+footer {
+	position: relative;
+	background: #262827;
+	width: 100%;
+	margin-top: 40px;
+}
+
+#footer-top-bar {
+	background: #e4e4e4;
+	height: 46px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#footer-news-bg {
+	position: absolute;
+	right: 0;
+	background: #15a89e;
+	width: 50%;
+	height: 46px;
+}
+
+#footer-news {
+	position: relative;
+	z-index: 10;
+	background: #15a89e;
+	height: 46px;
+	width: 680px;
+	float: right;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	-webkit-border-top-left-radius: 23px;
+	-webkit-border-bottom-left-radius: 23px;
+	-moz-border-radius-topleft: 23px;
+	-moz-border-radius-bottomleft: 23px;
+	border-top-left-radius: 23px;
+	border-bottom-left-radius: 23px;
+}
+
+#footer-news span, #footer-news input {
+	margin-top: 9px;
+}
+
+#footer-news span {
+	padding: 0 17px;
+}
+
+#footer-news span.start {
+		padding-left: 130px;
+}
+
+#newsletter_email {
+	width: 260px;
+	height: 28px;
+	border: 0;
+	padding: 0 12px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 13px;
+}
+
+#footer-social {
+	float: left;
+	width: 270px;
+	margin-top: 9px;
+}
+
+#footer-social span {
+	float: left;
+	color: #8e8e8e;
+	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: 1px;
+	font-weight: 700;
+	padding: 5px 18px 0 0;
+}
+
+#footer-social ul li {
+	margin: 0 6px;
+	float: left;
+}
+
+#footer-social ul li a {
+	background: url("images/social_media_icons.png") no-repeat 0 -27px;
+	width: 27px;
+	height: 27px;
+	display: block;
+}
+
+#footer-social .facebook {
+	background-position: 0 -27px;
+}
+
+#footer-social .twitter {
+	background-position: -27px -27px;
+}
+
+#footer-social .pinterest {
+	background-position: -54px -27px;
+}
+
+#footer-social .rss {
+	background-position: -81px -27px;
+}
+
+#footer-news a {
+	font-family: "Antic Didone";
+	color: #fff;
+}
+
+#footer-news a:hover {
+	text-decoration: none;
+}
+
+footer ul#footer-nav {
+	margin: 70px 0;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: 11px;
+	overflow: hidden;
+	-webkit-padding-start: 0px;
+}
+
+footer ul#footer-nav h2 {
+	margin-top: 25px;
+	padding-bottom: 2px;
+}
+
+footer ul#footer-nav h2.brand {
+	text-indent: -9999px;
+	background: url("images/OccOnline_logo_g.png") no-repeat -7px -8px;
+}
+
+footer ul#footer-nav li.col-md-3 {
+	color: #fff;
+	float: left;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+footer ul#footer-nav li.col-md-3:first-child {
+	padding-left: 0;
+}
+
+footer ul#footer-nav ul {
+	list-style-type: none;
+}
+
+footer ul#footer-nav ul li {
+	display: block;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #eee;
+	line-height: 20px;
+}
+
+#back-to-top {
+	width: 100%;
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+
+#back-to-top a {
+	display: block;
+	width: 80px;
+	height: 40px;
+	background: url("images/arrow_top.png") no-repeat;
+	margin: auto;
+}
+
