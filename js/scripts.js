@@ -35,7 +35,7 @@ $( function() {
 
     /* Slider top */
 
-    $('#featured-carousel').skdslider({delay:7000, animationSpeed: 2000,showNextPrev:true,showPlayButton:false,autoSlide:false,showNav:false,animationType:'fading'});
+    $('#featured-carousel').skdslider({delay:7000, animationSpeed: 2000,showNextPrev:true,showPlayButton:false,autoSlide:true,showNav:false,animationType:'fading'});
 
     /* Slider Sections */
     $('#sections-carousel').skdslider({delay:7000, animationSpeed: 400,showNextPrev:true,showPlayButton:false,autoSlide:true,showNav:false,animationType:'fading'});
