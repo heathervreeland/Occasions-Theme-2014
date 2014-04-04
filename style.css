@@ -8,13 +8,6 @@ Version: 1.0
 License: GNU General Public License v2 or later
 */
 
-/************************************
- *
- * WORDPRESS
- *
- *************************************/
-
-#wpadminbar { display: block !important; }
 
 /************************************
  *
@@ -36,11 +29,6 @@ License: GNU General Public License v2 or later
  * GENERAL
  *
  *************************************/
-
-
-html {
-
-}
 
 ul {
 	-webkit-padding-start: 0px;
@@ -540,6 +528,7 @@ ul#main-nav li.vendors span {
 }
 
 #featured-carousel .featured-image img {
+	
 }
 
 #featured-carousel .featured-meta {
@@ -589,6 +578,10 @@ ul#main-nav li.vendors span {
 	width: 334px;
 	overflow: hidden;
 	margin: auto;
+}
+
+#sections-carousel .featured-image img {
+	min-height: 519px;
 }
 
 #sections-carousel-container .skdslider a.prev, #sections-carousel-container .skdslider a.next {
