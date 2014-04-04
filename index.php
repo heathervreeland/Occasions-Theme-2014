@@ -4,18 +4,22 @@
 
 	<div class="col-md-4">
 		<div class="pull-left">
-			<div class="tile">
-				<div class="title-cont">
-					<div class="title">Venue &amp; Vendor<br/>Guide</div>
+			<a href="#">
+				<div class="tile">
+					<div class="title-cont">
+						<div class="title">Venue &amp; Vendor<br/>Guide</div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
-			</div>
-			<div class="tile">
-				<div class="title-cont">
-					<div class="title">City Blog <span>Find Inspiration</span></div>
+			</a>
+			<a href="#">
+				<div class="tile">
+					<div class="title-cont">
+						<div class="title">City Blog <span>Find Inspiration</span></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_blog.jpg"/>
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_blog.jpg"/>
-			</div>
+			</a>
 		</div>
 	</div>
 
@@ -24,22 +28,25 @@
 			<div id="sections-carousel">
 				<div class="sections-skdslider">
 					<ul class="slides">
-
+					<?php
+						
+						// Get the latest featured posts
+						$recent_posts = new WP_Query( "post_type=post&posts_per_page=3&post_status=publish&orderby=date&order=DESC" );
+						if($recent_posts->have_posts()) : 
+							$counter = 0;
+							while($recent_posts->have_posts()) : 
+								$recent_posts->the_post();
+								$counter++;
+								foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
+					?>
 						<li>
-							<div class="sections-slide-overlay"></div>
-							<div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/images/occasionscheese3.jpg" width="600" height="400" alt=""/></div>
+							<a href="<?php the_permalink(); ?>"><div class="sections-slide-overlay"></div></a>
+							<div class="featured-image"><?php the_post_thumbnail("large"); ?></div>
 						</li>
-
-						<li>
-							<div class="sections-slide-overlay"></div>
-							<div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/images/occasionscheese2.jpg" width="600" height="400" alt=""></div>
-						</li>
-
-						<li>
-							<div class="sections-slide-overlay"></div>
-							<div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/images/occasionscheese1.jpg" width="600" height="400" alt=""></div>
-						</li>
-
+					<?php
+							endwhile;
+						endif;
+					?>
 					</ul>
 				</div>
 			</div>
@@ -49,18 +56,22 @@
 
 	<div class="col-md-4">
 		<div class="pull-right">
-			<div class="tile">
-				<div class="title-cont">
-					<div class="title">Galleries</div>
+			<a href="#">
+				<div class="tile">
+					<div class="title-cont">
+						<div class="title">Galleries</div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
-			</div>
-			<div class="tile">
-				<div class="title-cont">
-					<div class="title">Shop - Magazine <span>Subscribe to Occasions</span></div>
+			</a>
+			<a href="#">
+				<div class="tile">
+					<div class="title-cont">
+						<div class="title">Shop - Magazine <span>Subscribe to Occasions</span></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_shop.jpg"/>
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_shop.jpg"/>
-			</div>
+			</a>
 		</div>
 	</div>
 
