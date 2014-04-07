@@ -16,9 +16,17 @@
 
 					while($featured_query->have_posts()) : 
 						$featured_query->the_post();
+						$category = get_the_category(); $category = $category[0];
+						if($category->category_parent == "0") {
+							$post_cat_slug = $category->slug;
+						}
+						else {
+							$parent = get_category($category->category_parent);
+							$post_cat_slug = $parent->slug;
+						}
 		    	?>
 
-					<li class="<?php foreach(get_the_category() as $category) {echo $category->slug . ' '; break;} ?>">
+					<li class="<?php echo $post_cat_slug; ?>">
 						<div class="featured-meta">
 							<div class="container">
 								<a href="#" class="nice-button">View Article</a>
