@@ -1,12 +1,12 @@
 <?php get_header(); 
 	
 	global $recent_featured_posts;
-	uasort($recent_featured_posts, function ($a, $b) {
-	    if ($a == $b) {
-	        return 0;
-	    }
-	    return ($a < $b) ? 1 : -1;
-	});
+	// uasort($recent_featured_posts, function ($a, $b) {
+	//     if ($a == $b) {
+	//         return 0;
+	//     }
+	//     return ($a < $b) ? 1 : -1;
+	// });
 ?>
 
 <div class="row" id="index-sections">
