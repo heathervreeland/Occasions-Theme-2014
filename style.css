@@ -800,6 +800,7 @@ text-decoration:underline;
 	position:absolute;
 	top: 275px;
 	margin-top:-17px;
+	z-index: 15;
 }
 
 .skdslider a.prev{
