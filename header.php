@@ -81,6 +81,11 @@
 			</div>
 		</div>
 		
+		<?php 
+			global $recent_featured_posts;
+			$recent_featured_posts = array();
+		?>
+
 		<div class="container">
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -134,9 +139,10 @@
 								<div class="submenu_recent">
 									<div class="sub_container">
 										<?php
-											// get most recent weddings post 
+											// get most recent entertaining and holidays post 
 
 											$most_recent = get_most_recent_post_from_category('entertaining-and-holidays', 4);
+											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											while($most_recent->have_posts()) : 
 												$most_recent->the_post();
@@ -227,9 +233,10 @@
 								<div class="submenu_recent">
 									<div class="sub_container">
 										<?php
-											// get most recent weddings post 
+											// get most recent parties and celebrations post 
 
 											$most_recent = get_most_recent_post_from_category('parties-and-celebrations', 4);
+											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											while($most_recent->have_posts()) : 
 												$most_recent->the_post();
@@ -322,6 +329,7 @@
 											// get most recent weddings post 
 
 											$most_recent = get_most_recent_post_from_category('weddings', 4);
+											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											$counter = 0;
 											while($most_recent->have_posts()) : 

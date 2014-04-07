@@ -1,18 +1,12 @@
 <?php get_header(); 
 	
-	$include =  array( 	get_cat_ID( "weddings" ),
-						get_cat_ID( "parties and celebrations" ),
-						get_cat_ID( "etertaining & holidays" ));
-
-	$args=array(
-		  'category__in' => $cata_children,
-		  'post_status' => 'publish',
-		  'posts_per_page' => 6,
-		  'caller_get_posts'=> 1,
-		  'orderby' => 'date',
-		  'order' => 'DESC'
-		);
-	$most_recent_posts = new WP_Query( $args );
+	global $recent_featured_posts;
+	uasort($recent_featured_posts, function ($a, $b) {
+	    if ($a == $b) {
+	        return 0;
+	    }
+	    return ($a < $b) ? 1 : -1;
+	});
 ?>
 
 <div class="row" id="index-sections">
@@ -46,20 +40,16 @@
 					<?php
 						
 						// Get the latest featured posts
-						if($most_recent_posts->have_posts()) : 
+						if($recent_featured_posts) : 
 							$counter = 0;
-							while($most_recent_posts->have_posts()) : 
-								$most_recent_posts->the_post();
-								$counter++;
-								foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
+							foreach($recent_featured_posts as $post) {
 					?>
 						<li>
-							<a href="<?php the_permalink(); ?>"><div class="sections-slide-overlay"></div></a>
-							<div class="featured-image"><?php the_post_thumbnail("large"); ?></div>
+							<a href="<?php echo get_permalink($post->ID); ?>"><div class="sections-slide-overlay"></div></a>
+							<div class="featured-image"><?php echo get_the_post_thumbnail($post->ID, "large"); ?></div>
 						</li>
 					<?php
-							endwhile;
-							rewind_posts();
+							}
 						endif;
 					?>
 					</ul>
@@ -179,12 +169,11 @@
 		<?php
 			
 			// Get the latest featured posts
-			if($most_recent_posts->have_posts()) : 
+			if($recent_featured_posts) : 
 				$counter = 0;
-				while($most_recent_posts->have_posts()) : 
-					$most_recent_posts->the_post();
+				foreach($recent_featured_posts as $post) {
 					$counter++;
-					$category = get_the_category(); $category = $category[0];
+					$category = get_the_category($post->ID); $category = $category[0];
 					$post_cat =  $category->name; 
 					if($category->category_parent == "0") {
 						$post_cat_slug = $category->slug;
@@ -193,23 +182,25 @@
 						$parent = get_category($category->category_parent);
 						$post_cat_slug = $parent->slug;
 					}
+					$date = date_create($post->post_date);
 		?>
 
 				<div class="col-md-4 <?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">
+
 					<span class="nice-button dept"><?php echo $post_cat; ?></span>
 					<div class="post-image">
-						<?php the_post_thumbnail("medium"); ?>
+						<?php echo get_the_post_thumbnail($post->ID, "medium"); ?>
 					</div>
 					<div class="content">
-						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<h1><a href="<?php get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h1>
 					</div>
-					<p class="post-meta">Posted <span class="date"><?php the_date("F j, Y"); ?></span> by <span class="author"><?php the_author(); ?></span></p>
+					<p class="post-meta">Posted <span class="date"><?php echo date_format($date, "F j, Y"); ?></span> by <span class="author"><?php echo get_the_author($post->ID); ?></span></p>
 				</div>
 
       
 		<?php
 					if($counter == 3) break;
-				endwhile;
+				}
 			endif;
 		?>
 
