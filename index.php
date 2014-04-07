@@ -170,7 +170,10 @@
 				while($recent_posts->have_posts()) : 
 					$recent_posts->the_post();
 					$counter++;
-					foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
+					$category = get_the_category(); $category = $category[0];
+					$post_cat =  $category->name; 
+					$parent = get_category($category->category_parent);
+					$post_cat_slug = $parent->slug;
 		?>
 
 				<div class="col-md-4 <?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">

@@ -179,7 +179,7 @@
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>
-														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+														<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
 													</div>
 												</li>
 											<?php
@@ -271,7 +271,7 @@
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>
-														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+														<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
 													</div>
 												</li>
 											<?php
@@ -364,7 +364,7 @@
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>
-														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+														<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
 													</div>
 												</li>
 											<?php

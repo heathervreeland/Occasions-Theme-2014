@@ -149,11 +149,11 @@ body {
 	color: #46c8bc !important;
 }
 
-.parties .post-meta .date, .parties .post-meta .author {
+.parties .post-meta .date, .parties .post-meta .author, .parties-and-celebrations .post-meta .date, .parties-and-celebrations .post-meta .author {
 	color: #fcb4a8 !important;
 }
 
-.entertaining .post-meta .date, .entertaining .post-meta .author {
+.entertaining .post-meta .date, .entertaining .post-meta .author, .entertaining-and-holidays .post-meta .date, .entertaining-and-holidays .post-meta .author {
 	color: #86bd7a !important;
 }
 
@@ -560,13 +560,17 @@ ul#main-nav li.vendors span.icon {
 }
 
 .submenu_features .features_block h1 {
-	line-height: 12px;
+	line-height: 19px;
 }
 
-.submenu_features .features_block h1 a {
+.submenu_features .features_block a h1 {
 	color: #000;
 	font-size: 16px;
 	font-family: "Antic Didone";
+}
+
+.submenu_features .features_block a:hover h1 {
+	color: #46c8bc !important;
 }
 
 .preview-window .sub_container {
