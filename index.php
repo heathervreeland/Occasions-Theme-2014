@@ -1,4 +1,19 @@
-<?php get_header(); ?>
+<?php get_header(); 
+	
+	$include =  array( 	get_cat_ID( "weddings" ),
+						get_cat_ID( "parties and celebrations" ),
+						get_cat_ID( "etertaining & holidays" ));
+
+	$args=array(
+		  'category__in' => $cata_children,
+		  'post_status' => 'publish',
+		  'posts_per_page' => 6,
+		  'caller_get_posts'=> 1,
+		  'orderby' => 'date',
+		  'order' => 'DESC'
+		);
+	$most_recent_posts = new WP_Query( $args );
+?>
 
 <div class="row" id="index-sections">
 
@@ -31,11 +46,10 @@
 					<?php
 						
 						// Get the latest featured posts
-						$recent_posts = new WP_Query( "post_type=post&posts_per_page=3&post_status=publish&orderby=date&order=DESC" );
-						if($recent_posts->have_posts()) : 
+						if($most_recent_posts->have_posts()) : 
 							$counter = 0;
-							while($recent_posts->have_posts()) : 
-								$recent_posts->the_post();
+							while($most_recent_posts->have_posts()) : 
+								$most_recent_posts->the_post();
 								$counter++;
 								foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
 					?>
@@ -45,6 +59,7 @@
 						</li>
 					<?php
 							endwhile;
+							rewind_posts();
 						endif;
 					?>
 					</ul>
@@ -164,11 +179,10 @@
 		<?php
 			
 			// Get the latest featured posts
-			$recent_posts = new WP_Query( "post_type=post&posts_per_page=3&post_status=publish&orderby=date&order=DESC" );
-			if($recent_posts->have_posts()) : 
+			if($most_recent_posts->have_posts()) : 
 				$counter = 0;
-				while($recent_posts->have_posts()) : 
-					$recent_posts->the_post();
+				while($most_recent_posts->have_posts()) : 
+					$most_recent_posts->the_post();
 					$counter++;
 					$category = get_the_category(); $category = $category[0];
 					$post_cat =  $category->name; 
@@ -194,6 +208,7 @@
 
       
 		<?php
+					if($counter == 3) break;
 				endwhile;
 			endif;
 		?>
