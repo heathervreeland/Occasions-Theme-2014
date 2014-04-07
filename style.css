@@ -30,6 +30,10 @@ License: GNU General Public License v2 or later
  *
  *************************************/
 
+div {
+	position: relative;
+}
+
 a {
 	text-decoration: none;
 }
@@ -137,6 +141,20 @@ body {
 
 .vendors .featured-meta {
 	border-color: #afa4ce !important;
+}
+
+/* dates and author colors */
+
+.weddings .post-meta .date, .weddings .post-meta .author {
+	color: #46c8bc !important;
+}
+
+.parties .post-meta .date, .parties .post-meta .author {
+	color: #fcb4a8 !important;
+}
+
+.entertaining .post-meta .date, .entertaining .post-meta .author {
+	color: #86bd7a !important;
 }
 
 
@@ -328,7 +346,7 @@ ul#main-nav li.dept {
 	overflow: hidden;
 }
 
-ul#main-nav li.dept span {
+ul#main-nav li.dept span.icon {
 	width: 60px;
 	height: 56px;
 	display: block;
@@ -336,27 +354,27 @@ ul#main-nav li.dept span {
 	background: url('images/icons_sections.png') no-repeat;
 }
 
-ul#main-nav li.weddings span {
+ul#main-nav li.weddings span.icon {
 	background-position: 0 0;
 }
 
-ul#main-nav li.parties span {
+ul#main-nav li.parties span.icon {
 	background-position: -60px 0;
 }
 
-ul#main-nav li.entertaining span {
+ul#main-nav li.entertaining span.icon {
 	background-position: -120px 0;
 }
 
-ul#main-nav li.galleries span {
+ul#main-nav li.galleries span.icon {
 	background-position: -180px 0;
 }
 
-ul#main-nav li.cities span {
+ul#main-nav li.cities span.icon {
 	background-position: -240px 0;
 }
 
-ul#main-nav li.vendors span {
+ul#main-nav li.vendors span.icon {
 	background-position: -300px 0;
 }
 
@@ -493,11 +511,62 @@ ul#main-nav li.vendors span {
 	left: 956px;
 }
 
-.submenu_categories {
+.submenu_categories, .submenu_recent, .submenu_features {
 	display: block;
 	float: left;
 	height: 100%;
 	border-right: 1px solid #ccc;
+	position: relative;
+}
+
+.submenu_features {
+	border-right: 0;
+	width: 409px;
+}
+
+.submenu_features .features_block {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 25px;
+	padding: 0 0 20px 0;
+	font-family: "Raleway";
+	font-weight: 300;
+	overflow: hidden;
+}
+
+.submenu_features .features_block:last-child {
+	border-bottom: 0;
+}
+
+.submenu_features .features_block .post-image {
+	width: 125px;
+	height: 70px;
+	float: left; 
+	overflow: hidden;
+	padding: 0 13px 13px 0;
+}
+
+.submenu_features .features_block .post-content {
+	float: left;
+	display: block;
+	width: 230px;
+	font-size: 12px;
+	padding: 0 0 0 10px;
+}
+
+.submenu_features .features_block .post-content span {
+	color: #adadad;
+	text-transform: uppercase;
+}
+
+.submenu_features .features_block h1 {
+	line-height: 12px;
+}
+
+.submenu_features .features_block h1 a {
+	color: #000;
+	font-size: 16px;
+	font-family: "Antic Didone";
 }
 
 .preview-window .sub_container {
@@ -505,7 +574,14 @@ ul#main-nav li.vendors span {
 }
 
 .submenu_categories .sub_container {
-	width: 250px;
+	width: 236px;
+	height: 468px;
+	position: relative;
+}
+
+.submenu_categories .sub_container .nice-button {
+	position: absolute;
+	bottom: 0;
 }
 
 .submenu_categories ul {
@@ -521,6 +597,10 @@ ul#main-nav li.vendors span {
 
 .submenu_categories ul li a {
 	color: #a6a19d;
+}
+
+.submenu_recent {
+	width: 380px;
 }
 
 /************************************
@@ -999,7 +1079,18 @@ text-decoration:underline;
 	margin-bottom: 80px;
 }
 
-#index_recent_posts .post-image img {
+.recent_post_grid_block {
+	text-align: center;
+	height: 468px;
+	font-family: "Raleway";
+	font-size: 14px;
+}
+
+.recent_post_grid_block div {
+	height: 100%;
+}
+
+#index_recent_posts .post-image img, .recent_post_grid_block .post-image img {
 	width: 100%;
 	height: auto;
 }
@@ -1017,12 +1108,12 @@ text-decoration:underline;
 	padding-right: 0px;
 }
 
-#index_recent_posts .col-md-4 span.dept {
+#index_recent_posts .col-md-4 span.dept, .recent_post_grid_block span.dept {
 	position: relative;
 	z-index: 10;
 }
 
-#index_recent_posts .col-md-4 .post-image {
+#index_recent_posts .col-md-4 .post-image, .recent_post_grid_block .post-image {
 	position: relative;
 	top: -11px;
 	width: 100%;
@@ -1031,23 +1122,27 @@ text-decoration:underline;
 	overflow: hidden;
 }
 
-#index_recent_posts .col-md-4 .content {
+#index_recent_posts .col-md-4 .content, .recent_post_grid_block .content {
 	text-align: left;
 	color: #787274;
 	padding: 18px;
 }
 
-#index_recent_posts .col-md-4 .content h1 {
+#index_recent_posts .col-md-4 .content h1, .recent_post_grid_block .content h1 {
 	color: #010101;
 	font-family: "Antic Didone";
 	font-size: 2em;
 }
 
-#index_recent_posts .col-md-4 .content h1 a {
+.recent_post_grid_block .content h1 {
+	font-size: 1.9em;
+}
+
+#index_recent_posts .col-md-4 .content h1 a, .recent_post_grid_block .content h1 a {
 	color: #010101;
 }
 
-#index_recent_posts .col-md-4 .post-meta {
+#index_recent_posts .col-md-4 .post-meta, .recent_post_grid_block .post-meta {
 	display: block;
 	text-align: left;
 	position: absolute;
@@ -1056,7 +1151,7 @@ text-decoration:underline;
 	padding: 18px;
 }
 
-#index_recent_posts .col-md-4 .post-meta .date, #index_recent_posts .col-md-4 .post-meta .author {
+#index_recent_posts .col-md-4 .post-meta .date, #index_recent_posts .col-md-4 .post-meta .author, .recent_post_grid_block .post-meta .date, .recent_post_grid_block .post-meta .author {
 	font-weight: bold;
 }
 

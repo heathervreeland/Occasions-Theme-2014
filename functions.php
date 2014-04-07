@@ -169,4 +169,26 @@ if ( ! function_exists( 'load_external_jQuery' ) ) {
 }
 
 
+if ( ! function_exists( 'get_most_recent_post_from_category' ) ) {
+
+	function get_most_recent_post_from_category($cat, $limit = 1) {
+
+		// Get the latest featured posts
+		$cat = get_category_by_slug($cat);
+		$taxonomy = 'category';
+		$cata_children = get_term_children( $cat->cat_ID, $taxonomy );
+
+		$args=array(
+		  'category__in' => $cata_children,
+		  'post_status' => 'publish',
+		  'posts_per_page' => $limit,
+		  'caller_get_posts'=> 1,
+		  'orderby' => 'date',
+		  'order' => 'DESC'
+		);
+		return new WP_Query( $args );
+	}
+}
+
+
 ?>
