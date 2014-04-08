@@ -141,7 +141,7 @@
 										<?php
 											// get most recent entertaining and holidays post 
 
-											$most_recent = get_most_recent_post_from_category('entertaining-and-holidays', 4);
+											$most_recent = get_most_recent_featured_post_from_category('entertaining-and-holidays', 4);
 											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											while($most_recent->have_posts()) : 
@@ -235,7 +235,7 @@
 										<?php
 											// get most recent parties and celebrations post 
 
-											$most_recent = get_most_recent_post_from_category('parties-and-celebrations', 4);
+											$most_recent = get_most_recent_featured_post_from_category('parties-and-celebrations', 4);
 											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											while($most_recent->have_posts()) : 
@@ -328,7 +328,7 @@
 										<?php
 											// get most recent weddings post 
 
-											$most_recent = get_most_recent_post_from_category('weddings', 4);
+											$most_recent = get_most_recent_featured_post_from_category('weddings', 4);
 											$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 											if($most_recent->have_posts()) : 
 											$counter = 0;
