@@ -190,5 +190,14 @@ if ( ! function_exists( 'get_most_recent_post_from_category' ) ) {
 	}
 }
 
+if ( ! function_exists("sort_recent_posts") ) {
+	function sort_recent_posts($a, $b) {
+	    if ($a == $b) {
+	        return 0;
+	    }
+	    return ($a < $b) ? 1 : -1;
+	}
+}
+
 
 ?>
