@@ -35,7 +35,7 @@
 									'post_type' => 'attachment',
 									'post_mime_type' => 'image'
 								));
-								echo "<img src=\"<?php echo $pic[0]->guid; ?>\"/>";
+								echo "<img src=\"<?php echo $images[0]->guid; ?>\"/>";
 							}
 						?>
 					</div>
