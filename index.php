@@ -115,35 +115,47 @@
 
 	<div id="index_dept_grid">
 		<div class="col-md-3 one cont">
-			<span>Galleries</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>Galleries</span>
+				<p>A curated collection of the most inspire wedding &amp; party images we've featured. Pin away.</p>
+			</div>
 		</div>
 		<div class="col-md-3 two"></div>
 		<div class="col-md-3 three cont">
-			<span>Real Weddings</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>Real Weddings</span>
+				<p>Chosen for their style, unique-details and great vendors these real wedding are guaranteed to inspire.</p>
+			</div>
 		</div>
 		<div class="col-md-3 four"></div>
 
 		<div class="col-md-3 five"></div>
 		<div class="col-md-3 six cont">
-			<span>Tools &amp; Checklists</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>Tools &amp; Checklists</span>
+				<p>Budgets, Checklists and Vendor Interviews will put your party planning in motion</p>
+			</div>
 		</div>
 		<div class="col-md-3 seven"></div>
 		<div class="col-md-3 eight cont">
-			<span>Holiday Inspirations</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>Holiday Inspirations</span>
+				<p>Tasty Recipes and beautiful seasonal settings bound to bring out your inner hostess skills</p>
+			</div>
 		</div>
 
 		<div class="col-md-3 nine cont">
-			<span>Party Ideas</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>Party Ideas</span>
+				<p>Make everyday an occasion with ideas from birthday parties to bridal shows</p>
+			</div>
 		</div>
 		<div class="col-md-3 ten"></div>
 		<div class="col-md-3 eleven cont">
-			<span>From the Editors</span>
-			<p>Perciminctas eost et aperitati<br/>officias mos volcrumen</p>
+			<div>
+				<span>From the Editors</span>
+				<p>Insider insights and a behind-the-scenes look from the team at Occasions</p>
+			</div>
 		</div>
 		<div class="col-md-3 twelve"></div>
 	</div>
