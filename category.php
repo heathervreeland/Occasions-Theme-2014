@@ -35,8 +35,13 @@
 									'post_type' => 'attachment',
 									'post_mime_type' => 'image'
 								));
-								$images = reset($images);
-								echo "<img src=\"" . $images->guid . "\"/>";
+								if(empty($images)) {
+									echo catch_that_image();
+								}
+								else {
+									$images = reset($images);
+									echo "<img src=\"" . $images->guid . "\"/>";
+								}
 							}
 						?>
 					</div>
