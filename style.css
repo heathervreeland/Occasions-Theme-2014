@@ -1245,6 +1245,7 @@ text-decoration:underline;
 	width: 246px;
 	margin-right: 24px;
 	margin-bottom: 24px;
+	opacity: 0.85;
 }
 
 #category_list .col-md-3 {
@@ -1278,6 +1279,10 @@ text-decoration:underline;
 	text-align: center;
 	padding: 10px;
 	background: url("images/cat_preview_bg.png") no-repeat 0 0;
+}
+
+.category-block:hover {
+	opacity: 1;
 }
 
 .category-block:hover h2 {
