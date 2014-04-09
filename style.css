@@ -1328,6 +1328,7 @@ text-decoration:underline;
 	font-family: "Oswald";
 	font-weight: 700;
 	text-align: center;
+	line-height: 40px;
 }
 
 .pagination .current, .pagination .pg, .pagination a.last-link {
