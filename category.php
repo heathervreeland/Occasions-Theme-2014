@@ -23,7 +23,7 @@
 		<?php while(have_posts()) : the_post(); ?>
 
 			<li class="col-md-3 category-block">
-				<a href="<?php get_permalink(get_the_ID()); ?>">
+				<a href="<?php echo get_permalink(get_the_ID()); ?>">
 					<div class="category-post-preview">
 						<?php 
 							if(get_the_post_thumbnail() != '') {
