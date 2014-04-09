@@ -1269,8 +1269,9 @@ text-decoration:underline;
 }
 
 .category-block .category-post-preview img {
-	width: 100%;
-	height: 100%;
+	width: 500px;
+	height: auto;
+	margin-left: -130px;
 }
 
 .category-block h2 {
