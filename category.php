@@ -26,7 +26,7 @@
 				<a href="<?php get_permalink(get_the_ID()); ?>">
 					<div class="category-post-preview">
 						<?php 
-							if(has_post_thumbnail(get_the_ID())) {
+							if(get_the_post_thumbnail() != '') {
 								the_post_thumbnail("large");
 							} 
 							else {
@@ -35,7 +35,7 @@
 									'post_type' => 'attachment',
 									'post_mime_type' => 'image'
 								));
-								echo "<img src=\"<?php echo $images[0]->guid; ?>\"/>";
+								echo "<img src=\"" . $images[0]->guid . "\"/>";
 							}
 						?>
 					</div>
