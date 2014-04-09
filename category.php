@@ -27,7 +27,7 @@
 					<div class="category-post-preview">
 						<?php 
 							if(has_post_thumbnail(get_the_ID())) {
-								the_post_thumbnail("medium");
+								the_post_thumbnail("large");
 							} 
 							else {
 								$images =& get_children( array (
