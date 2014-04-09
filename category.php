@@ -36,7 +36,7 @@
 									'post_mime_type' => 'image'
 								));
 								if(empty($images)) {
-									echo <img src=\"" . catch_that_image() . "\"/>";
+									echo "<img src=\"" . catch_that_image() . "\"/>";
 								}
 								else {
 									$images = reset($images);
