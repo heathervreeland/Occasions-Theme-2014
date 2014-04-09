@@ -1,8 +1,4 @@
-<?php get_header(); 
-	/* recent featured posts */
-	global $recent_featured_posts;
-	uasort($recent_featured_posts, "sort_recent_posts");
-?>
+<?php get_header(); ?>
 
 <div class="row" id="category_list">
 
