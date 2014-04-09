@@ -35,7 +35,8 @@
 									'post_type' => 'attachment',
 									'post_mime_type' => 'image'
 								));
-								echo "<img src=\"" . $images[0]->guid . "\"/>";
+								$images = reset($images);
+								echo "<img src=\"" . $images->guid . "\"/>";
 							}
 						?>
 					</div>
