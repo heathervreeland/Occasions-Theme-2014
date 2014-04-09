@@ -1,31 +1,56 @@
 <?php
 	
+	// Get cover stories
+	$cover_stories = get_cover_stories();
 	// Get the latest featured posts
-	$featured_query = new WP_Query( "post_type=post&post_status=publish&meta_key=featured_story&meta_value=1&posts_per_page=4&orderby=date&order=DESC" );
-
-	if($featured_query->have_posts()) : 
+	
+	if($cover_stories->have_posts()) : 
     	
+?>
+
+
+<?php
+
+	while($cover_stories->have_posts()) : 
+
+		/* get gallery pictures... or pictures in post */
+		$album_pics = get_post_gallery_images(get_the_ID());
+		$album_images = array();
+		$images = array();
+		if(sizeof($album_pics) > 0) {
+			// process the gallery images
+			foreach ( $album_pics as $pic ) {
+				$album_images[] = str_replace(array("-75x75", "-170x170", "-300x300"), "", $pic);
+			}
+		}
+		else {
+			// get the pictures in the post
+			$images =& get_children( array (
+				'post_parent' => get_the_ID(),
+				'post_type' => 'attachment',
+				'post_mime_type' => 'image'
+			));
+		}
+
+		$cover_stories->the_post();
+		$category = get_the_category(); $category = $category[0];
+		if($category->category_parent == "0") {
+			$post_cat_slug = $category->slug;
+		}
+		else {
+			$parent = get_category($category->category_parent);
+			$post_cat_slug = $parent->slug;
+		}
 ?>
 
 
 	<div class="skdslider-wrapper" id="featured-carousel">
 		<div class="skdslider">
 			<ul class="slides">
-
 				<?php
-
-					while($featured_query->have_posts()) : 
-						$featured_query->the_post();
-						$category = get_the_category(); $category = $category[0];
-						if($category->category_parent == "0") {
-							$post_cat_slug = $category->slug;
-						}
-						else {
-							$parent = get_category($category->category_parent);
-							$post_cat_slug = $parent->slug;
-						}
-		    	?>
-
+					// If one array is populated the other will be empty, simpler this way
+					foreach($album_images as $pic) {
+				?>	
 					<li class="<?php echo $post_cat_slug; ?>">
 						<div class="featured-meta">
 							<div class="container">
@@ -33,18 +58,32 @@
 								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></a></h1>
 							</div>
 						</div>
-						<div class="featured-image"><?php the_post_thumbnail('full'); ?></div>
+						<div class="featured-image"><img src="<?php echo $pic; ?>"/></div>
 					</li>
 				<?php
-					endwhile;
+					}
 				?>
-
+				<?php
+					foreach($images as $pic) {
+				?>	
+					<li class="<?php echo $post_cat_slug; ?>">
+						<div class="featured-meta">
+							<div class="container">
+								<a href="#" class="nice-button">View Article</a>
+								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></a></h1>
+							</div>
+						</div>
+						<div class="featured-image"><img src="<?php echo $pic->guid; ?>"/></div>
+					</li>
+				<?php
+					}
+				?>
 			</ul>
 		</div>
 	</div>
 
 
-      
 <?php
+	endwhile;
 	endif;
 ?>

@@ -168,6 +168,40 @@ if ( ! function_exists( 'load_external_jQuery' ) ) {
 	add_action('wp_enqueue_scripts', 'load_external_jQuery');
 }
 
+if ( ! function_exists( 'get_cover_stories' ) ) {
+
+	function get_cover_stories($limit = 1) {
+
+		// Exclude categories
+		$inc_cats = array();
+		foreach(array("weddings","parties-and-celebrations","entertaining-and-holidays") as $cat) {
+			$cat = get_category_by_slug($cat);
+			$taxonomy = 'category';
+			$inc_cats = array_merge($inc_cats, get_term_children( $cat->cat_ID, $taxonomy ));
+		}
+
+		$exc_cats = array();
+		foreach(array("atlanta","savannah","south florida","jacksonville","tampa","orlando") as $cat) {
+			$cat = get_category_by_slug($cat);
+			$taxonomy = 'category';
+			$exc_cats = array_merge($exc_cats, get_term_children( $cat->cat_ID, $taxonomy ));
+		}
+
+		// Get the latest featured posts
+		$args=array(
+		  'post_status' => 'publish',
+		  'posts_per_page' => $limit,
+		  'caller_get_posts'=> 1,
+		  'meta_key'         => 'cover_story',
+		  'meta_value'       => '1',
+		  'category__in' => $inc_cats,
+		  'category__not_in' => $exc_cats,
+		  'orderby' => 'date',
+		  'order' => 'DESC'
+		);
+		return new WP_Query( $args );
+	}
+}
 
 if ( ! function_exists( 'get_most_recent_post_from_category' ) ) {
 
