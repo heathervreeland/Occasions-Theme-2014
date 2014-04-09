@@ -13,6 +13,14 @@ if ( function_exists( 'register_nav_menus' ) ) {
 }
 
 
+// Limit results on category page before pagination
+function limit_posts_per_archive_page() {
+	if ( is_category() )
+		set_query_var('posts_per_archive_page', 16); // or use variable key: posts_per_page
+}
+add_filter('pre_get_posts', 'limit_posts_per_archive_page');
+
+
 // filter the Gravity Forms button type
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){
@@ -224,6 +232,8 @@ if ( ! function_exists( 'get_most_recent_post_from_category' ) ) {
 	}
 }
 
+/* get recent featured posts */
+
 if ( ! function_exists( 'get_most_recent_featured_post_from_category' ) ) {
 
 	function get_most_recent_featured_post_from_category($cat, $limit = 1) {
@@ -247,6 +257,8 @@ if ( ! function_exists( 'get_most_recent_featured_post_from_category' ) ) {
 	}
 }
 
+/* sort recent posts */
+
 if ( ! function_exists("sort_recent_posts") ) {
 	function sort_recent_posts($a, $b) {
 	    if ($a == $b) {
@@ -255,6 +267,9 @@ if ( ! function_exists("sort_recent_posts") ) {
 	    return ($a < $b) ? 1 : -1;
 	}
 }
+
+
+/* get subcategories */
 
 if ( ! function_exists( 'get_subcategories' ) ) {
 
@@ -266,7 +281,54 @@ if ( ! function_exists( 'get_subcategories' ) ) {
 
 		return $categories;
 	}
+
 }
+
+// Pagination
+
+function pagination($pages = '', $range = 2) {
+	$morepages = ($range * 2)+1;
+	global $paged;
+	if(empty($paged)) $paged = 1;
+	if($pages == '') {
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if(!$pages) {
+			$pages = 1;
+		}
+	}
+	if(1 != $pages) {
+		echo '<div class="pagination">';
+		if($paged > 1 && $morepages < $pages) echo '<a class="prev-link" href="'.get_pagenum_link($paged - 1).'">Previous</a>';
+		if($paged > 2 && $paged > $range+1 && $morepages < $pages) echo '<a href="'.get_pagenum_link(1).'">1</a><span class="separate">...</span>';
+		for ($i=1; $i <= $pages; $i++) {
+			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $morepages )) {
+				echo ($paged == $i)? '<span class="current">'.$i.'</span>':'<a href="'.get_pagenum_link($i).'">'.$i.'</a>';
+			}
+		}
+		if ($paged < $pages-1 && $paged+$range-1 < $pages && $morepages < $pages) echo '<span class="separate">...</span><a class="last-link" href="'.get_pagenum_link($pages).'">'.$pages.'</a>';
+		if ($paged < $pages && $morepages < $pages) echo '<a class="next-link" href="'.get_pagenum_link($paged + 1).'">Next</a>';
+		echo '</div>';
+	}
+}
+
+// Pagination
+
+function truncate_string($string, $length = 50) {
+	
+	if (strlen($string) < $length) {
+		return $string;
+	}
+
+	$position = strpos($string, ' ', $length);
+	if ($position !== false) {
+	  return substr($string, 0, $position) . "&hellip;";
+	} else {
+	  return $string;
+	}
+
+}
+
 
 
 ?>

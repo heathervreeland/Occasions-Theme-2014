@@ -617,6 +617,40 @@ ul#main-nav li.vendors span.icon {
 
 /************************************
  *
+ * Breadcrums
+ *
+ *************************************/
+
+ #breadcrumbs {
+ 	margin-top: 20px;
+ 	text-transform: uppercase;
+ 	font-size: 11px;
+ }
+
+#breadcrumbs span span {
+	padding: 0 5px;
+}
+
+#breadcrumbs span span span.breadcrumb_last {
+	padding: 0;
+}
+
+#breadcrumbs span span a {
+	color: #000;
+	line-height: 26px;
+}
+
+ #breadcrumbs span span:first-child a {
+ 	text-indent: -9999px;
+ 	display: inline-block;
+ 	width: 23px;
+ 	height: 23px;
+ 	background: url("images/icn_home.png") no-repeat;
+ 	padding: 0 10px 0 0;
+ }
+
+/************************************
+ *
  * INDEX
  *
  *************************************/
@@ -1198,6 +1232,76 @@ text-decoration:underline;
 #index_recent_posts .col-md-4.entertaining .post-meta .date, #index_recent_posts .col-md-4.entertaining-and-holidays .post-meta .date {
 	color: #86bd7a;
 }
+
+
+/************************************
+ *
+ * Category Page
+ *
+ *************************************/
+
+.category-block {
+	height: 330px;
+	width: 246px;
+	margin-right: 24px;
+	margin-bottom: 24px;
+}
+
+#category_list .col-md-3 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#category_list .col-md-3:nth-child(4n) {
+	margin-right: 0;
+}
+
+.category-block .category-post-preview {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.category-block .category-post-preview img {
+	width: 100%;
+	height: 100%;
+}
+
+.category-block h2 {
+	color: #404040;
+	position: absolute;
+	bottom: 18px;
+	font-size: 20px;
+	width: 100%;
+	height: 97px;
+	text-align: center;
+	padding: 10px;
+	background: url("images/cat_preview_bg.png") no-repeat 0 0;
+}
+
+.category-block:hover h2 {
+	background: url("images/cat_preview_bg.png") no-repeat -300px 0;
+}
+
+.category-block .date {
+	padding-top: 3px;
+	font-size: 11px;
+	background: #fff;
+	width: 100%;
+	height: 38px;
+	line-height: 24px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #6a6a6a;
+	padding: 0!important;
+}
+
+.category-block .date span {
+	font-weight: 700;
+}
+
 
 /************************************
  *
