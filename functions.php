@@ -256,5 +256,17 @@ if ( ! function_exists("sort_recent_posts") ) {
 	}
 }
 
+if ( ! function_exists( 'get_subcategories' ) ) {
+
+	function get_subcategories($cat) {
+
+		// Get the latest featured posts
+		$cat = get_category_by_slug($cat);
+		$categories = get_categories('child_of=' . $cat->cat_ID . '&hide_empty=0');
+
+		return $categories;
+	}
+}
+
 
 ?>

@@ -607,6 +607,14 @@ ul#main-nav li.vendors span.icon {
 	width: 380px;
 }
 
+#nav-shadow {
+	height: 18px;
+	width: 100%;
+	position: absolute;
+	background: url("images/shadow_nav_top.png") repeat-x;
+	z-index: 15;
+}
+
 /************************************
  *
  * INDEX
