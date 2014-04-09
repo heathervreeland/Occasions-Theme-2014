@@ -1248,6 +1248,10 @@ text-decoration:underline;
 	opacity: 0.85;
 }
 
+#category_list ul {
+	overflow: hidden;
+}
+
 #category_list .col-md-3 {
 	padding-left: 0;
 	padding-right: 0;
@@ -1307,6 +1311,59 @@ text-decoration:underline;
 	font-weight: 700;
 }
 
+
+/************************************
+ *
+ * Pagination
+ *
+ *************************************/
+
+.pagination {
+	height: 40px;
+	display: block;
+	overflow: hidden;
+	margin: 60px 0;
+	font-size: 12px !important;
+	font-family: "Oswald";
+	font-weight: 700;
+	text-align: center;
+}
+
+.pagination .current, .pagination .pg, .pagination a.last-link {
+	width: 23px;
+	height: 23px;
+	padding: 4px 10px;
+	margin: 0 4px;
+	color: #949494;
+	background: #f1f1f1;
+}
+
+.pagination .current {
+	background: #262827;
+	color: #fff;
+}
+
+.pagination .separate {
+	font-size: 16px;
+}
+
+.pagination .next-link, .pagination .prev-link {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #282828;
+}
+
+.pagination .next-link {
+	background: url("images/arrow_next.jpg") no-repeat right 0;
+	padding-left: 60px;
+	padding-right: 23px;
+}
+
+.pagination .prev-link {
+	background: url("images/arrow_previous.jpg") no-repeat left;
+	padding-right: 60px;
+	padding-left: 23px;
+}
 
 /************************************
  *

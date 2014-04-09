@@ -23,25 +23,27 @@
 		<?php while(have_posts()) : the_post(); ?>
 
 			<li class="col-md-3 category-block">
-				<div class="category-post-preview">
-					<?php 
-						if(has_post_thumbnail(get_the_ID())) {
-							the_post_thumbnail("medium");
-						} 
-						else {
-							$images =& get_children( array (
-								'post_parent' => get_the_ID(),
-								'post_type' => 'attachment',
-								'post_mime_type' => 'image'
-							));
-							echo "<img src=\"<?php echo $pic[0]->guid; ?>\"/>";
-						}
-					?>
-				</div>
-				<h2><?php echo truncate_string(get_the_title(), 50); ?></h2>
-				<div class="date">
-					Posted <span><?php the_date("F j, Y"); ?></span>
-				</div>
+				<a href="<?php get_permalink(get_the_ID()); ?>">
+					<div class="category-post-preview">
+						<?php 
+							if(has_post_thumbnail(get_the_ID())) {
+								the_post_thumbnail("medium");
+							} 
+							else {
+								$images =& get_children( array (
+									'post_parent' => get_the_ID(),
+									'post_type' => 'attachment',
+									'post_mime_type' => 'image'
+								));
+								echo "<img src=\"<?php echo $pic[0]->guid; ?>\"/>";
+							}
+						?>
+					</div>
+					<h2><?php echo truncate_string(get_the_title(), 50); ?></h2>
+					<div class="date">
+						Posted <span><?php the_date("F j, Y"); ?></span>
+					</div>
+				</a>
 			</li>
 
 		<?php endwhile; ?>
