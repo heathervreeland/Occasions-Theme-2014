@@ -284,6 +284,34 @@ if ( ! function_exists( 'get_subcategories' ) ) {
 
 }
 
+// add div.image and pinterest button
+function wrap_image_credits ($content = null)
+{
+    if (!$content) {
+        $content = get_the_content();
+    }
+
+	preg_match_all("/(<img[^>]+>)/sim", $content, $matches);
+
+	$imgs=$matches[1];
+
+	foreach($imgs as $k=>$img)
+	{
+		preg_match('~(src="([^"]+)")~simU', $img, $src);
+		$img_md5 = md5($src[2]);
+		$replace = '<div class="image '.$class[2].'" id="'.$img_md5.'"><img';
+		$pinit = "javascript:void(showPinterest('".$img_md5."'))";
+		$bottom_info = '<a href="'.$pinit.'" class="pinit"></a>';
+		$after = '>'.$bottom_info.'</div>';
+		$res=str_replace(array('>','<img'),array($after,$replace),$img);
+
+		$content=str_replace($img,$res,$content);
+	}
+
+	return $content;
+}
+
+
 // Pagination
 
 function pagination($pages = '', $range = 2) {

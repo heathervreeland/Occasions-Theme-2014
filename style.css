@@ -157,6 +157,20 @@ body {
 	color: #86bd7a !important;
 }
 
+/* border lines */
+
+.weddings .border-line {
+	border-top-color: #46c8bc;
+}
+
+.parties .border-line, .parties-and-celebrations .border-line {
+	border-top-color: #fcb4a8;
+}
+
+.entertaining  .border-line, .entertaining-and-holidays  .border-line {
+	border-top-color: #86bd7a;
+}
+
 
 /************************************
  *
@@ -648,6 +662,61 @@ ul#main-nav li.vendors span.icon {
  	background: url("images/icn_home.png") no-repeat;
  	padding: 0 10px 0 0;
  }
+
+/************************************
+ *
+ * PINTEREST STUFF
+ *
+ *************************************/
+
+#main section .image {
+	position: relative;
+}
+
+#main section .excerpt img,
+#main section .story img,
+#main section .excerpt img,
+#main section .story img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+#main section .excerpt .image,
+#main section .story .image,
+#main section .excerpt .image,
+#main section .story .image {
+	text-align: center;
+	position: relative;
+}
+
+#main section .image:hover .pinit,
+#main section .excerpt .image:hover .pinit,
+#main section .story .image:hover .pinit,
+#main section .excerpt .image:hover .pinit,
+#main section .story .image:hover .pinit {
+	opacity: 1;
+}
+
+#main section .image .pinit,
+#main section .excerpt .image .pinit,
+#main section .story .image .pinit,
+#main section .excerpt .image .pinit,
+#main section .story .image .pinit {
+	opacity: 0;
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 30px;
+	height: 30px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	background: url("images/icon-pinit.png") 0 0 no-repeat transparent;
+}
 
 /************************************
  *
@@ -1312,6 +1381,80 @@ text-decoration:underline;
 	font-weight: 700;
 }
 
+/************************************
+ *
+ * Post Page
+ *
+ *************************************/
+
+.page-block {
+	margin-top: 80px;
+}
+
+.post-container {
+	width: 722px;
+}
+
+.post-category-floater {
+	width: 700px;
+	text-align: center;
+	margin: auto;
+	position: absolute; 
+	top: -10px;
+	z-index: 5;
+}
+
+#single-post-row .post-content {
+	padding: 25px;
+	border: 1px solid #d4d4d4;
+}
+
+#single-post-row .post-content h1 {
+	color: #000;
+	font-family: "Antic Didone";
+	margin: 35px 0 25px 0;
+	text-align: center;
+	font-size: 30px;
+}
+
+#single-post-row .post-content .post-meta {
+	display: block;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+#single-post-row .post-content .post-meta .author {
+	color: #2a2a2a !important;
+	font-weight: 700;
+}
+
+#single-post-row .post-content .post-meta .date {
+	font-weight: 700;
+}
+
+#single-post-row .post-content .border-line {
+	margin-right: -25px;
+	margin-left: -25px;
+	border-top-style: solid;
+	border-top-width: 4px;
+	margin-bottom: 40px;
+}
+
+#single-post-row .post-content {
+	color: #323232;
+}
+
+#single-post-row .weddings .post-content a {
+	color: #46c8bc;
+}
+
+#single-post-row .parties-and-celebrations .post-content a {
+	color: #fcb4a8;
+}
+
+#single-post-row .entertaining-and-holidays .post-content a {
+	color: #86bd7a;
+}
 
 /************************************
  *
