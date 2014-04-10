@@ -8,7 +8,9 @@
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen, projection" />		
 		<link href='http://fonts.googleapis.com/css?family=Antic+Didone|Raleway:400,700|Oswald:300,400' rel='stylesheet' type='text/css'>
-				
+		
+		<?php wp_head(); ?>
+		
 		<?php if ( is_front_page() ) { ?>
 
 			<script>
@@ -41,8 +43,6 @@
 			</script>
 
 		<?php }    ?>
-		
-		<?php wp_head(); ?>
 	</head>
  
 	<body <?php body_class($class); ?>>
