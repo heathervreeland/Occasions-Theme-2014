@@ -4,6 +4,10 @@
 //Add thumbnail support
 add_theme_support( 'post-thumbnails' );
 
+if ( ! isset( $content_width ) )
+    $content_width = 670;
+
+
 //Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
   	register_nav_menus(
