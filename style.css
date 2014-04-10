@@ -1445,6 +1445,11 @@ text-decoration:underline;
 	color: #454545;
 }
 
+#single-post-row .post-content p {
+	margin: 40px 0 20px;
+	line-height: 1.8em;
+}
+
 #single-post-row .weddings .post-content a {
 	color: #46c8bc;
 }
