@@ -241,7 +241,7 @@ h2 {
 	-webkit-padding-start: 0px;
 }
 
-#top-bar ul li {
+#top-bar ul li, #post-social ul li {
 	color: #ddd;
 	float: left;
 	padding-left: 6px;
@@ -266,30 +266,30 @@ h2 {
 	margin: 1px 13px 0 0;
 }
 
-#top-social ul li {
+#top-social ul li, #post-social ul li  {
 	margin: 0;
 }
 
-#top-social ul li a {
+#top-social ul li a, #post-social ul li a {
 	background: url("images/social_media_icons.png") no-repeat;
 	width: 27px;
 	height: 27px;
 	display: block;
 }
 
-#top-social .facebook {
+#top-social .facebook, #post-social .facebook {
 	background-position: 0 0;
 }
 
-#top-social .twitter {
+#top-social .twitter, #post-social .twitter {
 	background-position: -27px 0;
 }
 
-#top-social .pinterest {
+#top-social .pinterest, #post-social .pinterest {
 	background-position: -54px 0;
 }
 
-#top-social .rss {
+#top-social .rss, #post-social .rss {
 	background-position: -81px 0;
 }
 
@@ -708,14 +708,14 @@ ul#main-nav li.vendors span.icon {
 	position: absolute;
 	right: 15px;
 	top: 15px;
-	width: 30px;
-	height: 30px;
+	background: url("images/social_media_icons.png") -54px 0 no-repeat transparent;
+	width: 27px;
+	height: 27px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	background: url("images/icon-pinit.png") 0 0 no-repeat transparent;
 }
 
 /************************************
@@ -1198,7 +1198,7 @@ text-decoration:underline;
 /* Recent posts */
 
 #index_recent_posts {
-	margin-bottom: 80px;
+	margin-bottom: 20px;
 }
 
 .recent_post_grid_block {
@@ -1421,6 +1421,7 @@ text-decoration:underline;
 	display: block;
 	margin-bottom: 35px;
 	text-align: center;
+	color: #454545;
 }
 
 #single-post-row .post-content .post-meta .author {
@@ -1441,7 +1442,7 @@ text-decoration:underline;
 }
 
 #single-post-row .post-content {
-	color: #323232;
+	color: #454545;
 }
 
 #single-post-row .weddings .post-content a {
@@ -1454,6 +1455,31 @@ text-decoration:underline;
 
 #single-post-row .entertaining-and-holidays .post-content a {
 	color: #86bd7a;
+}
+
+#single-post-row .share-post {
+	margin-top: 65px;
+	border-top: 1px solid #d4d4d4;
+	border-bottom: 1px solid #d4d4d4;
+	padding: 10px 0;
+}
+
+#single-post-row .share-post span {
+	text-transform: uppercase;
+	color: #46c8bc;
+	font-size: 28px;
+	font-weight: 300;
+	font-family: "Oswald";
+}
+
+#post-social {
+	position: absolute;
+	top: 16px;
+	left: 227px;
+}
+
+#post-social ul li a {
+	background: url("images/icn_share.png") no-repeat;
 }
 
 /************************************
@@ -1522,7 +1548,7 @@ footer {
 	position: relative;
 	background: #262827;
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 100px;;
 }
 
 #footer-top-bar {

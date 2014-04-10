@@ -46,7 +46,26 @@
 							<?php echo do_shortcode( $ngg[0] ); ?>
 						<?php endif; ?>
 					</div>
+
+					<div class="share-post">
+						<span>
+							Share this post
+						</span>
+
+						<div id="post-social">
+							<ul>
+								<li><a href="#" class="facebook"></a></li>
+								<li><a href="#" class="twitter"></a></li>
+								<li><a href="#" class="pinterest"></a></li>
+								<li><a href="#" class="rss"></a></li>
+							</ul>
+						</div>
+
+					</div>
+
 				</section>
+
+
 
 			</div>
 
