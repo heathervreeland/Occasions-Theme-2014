@@ -1995,6 +1995,7 @@ footer ul#footer-nav ul li {
 	border: 1px solid #e9e9e9;
 	background: #f9f9f9;
 	height: 40px;
+	padding: 10px;
 }
 
 .comment-form textarea {
