@@ -1201,18 +1201,18 @@ text-decoration:underline;
 	margin-bottom: 20px;
 }
 
-.recent_post_grid_block {
+.post_grid_block {
 	text-align: center;
 	height: 468px;
 	font-family: "Raleway";
 	font-size: 14px;
 }
 
-.recent_post_grid_block div {
+.post_grid_block div {
 	height: 100%;
 }
 
-#index_recent_posts .post-image img, .recent_post_grid_block .post-image img {
+#index_recent_posts .post-image img, .post_grid_block .post-image img {
 	width: 100%;
 	height: auto;
 }
@@ -1230,12 +1230,12 @@ text-decoration:underline;
 	padding-right: 0px;
 }
 
-#index_recent_posts .col-md-4 span.dept, .recent_post_grid_block span.dept {
+#index_recent_posts .col-md-4 span.dept, .post_grid_block span.dept {
 	position: relative;
 	z-index: 10;
 }
 
-#index_recent_posts .col-md-4 .post-image, .recent_post_grid_block .post-image {
+#index_recent_posts .col-md-4 .post-image, .post_grid_block .post-image {
 	position: relative;
 	top: -11px;
 	width: 100%;
@@ -1244,27 +1244,27 @@ text-decoration:underline;
 	overflow: hidden;
 }
 
-#index_recent_posts .col-md-4 .content, .recent_post_grid_block .content {
+#index_recent_posts .col-md-4 .content, .post_grid_block .content {
 	text-align: left;
 	color: #787274;
 	padding: 18px;
 }
 
-#index_recent_posts .col-md-4 .content h1, .recent_post_grid_block .content h1 {
+#index_recent_posts .col-md-4 .content h1, .post_grid_block .content h1 {
 	color: #010101;
 	font-family: "Antic Didone";
 	font-size: 2em;
 }
 
-.recent_post_grid_block .content h1 {
+.post_grid_block .content h1 {
 	font-size: 1.9em;
 }
 
-#index_recent_posts .col-md-4 .content h1 a, .recent_post_grid_block .content h1 a {
+#index_recent_posts .col-md-4 .content h1 a, .post_grid_block .content h1 a {
 	color: #010101;
 }
 
-#index_recent_posts .col-md-4 .post-meta, .recent_post_grid_block .post-meta {
+#index_recent_posts .col-md-4 .post-meta, .post_grid_block .post-meta {
 	display: block;
 	text-align: left;
 	position: absolute;
@@ -1273,7 +1273,7 @@ text-decoration:underline;
 	padding: 18px;
 }
 
-#index_recent_posts .col-md-4 .post-meta .date, #index_recent_posts .col-md-4 .post-meta .author, .recent_post_grid_block .post-meta .date, .recent_post_grid_block .post-meta .author {
+#index_recent_posts .col-md-4 .post-meta .date, #index_recent_posts .col-md-4 .post-meta .author, .post_grid_block .post-meta .date, .post_grid_block .post-meta .author {
 	font-weight: bold;
 }
 
@@ -1492,7 +1492,7 @@ text-decoration:underline;
 /* previous next links */
 
 .prev_next_links {
-	margin: 90px 0;
+	margin: 90px 0 0 0;
 	color: #414141;
 	border-top: 1px solid #414141;
 	border-bottom: 1px solid #414141;
@@ -2042,4 +2042,23 @@ footer ul#footer-nav ul li {
 	border-bottom: 1px solid #dadada;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
+}
+
+/************************************
+ *
+ * YOU MAY LIKE / RELATED POSTS
+ *
+ *************************************/
+
+.you_may_like {
+	margin-top: 90px;
+	overflow: hidden;
+}
+
+.you_may_like .post_grid_block:nth-child(2n) {
+	padding-right: 0;
+}
+
+.you_may_like .post_grid_block:first-child {
+	padding-left: 0;
 }

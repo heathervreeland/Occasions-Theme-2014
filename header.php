@@ -143,29 +143,11 @@
 												$most_recent->the_post();
 												foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
 										?>
-											<div class="recent_post_grid_block">
+											<div class="post_grid_block">
 												<div class="<?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">
 													<span class="nice-button dept"><?php echo $post_cat; ?></span>
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("large");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('large');	?>
 													</div>
 													<div class="content">
 														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -194,25 +176,7 @@
 											?>
 												<li class="features_block">
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("medium");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('medium');	?>
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>
@@ -263,29 +227,11 @@
 												$most_recent->the_post();
 												foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
 										?>
-											<div class="recent_post_grid_block">
+											<div class="post_grid_block">
 												<div class="<?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">
 													<span class="nice-button dept"><?php echo $post_cat; ?></span>
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("large");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('large');	?>
 													</div>
 													<div class="content">
 														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -313,25 +259,7 @@
 											?>
 												<li class="features_block">
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("medium");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('medium');	?>
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>
@@ -384,29 +312,11 @@
 												$most_recent->the_post();
 												foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
 										?>
-											<div class="recent_post_grid_block">
+											<div class="post_grid_block">
 												<div class="<?php echo $post_cat_slug;?> <?php echo $counter == 3 ? "last" : ""; ?> ">
 													<span class="nice-button dept"><?php echo $post_cat; ?></span>
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("large");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('large');	?>
 													</div>
 													<div class="content">
 														<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -434,25 +344,7 @@
 											?>
 												<li class="features_block">
 													<div class="post-image">
-														<?php 
-															if(get_the_post_thumbnail() != '') {
-																the_post_thumbnail("medium");
-															} 
-															else {
-																$images =& get_children( array (
-																	'post_parent' => get_the_ID(),
-																	'post_type' => 'attachment',
-																	'post_mime_type' => 'image'
-																));
-																if(empty($images)) {
-																	echo "<img src=\"" . catch_that_image() . "\"/>";
-																}
-																else {
-																	$images = reset($images);
-																	echo "<img src=\"" . $images->guid . "\"/>";
-																}
-															}
-														?>
+														<?php get_nice_image('medium');	?>
 													</div>
 													<div class="post-content">
 														<span><?php echo $post_cat; ?></span>

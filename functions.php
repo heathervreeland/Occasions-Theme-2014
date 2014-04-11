@@ -416,6 +416,27 @@ if ( ! function_exists("get_prev_next_post_links") ) {
 	}
 }
 
+if ( ! function_exists("get_nice_image") ) {
+	function get_nice_image($size) {
+		if(get_the_post_thumbnail() != '') {
+			the_post_thumbnail($size);
+		} 
+		else {
+			$images =& get_children( array (
+				'post_parent' => get_the_ID(),
+				'post_type' => 'attachment',
+				'post_mime_type' => 'image'
+			));
+			if(empty($images)) {
+				echo "<img src=\"" . catch_that_image() . "\"/>";
+			}
+			else {
+				$images = reset($images);
+				echo "<img src=\"" . $images->guid . "\"/>";
+			}
+		}
+	}
+}
 
 
 /**
@@ -446,3 +467,5 @@ function oo_comment($comment, $args, $depth) {
 
 
 ?>
+
+

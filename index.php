@@ -199,7 +199,7 @@
 						<?php echo get_the_post_thumbnail($post->ID, "medium"); ?>
 					</div>
 					<div class="content">
-						<h1><a href="<?php get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h1>
+						<h1><a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h1>
 					</div>
 					<p class="post-meta">Posted <span class="date"><?php echo date_format($date, "F j, Y"); ?></span> by <span class="author"><?php echo get_the_author($post->ID); ?></span></p>
 				</div>
