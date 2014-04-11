@@ -1462,6 +1462,8 @@ text-decoration:underline;
 	color: #86bd7a;
 }
 
+/* share post */
+
 #single-post-row .share-post {
 	margin-top: 65px;
 	border-top: 1px solid #d4d4d4;
@@ -1485,6 +1487,58 @@ text-decoration:underline;
 
 #post-social ul li a {
 	background: url("images/icn_share.png") no-repeat;
+}
+
+/* previous next links */
+
+.prev_next_links {
+	margin: 70px 0;
+	color: #414141;
+	border-top: 1px solid #414141;
+	border-bottom: 1px solid #414141;
+	width: 100%;
+	overflow: hidden;
+}
+
+.prev_next_links h2 {
+	color: #414141;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.prev_next_links a, .prev_next_links a:hover {
+	color: #414141 !important;
+}
+
+.prev_next_links span {
+	font-size: 12px;
+}
+
+.prev_next_links .prev-post, .prev_next_links .next-post {
+	padding: 25px;
+	width: 50%;
+	height: 130px;
+	text-align: center;
+}
+
+.prev_next_links .prev-post:hover, .prev_next_links .next-post:hover {
+	background-color: #c4eae6;
+}
+
+.prev_next_links .prev-post {
+	float: left;
+	padding-left: 50px;
+	background: url("images/parrow_previous.png") no-repeat left 50px;
+}
+
+.prev_next_links .next-post {
+	float: right;
+	padding-right: 50px;
+	background: url("images/parrow_next.png") no-repeat right 50px;
+}
+
+.prev_next_links .next-post.both {
+	border-left: 1px solid #414141;
 }
 
 /************************************
@@ -1530,13 +1584,13 @@ text-decoration:underline;
 }
 
 .pagination .next-link {
-	background: url("images/arrow_next.jpg") no-repeat right 0;
+	background: url("images/parrow_next.png") no-repeat right 0;
 	padding-left: 60px;
 	padding-right: 23px;
 }
 
 .pagination .prev-link {
-	background: url("images/arrow_previous.jpg") no-repeat left;
+	background: url("images/parrow_previous.png") no-repeat left;
 	padding-right: 60px;
 	padding-left: 23px;
 }

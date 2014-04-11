@@ -381,4 +381,40 @@ function catch_that_image() {
 	return $first_img;
 }
 
+/* sort recent posts */
+
+if ( ! function_exists("get_prev_next_post_links") ) {
+	function get_prev_next_post_links() {
+		global $wp_query;
+	    $prevpost = get_previous_post(true);
+		$nextpost = get_next_post(true);
+		$prevpost = empty($prevpost) ? null : $prevpost;
+		$nextpost = empty($nextpost) ? null : $nextpost;
+		$both = ($prevpost && $nextpost) ? 'both' : '';
+
+		echo '<div class="prev_next_links">';
+		if($prevpost)
+			echo '	<a href="' . get_permalink($prevpost->ID) . '">
+						<div class="prev-post">
+							<h2>Previous Article</h2>
+							<span>' . $prevpost->post_title . '</span>
+						</div>
+					</a>
+				';
+		if($nextpost)
+			echo '  <a href="' . get_permalink($nextpost->ID) . '">
+						<div class="next-post ' . $both . '">
+							<h2>Next Article</h2>
+							<span>' . $nextpost->post_title . '</span>
+						</div>
+					</a>
+				';
+		echo '</div>';
+
+		// return array('previous' => empty($prevpost) ? null : $prevpost, 'next' => empty($nextpost) ? null : $nextpost );
+
+	}
+}
+
+
 ?>

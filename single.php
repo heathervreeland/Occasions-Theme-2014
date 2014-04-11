@@ -63,6 +63,10 @@
 
 					</div>
 
+					<?php 
+						get_prev_next_post_links();
+					?>
+
 				</section>
 
 
