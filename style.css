@@ -1492,7 +1492,7 @@ text-decoration:underline;
 /* previous next links */
 
 .prev_next_links {
-	margin: 70px 0;
+	margin: 90px 0;
 	color: #414141;
 	border-top: 1px solid #414141;
 	border-bottom: 1px solid #414141;
@@ -1786,3 +1786,260 @@ footer ul#footer-nav ul li {
 	margin: auto;
 }
 
+
+/************************************
+ *
+ * Comments
+ *
+ *************************************/
+
+.comments {
+	margin-top: 150px;
+}
+
+.comments a {
+	color: #4bb6a6;
+}
+
+.comments ol {
+	list-style-type: none;
+	-webkit-padding-start: 0;
+	font-size: 13px;
+}
+
+.comments .comments-head {
+	overflow: hidden;
+	display: block;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #000;
+}
+
+.comments .comments-head h2 {
+	float: left;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 26px;
+	margin-bottom: 8px;
+}
+
+.comments .comments-head .post-comment {
+	float: right;
+}
+
+.comments ol.commentlist li.comment .comment-container, .comments ol.commentlist li.pingback .comment-container {
+	padding: 15px;
+	background: #f1f1f1;
+	margin-bottom: 25px;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author,
+.comments ol.commentlist li.pingback .comment-container .comment-author {
+	padding-left: 50px;
+	position: relative;
+	min-height: 40px;
+	margin-bottom: 24px;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author img,
+.comments ol.commentlist li.pingback .comment-container .comment-author img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author cite,
+.comments ol.commentlist li.pingback .comment-container .comment-author cite {
+	display: block;
+	color: #2a2b2c;
+	margin-bottom: 4px;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author cite a,
+.comments ol.commentlist li.pingback .comment-container .comment-author cite a {
+	color: #000;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author time,
+.comments ol.commentlist li.pingback .comment-container .comment-author time {
+	color: #8e8e8e;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-author time a,
+.comments ol.commentlist li.pingback .comment-container .comment-author time a {
+	color: #4bb6a6;
+	text-transform: uppercase;
+	font: 600 10px 'Raleway', sans-serif;
+}
+
+.comments ol.commentlist li.comment .comment-container .waiting,
+.comments ol.commentlist li.pingback .comment-container .waiting {
+	color: #747474;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-body,
+.comments ol.commentlist li.pingback .comment-container .comment-body {
+	font-style: italic;
+	margin-bottom: 1em;
+	color: #747474;
+}
+
+.comments ol.commentlist li.comment .comment-container .comment-body p,
+.comments ol.commentlist li.pingback .comment-container .comment-body p {
+	line-height: 1.3;
+}
+
+.comments ol.commentlist li.comment .reply,
+.comments ol.commentlist li.pingback .reply {
+	text-transform: uppercase;
+	font: 600 10px 'Raleway', sans-serif;
+}
+
+.comments ol.commentlist li.comment .children,
+.comments ol.commentlist li.pingback .children {
+	margin-left: 60px;
+}
+
+.comments ol.commentlist li.comment .respond, 
+.comments ol.commentlist li.pingback .respond {
+	margin: 0 0 20px 60px;
+}
+
+.comments ol.commentlist li.bypostauthor > .comment-container {
+	background: #edf8f7;
+}
+
+/* new comment */
+.new-comment-meta {
+	display: block;
+	overflow: hidden;
+}
+
+.new-comment-meta p {
+	display: block;
+	padding-right: 20px;
+	padding-left: 0;
+}
+
+.new-comment-meta p:first-child {
+}
+
+.new-comment-meta p:last-child {
+	padding-right: 0;
+}
+
+.respond {
+	position: relative;
+}
+
+.respond .cancel-comment-reply {
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 30px;
+}
+
+.comment-form h3 {
+	background: url("../img/gray-stripe.png") 0 0 repeat;
+	color: #2a2b2c;
+	font: 300 21px 'Oswald', sans-serif;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 12px;
+}
+
+.comment-form h3:before {
+	content: url("../img/comment-bubble.png");
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+
+.comment-form .description {
+	color: #a7a7a7;
+	font: 400 12px 'Raleway', sans-serif;
+	margin-bottom: 28px;
+}
+
+.comment-form .area1 label {
+	font: 300 26px 'Oswald', sans-serif;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.comment-form .area1 label span {
+	text-transform: lowercase;
+	font-size: 12px;
+	font-family: "Raleway";
+	padding: 0 6px;
+}
+
+.comment-form .comment-subscription-form {
+
+}
+
+.comment-form .comment-subscription-form label {
+	color: #8e8e8e;
+	text-transform: uppercase;
+	font-size: 9px;
+}
+
+.comment-form input[type=text],
+.comment-form input[type=email],
+.comment-form input[type=url],
+.comment-form textarea {
+	width: 100%;
+	border: 1px solid #e9e9e9;
+	background: #f9f9f9;
+	height: 40px;
+}
+
+.comment-form textarea {
+	background: #fff;
+	height: 110px;
+	margin-top: 16px;
+}
+
+.comment-form .area1 {
+}
+
+
+.comment-form .area1 p:last-child {
+	margin-right: 0;
+}
+
+.comment-form .area2 {
+	margin-bottom: 40px;
+}
+
+.comment-form .area3 {
+}
+
+.comment-form .area3 p {
+}
+
+.comment-form .area3 label.opt {
+}
+
+.comment-form .area3 label.opt input {
+}
+
+.comment-form .area3 label.opt span {
+}
+
+.comment-form .submit {
+	margin: 50px 0;
+	text-align: right;
+	border: 0;
+	background-color: #333 !important;
+	color: #fff;
+}
+
+.comment-form .button {
+	border-bottom: 1px solid #dadada;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}

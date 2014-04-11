@@ -64,8 +64,16 @@
 					</div>
 
 					<?php 
-						get_prev_next_post_links();
-					?>
+						// Previous and Next Post Links
+						get_prev_next_post_links();	?>
+
+					<?
+						// Suggested posts
+						include get_template_directory() . "/inc/you_may_also_like.php"; ?>
+
+					<?php 
+						// Comments template
+						comments_template(); ?>
 
 				</section>
 

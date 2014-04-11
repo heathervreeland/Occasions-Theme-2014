@@ -417,4 +417,32 @@ if ( ! function_exists("get_prev_next_post_links") ) {
 }
 
 
+
+/**
+ * Comment callback function 
+ * @param object $comment
+ * @param array $args
+ * @param int $depth 
+ */
+function oo_comment($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment; ?>
+	<li <?php comment_class(); ?> data-comment-id="<?php echo $comment->comment_ID?>">
+		<div id="comment-<?php comment_ID(); ?>" class="comment-container">
+			<header class="comment-author vcard cf">
+				<?php echo get_avatar($comment, 40) ? get_avatar($comment, 40) : '<img alt="" src="' . get_template_directory_uri() .'/images/default_comment_avatar.png" class="avatar avatar-40 photo" height="40" width="40">'; ?>
+				<?php printf(__('<cite class="fn">%s</cite>', 'flotheme'), get_comment_author_link()); ?>
+				<time datetime="<?php echo comment_date('Y-m-d'); ?>"><?php printf(__('Posted on %1$s', 'flotheme'), get_comment_date(),  get_comment_time()); ?></time>
+				<?php edit_comment_link(__('(Edit)', 'flotheme'), '', ''); ?>
+			</header>
+			<?php if ($comment->comment_approved == '0') : ?>
+				<p class="waiting"><?php _e('Your comment is awaiting moderation.', 'flotheme'); ?></p>
+			<?php endif; ?>
+			<section class="comment-body"><?php comment_text() ?></section>
+			<div class="reply">
+				<?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+			</div>
+		</div>
+<?php }
+
+
 ?>
