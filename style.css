@@ -185,7 +185,7 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	color: #46c8bc;
+	color: #46c6bb;
 	font-weight: 300;
 	font-family: "Oswald";
 	font-size: 1.7em;
@@ -718,6 +718,11 @@ ul#main-nav li.vendors span.icon {
 	transition: all 0.2s ease-in-out;
 }
 
+.story p {
+	margin-bottom: 20px;
+	line-height: 1.8em;
+}
+
 /************************************
  *
  * INDEX
@@ -982,6 +987,11 @@ text-decoration:underline;
 	width: 100%;
 	font-size: 24px;
 	vertical-align: middle;
+}
+
+.section-divider.top-divider {
+	top: -56px;
+	position: absolute;
 }
 
 .section-divider .line {
@@ -1395,6 +1405,7 @@ text-decoration:underline;
 .post-container {
 	width: 722px;
 	float: left;
+	position: relative;
 }
 
 .post-category-floater {
@@ -2112,4 +2123,69 @@ footer ul#footer-nav ul li {
 
 #sidebar .zone .spot {
 	margin-bottom: 20px;
+}
+
+
+/************************************
+ *
+ * VENDORS PAGE
+ *
+ *************************************/
+
+#vendors-page #index_vv {
+	margin-top: 56px;
+	height: 218px;
+}
+
+#vendors-page #index_vv_celebration {
+	width: 365px;
+}
+
+#vendors-page #index_vv img {
+	width: 315px;
+}
+
+#vendors-page .vendors-trust {
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	text-transform: uppercase;
+	color: #feaaaa;
+	text-align: center;
+	padding: 20px;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+#vendors-page #vendors-locations {
+	position: relative;
+	overflow: hidden;
+}
+
+#vendors-page .location-box {
+	float: left;
+	border: 1px solid #cfcfcf;
+	padding: 25px 25px 25px 60px;
+}
+
+#vendors-page .location-box ul { 
+	overflow: hidden;
+}
+
+#vendors-page .location-box li { 
+	float: left;
+	width: 170px;
+}
+
+#vendors-page .location-box li a { 
+	color: #9b9a98;
+	text-transform: uppercase;
+}
+
+#vendors-page .location-box.georgia {
+	width: 252px;
+}
+
+#vendors-page .location-box.florida {
+	margin-left: 22px;
+	width: 448px;
 }
