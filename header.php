@@ -125,7 +125,7 @@
 				<div class="collapse navbar-collapse">
 					<ul id="main-nav">
 						<li class="main-nav dept vendors">
-							<a href="#" class="hv"><span class="icon"></span>Vendors</a>
+							<a href="<?php echo get_permalink( get_page_by_path( 'vendors' ) ) ?>" class="hv"><span class="icon"></span>Vendors</a>
 						</li>
 						<li class="main-nav dept cities">
 							<a href="#" class="hv"><span class="icon"></span>Cities</a>
