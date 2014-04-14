@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+
+/* 
+Template Name: Vendors
+*/
+
+ get_header(); ?>
 
 <div class="row" id="vendors-page">
 	<?php if(have_posts()) : ?>

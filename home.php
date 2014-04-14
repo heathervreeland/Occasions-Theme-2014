@@ -1,4 +1,9 @@
-<?php get_header(); 
+<?php
+
+/* 
+Template Name: Home
+*/
+	get_header(); 
 	/* recent featured posts */
 	global $recent_featured_posts;
 	uasort($recent_featured_posts, "sort_recent_posts");
