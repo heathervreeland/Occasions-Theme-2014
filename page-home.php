@@ -201,7 +201,23 @@ Template Name: Home
 
 					<span class="nice-button dept"><?php echo $post_cat; ?></span>
 					<div class="post-image">
-						<?php echo get_the_post_thumbnail($post->ID, "medium"); ?>
+						<?php 		if(get_the_post_thumbnail($post->ID) != '') {
+										echo get_the_post_thumbnail($post->ID, $size);
+									} 
+									else {
+										$images =& get_children( array (
+											'post_parent' => $post->ID,
+											'post_type' => 'attachment',
+											'post_mime_type' => 'image'
+										));
+										if(empty($images)) {
+											echo "<img src=\"" . catch_that_image() . "\"/>";
+										}
+										else {
+											$images = reset($images);
+											echo "<img src=\"" . $images->guid . "\"/>";
+										}
+									} ?>
 					</div>
 					<div class="content">
 						<h1><a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h1>
