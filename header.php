@@ -9,6 +9,29 @@
 		<link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen, projection" />		
 		<link href='http://fonts.googleapis.com/css?family=Antic+Didone|Raleway:400,700|Oswald:300,400' rel='stylesheet' type='text/css'>
 		
+		<?php
+		if (oo_get_option('google_ad')) {
+		?>
+			<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+			<script type='text/javascript'>
+				GS_googleAddAdSenseService("<?php oo_option('google_ad') ?>");
+				GS_googleEnableAllServices();
+			</script>
+			<script type='text/javascript'>
+				<?php for($i = 1; $i <= oo_get_option('sidebar_ad_count'); $i++): ?>
+					GA_googleAddSlot("<?php oo_option('google_ad') ?>", "300x125_spot_<?php echo $i ?>");
+				<?php endfor; ?>
+				<?php if (is_front_page()) : ?>
+					GA_googleAddSlot("<?php oo_option('google_ad') ?>", "660x90_spot_1");
+				<?php endif; ?>
+			</script>
+			<script type='text/javascript'>
+				GA_googleFetchAds();
+			</script>
+		<?php
+		}
+		?>
+
 		<?php wp_head(); ?>
 		
 		<?php if ( is_front_page() ) { ?>
@@ -371,7 +394,7 @@
 		<?php
 			if( is_front_page() )
 			{
-				include get_template_directory() . "/inc/index_featured_carousel.php";
+				oo_part("index_featured_carousel");
 			}
 		?>
 

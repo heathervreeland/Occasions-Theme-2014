@@ -24,6 +24,8 @@
 			?>
 			<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
+				<?php get_sidebar('blog'); ?>
+
 				<section class="post-container">
 
 					<div class="post-category-floater">
@@ -69,15 +71,13 @@
 
 					<?
 						// Suggested posts
-						include get_template_directory() . "/inc/you_may_also_like.php"; ?>
+						oo_part("you_may_also_like"); ?>
 
 					<?php 
 						// Comments template
 						comments_template(); ?>
 
 				</section>
-
-
 
 			</div>
 

@@ -1388,19 +1388,21 @@ text-decoration:underline;
  *************************************/
 
 .page-block {
-	margin-top: 80px;
+	overflow: hidden;
+	padding-top: 80px;
 }
 
 .post-container {
 	width: 722px;
+	float: left;
 }
 
 .post-category-floater {
 	width: 700px;
 	text-align: center;
 	margin: auto;
-	position: absolute; 
-	top: -10px;
+	position: absolute;
+	top: 70px;
 	z-index: 5;
 }
 
@@ -2062,4 +2064,52 @@ footer ul#footer-nav ul li {
 
 .you_may_like .post_grid_block:first-child {
 	padding-left: 0;
+}
+
+
+/************************************
+ *
+ * SIDEBAR
+ *
+ *************************************/
+
+#sidebar {
+	width: 300px;
+	margin-left: 30px;
+	float: right;
+}
+
+#sidebar .letter {
+	margin-bottom: 20px;
+}
+
+#sidebar .letter a {
+	display: block;
+	height: 52px;
+	overflow: hidden;
+	background: url("images/sidebar-letter.jpg") 0 0 no-repeat;
+	padding: 12px 0 0 60px;
+	font: 400 12px 'Raleway', sans-serif;
+}
+
+#sidebar .letter a span {
+	display: block;
+}
+
+#sidebar .letter a .title {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 13px; font-size: 1.3rem;
+}
+
+#sidebar .letter a .descr {
+	color: #2a2b2c;
+}
+
+#sidebar .letter a:hover {
+	color: #2a2b2c;
+}
+
+#sidebar .zone .spot {
+	margin-bottom: 20px;
 }

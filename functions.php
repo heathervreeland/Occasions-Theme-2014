@@ -1,6 +1,31 @@
 <?php 
 
 
+/****************************************************************
+ * DO NOT DELETE
+ ****************************************************************/
+if ( STYLESHEETPATH == TEMPLATEPATH ) {
+	define('OOTHEME_PATH', TEMPLATEPATH . '/');
+	define('OOTHEME_URL', get_bloginfo('template_directory') . '/');
+} else {
+	
+	define('OOTHEME_PATH', STYLESHEETPATH . '/');
+	define('OOTHEME_URL', get_bloginfo('stylesheet_directory') . '/');
+}
+
+require_once OOTHEME_PATH . '/init.php';
+function SearchFilter($query) {
+  if ($query->is_search && !is_admin()) {
+    if (isset($query->query["post_type"])) {
+      $query->set('post_type', $query->query["post_type"]);
+    } else {
+      $query->set('post_type', 'product');
+    }
+  }
+  return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
 //Add thumbnail support
 add_theme_support( 'post-thumbnails' );
 

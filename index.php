@@ -41,7 +41,7 @@
 					?>
 						<li>
 							<a href="<?php echo get_permalink($post->ID); ?>"><div class="sections-slide-overlay"></div></a>
-							<div class="featured-image"><?php echo get_the_post_thumbnail($post->ID, "large"); ?></div>
+							<div class="featured-image"><?php get_nice_image("large"); ?></div>
 						</li>
 					<?php
 							}

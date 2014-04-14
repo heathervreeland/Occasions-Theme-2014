@@ -20,7 +20,10 @@
 		if(sizeof($album_pics) > 0) {
 			// process the gallery images
 			foreach ( $album_pics as $pic ) {
-				$album_images[] = str_replace(array("-75x75", "-170x170", "-300x300"), "", $pic);
+				$string = str_replace(array("-75x75", "-170x170", "-300x300"), "", $pic);
+				$string = explode("?", $string);
+				$string = $string[0];
+				$album_images[] = $string;
 			}
 		}
 		else {
