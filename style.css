@@ -1417,6 +1417,10 @@ text-decoration:underline;
 	z-index: 5;
 }
 
+#single-post-row .post-category-floater {
+	top: -11px;
+}
+
 #single-post-row .post-content {
 	padding: 25px;
 	border: 1px solid #d4d4d4;
@@ -2156,36 +2160,205 @@ footer ul#footer-nav ul li {
 	font-size: 17px;
 }
 
-#vendors-page #vendors-locations {
+#vendors-locations {
 	position: relative;
 	overflow: hidden;
 }
 
-#vendors-page .location-box {
+.location-box {
 	float: left;
 	border: 1px solid #cfcfcf;
 	padding: 25px 25px 25px 60px;
 }
 
-#vendors-page .location-box ul { 
+.location-box ul { 
 	overflow: hidden;
 }
 
-#vendors-page .location-box li { 
+.location-box li { 
 	float: left;
 	width: 170px;
 }
 
-#vendors-page .location-box li a { 
+.location-box li a { 
 	color: #9b9a98;
 	text-transform: uppercase;
 }
 
-#vendors-page .location-box.georgia {
+.location-box.georgia {
 	width: 252px;
 }
 
-#vendors-page .location-box.florida {
+.location-box.florida {
 	margin-left: 22px;
 	width: 448px;
+}
+
+/************************************
+ *
+ * VENDORS IN CITY PAGE
+ *
+ *************************************/
+
+.vendors-city .nice-button {
+	background-color: #000;
+}
+
+.vendors-city .city-map-block {
+	height: 400px;
+	margin: 0 -25px;
+}
+
+.vendors-city .city-map-block .title {
+	height: 82px;
+	margin: 140px 0 50px 0;
+	background: #dff2f0;
+	position: absolute;
+	width: 100%;
+}
+
+.vendors-city .city-map-block .title h1 {
+	width: 390px;
+	padding: 0 20px;
+	float: right;
+	font-family: "Oswald" !important;
+	font-size: 39px !important;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 80px;
+	margin: 0 !important;
+}
+
+.vendors-city .city-map-block img {
+	position: absolute;
+	top: 18px;
+	z-index: 2;
+	left: 40px;
+}
+
+.vendors-city .vendors-city-description {
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	padding: 25px 0;
+	margin-top: 15px !important;
+}
+
+.vendors-city .city-star {
+	background: url("images/star_location.png") no-repeat transparent;
+	width: 24px;
+	height: 23px;
+	position: absolute;
+	z-index: 3;
+	display: none;
+}
+
+.vendors-city .city-star.atlanta {
+	display: block;
+	top: 117px;
+	left: 200px;
+}
+
+.vendors-city .city-star.savannah {
+	display: block;
+	top: 186px;
+	left: 282px;
+}
+
+.vendors-city .city-star.orlando {
+	display: block;
+	top: 279px;
+	left: 295px;
+}
+
+.vendors-city .city-star.tampa {
+	display: block;
+	top: 287px;
+	left: 272px;
+}
+
+.vendors-city .city-star.south-florida {
+	display: block;
+	top: 325px;
+	left: 340px;
+}
+
+.vendors-city .city-star.jacksonville {
+	display: block;
+	top: 221px;
+	left: 281px;
+}
+
+.vendors-city .service-breaker {
+	background: #f4f2f3;
+	border-bottom: 4px solid #000;
+	font-family: "Antic Didone";
+	font-size: 29px;
+	text-align: center;
+	margin: 40px -25px 25px -25px;
+	padding: 9px;
+}
+
+
+.vendors-services-list {
+	overflow: hidden;
+}
+
+.vendors-services-list h1, .vendors-apply h1 {
+	color: #000;
+	text-transform: uppercase;
+	font-size: 25px;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.vendors-apply {
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+.vendors-apply h1 {
+	border-top: 1px solid #ddd;
+}
+
+.vendors-services-list ul {
+	float: left; 
+	width: 335px;
+	font-size: 11px;
+	font-family: "Raleway";
+	list-style-type: none;
+}
+
+.vendors-services-list ul li {
+	list-style: none;
+}
+
+.vendors-services-list ul li a {
+	color: #757575;
+	text-transform: uppercase;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-decoration: none !important;
+}
+
+.vendors-services-list ul li a:hover {
+	color: #47cabe;
+}
+
+.vendors-services-list ul li.service-title {
+	color: #47cabe;
+	margin-top: 15px;
+}
+
+.vendors-services-list ul li.service-title h2 {
+	color: #47cabe;
+	font-size: 22px !important;
+	text-transform: uppercase;
+	text-decoration: none; 
+	padding-top: 10px;
+}
+
+.vendors-services-list ul li.service-title a {
+	color: #47cabe;
+	text-decoration: none;
 }
