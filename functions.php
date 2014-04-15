@@ -473,7 +473,8 @@ function oo_add_rewrite_rules() {
 	global $wp_rewrite;
 	$new_rules = array(
 		/* vendors */
-		'vendors/([\w\d\-]+)/?$' => 'index.php?pagename=vendors-in-city&tag=' . $wp_rewrite->preg_index(1)
+		'vendors/([\w\d\-]+)/?$' => 'index.php?pagename=vendors-in-city&tag=' . $wp_rewrite->preg_index(1),
+		'(florida|georgia)/([\w\d\-]+)-weddings/([\w\d\-]+)/?$' => 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(2) . '&service=' . $wp_rewrite->preg_index(3),
 	);
 
 	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

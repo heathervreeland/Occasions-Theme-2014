@@ -44,7 +44,7 @@ function oo_get_meta($key, $single = true, $post_id = null) {
 	if (null === $post_id) {
 		$post_id = get_the_ID();
 	}
-	$key = 'oo_' . $key;
+	$key = 'flo_' . $key;
 	return get_post_meta($post_id, $key, $single);
 }
 /**

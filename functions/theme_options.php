@@ -31,3 +31,26 @@ function get_state_from_region( $region ) {
     return $state;
 
 }
+
+
+function oo_venue_rating($id = null) {
+    if (null === $id) {
+        $id = get_the_ID();
+    }
+    echo oo_get_venue_rating($id);
+}
+
+function oo_get_venue_rating($id = null) {
+    global $wpdb;
+
+    if (null === $id) {
+        $id = get_the_ID();
+    }
+
+    $sql = 'SELECT ROUND(AVG(meta.meta_value)) FROM ' . $wpdb->comments . ' comments '
+                    . ' INNER JOIN ' . $wpdb->commentmeta . ' meta ON comments.comment_ID = meta.comment_id '
+                    . ' WHERE comment_post_ID=%d AND comment_approved=%d AND meta.meta_key = %s GROUP BY meta.meta_key';
+
+    return $wpdb->get_var($wpdb->prepare($sql, $id, 1, 'rating'));
+
+}
