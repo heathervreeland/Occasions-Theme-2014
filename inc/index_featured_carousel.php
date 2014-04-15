@@ -57,7 +57,7 @@
 					<li class="<?php echo $post_cat_slug; ?>">
 						<div class="featured-meta">
 							<div class="container">
-								<a href="#" class="nice-button">View Article</a>
+								<a href="<?php the_permalink(); ?>" class="nice-button">View Article</a>
 								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></a></h1>
 							</div>
 						</div>
