@@ -72,6 +72,12 @@
 
 
 						<?php endwhile; ?>
+
+
+					<?php 
+						pagination();
+					 ?>
+						
 					</div>
 
 				</div>
