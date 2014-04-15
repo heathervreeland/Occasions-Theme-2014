@@ -464,6 +464,26 @@ if ( ! function_exists("get_nice_image") ) {
 }
 
 
+/*****************************
+	CUSTOM REWRITE RULES     *
+******************************/
+
+
+function oo_add_rewrite_rules() {
+	global $wp_rewrite;
+	$new_rules = array(
+		/* vendors */
+		'vendors/([\w\d\-]+)/?$' => 'index.php?pagename=vendors-in-city&tag=' . $wp_rewrite->preg_index(1)
+	);
+
+	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+	
+}
+add_action( 'generate_rewrite_rules', 'oo_add_rewrite_rules' );
+
+
+
+
 /**
  * Comment callback function 
  * @param object $comment
@@ -492,5 +512,7 @@ function oo_comment($comment, $args, $depth) {
 
 
 ?>
+
+
 
 

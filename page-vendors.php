@@ -4,7 +4,7 @@
 Template Name: Vendors
 */
 
- get_header(); ?>
+ 	get_header(); ?>
 
 <div class="row" id="vendors-page">
 	<?php if(have_posts()) : ?>
@@ -66,18 +66,18 @@ Template Name: Vendors
 						<div class="location-box georgia">
 							<h2>Georgia</h2>
 							<ul>
-								<li><a href="#">Atlanta</a></li>
-								<li><a href="#">Savannah</a></li>
+								<li><a href="/vendors/atlanta">Atlanta</a></li>
+								<li><a href="/vendors/savannah">Savannah</a></li>
 							</ul>
 						</div>
 
 						<div class="location-box florida">
 							<h2>Florida</h2>
 							<ul>
-								<li><a href="#">Orlando</a></li>
-								<li><a href="#">Tampa</a></li>
-								<li><a href="#">South Florida</a></li>
-								<li><a href="#">Jacksonville</a></li>
+								<li><a href="/vendors/orlando">Orlando</a></li>
+								<li><a href="/vendors/tampa">Tampa</a></li>
+								<li><a href="/vendors/south-florida">South Florida</a></li>
+								<li><a href="/vendors/jacksonville">Jacksonville</a></li>
 							</ul>
 						</div>
 
