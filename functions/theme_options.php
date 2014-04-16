@@ -54,3 +54,39 @@ function oo_get_venue_rating($id = null) {
     return $wpdb->get_var($wpdb->prepare($sql, $id, 1, 'rating'));
 
 }
+
+
+function get_events_for_region($region, $limit = 5) {
+
+    return new WP_Query(array(
+        'posts_per_page'    => $limit,
+        'post_type'         => 'event',
+        'tax_query'         => array(
+            array(
+                'taxonomy'  => 'region',
+                'field'     => 'slug',
+                'terms'     => $region->slug,
+            ),
+        ),
+        'ignore_filter_changes' => true,
+        'norewrite'         => true,
+    ));
+
+}
+
+
+/********************
+*
+* EVENT STUFF
+*
+*********************/
+
+
+function oo_get_event_date($type = 'start', $format = 'F d, Y', $id = null) {
+    if (null === $id) {
+        $id = get_the_ID();
+    }
+    $date = oo_get_meta($type . '_date', true, $id);
+
+    return date($format, strtotime($date));
+}

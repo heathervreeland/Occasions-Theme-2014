@@ -74,13 +74,59 @@
 						<?php endwhile; ?>
 
 
-					<?php 
-						pagination();
-					 ?>
-						
+						<?php 
+							pagination();
+						 ?>
+
 					</div>
 
 				</div>
+
+
+				<?php
+					$events = get_events_for_region($city, 4);
+					if ($events->have_posts()) : 
+				?>
+
+					<div class="section-breaker">
+						Events in <?php echo $city->name; ?>
+					</div>
+
+					<ul class="event-display-list">
+					<?php while($events->have_posts()): $events->the_post(); ?>
+						<li>
+							<div class="image">
+								<?php
+									get_nice_image("small");
+								?>
+							</div>
+							<a href="<?php the_permalink() ?>">
+								<span class="title"><?php the_title(); ?></span>
+								<time datetime="<?php the_time('Y-m-d'); ?>"><?php echo oo_get_event_date() ?></time>
+							</a>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+
+					<div class="button-separator">
+						<a href="#" class="nice-button">View More</a>
+					</div>
+
+				<?php endif; ?>
+
+
+				<div class="section-breaker">
+					Venues in <?php echo $city->name; ?>
+				</div>
+
+				<?php oo_part("venues-menu"); ?>
+
+				<div class="section-breaker">
+					Services in <?php echo $city->name; ?>
+				</div>
+
+				<?php oo_part("services-menu"); ?>
+
 
 			</section>
 
