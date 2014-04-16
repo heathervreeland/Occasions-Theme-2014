@@ -134,7 +134,7 @@
 				'show_names'=> false,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_upgrade_type',
+						'id'   => 'flo_upgrade_type',
 						'type' => 'select',
 						'options' => array(
 							array(
@@ -150,7 +150,7 @@
 		            array(
 		                'name' => 'Upgraded until',
 		                'desc' => 'upgraded until',
-		                'id'   => 'oo_upgrade_until',
+		                'id'   => 'flo_upgrade_until',
 		                'type' => 'text_date_timestamp',
 		            ),				
 				),
@@ -164,12 +164,12 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_website',
+						'id'   => 'flo_website',
 						'type' => 'text',
 						'name' => 'Website',
 					),
 					array(
-						'id'   => 'oo_blog',
+						'id'   => 'flo_blog',
 						'type' => 'text',
 						'name' => 'Blog',
 					),
@@ -184,25 +184,25 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_short_info',
+						'id'   => 'flo_short_info',
 						'type' => 'textarea_small',
 						'name' => 'Short Information',
 					),
 					array(
-						'id'   => 'oo_description',
+						'id'   => 'flo_description',
 						'type' => 'wysiwyg',
 						'name' => 'Profile Description',
 						'desc' => 'Use this area to describe your services or business.',
 					),
 					array(
-						'id'   => 'oo_promo',
+						'id'   => 'flo_promo',
 						'type' => 'wysiwyg',
 						'name' => 'Promotional Offer',
 						'desc' => 'Enter an optional promotional offer or incentive you are currently offering. It is helpful for determining the effectiveness of your profile if you ask the client to mention Occasions Magazine when inquiring about your offer.',
 					),
 
 					array(
-						'id'   => 'oo_video_url',
+						'id'   => 'flo_video_url',
 						'type' => 'text',
 						'name' => 'Video URL',
 					),
@@ -217,27 +217,27 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_facebook',
+						'id'   => 'flo_facebook',
 						'type' => 'text',
 						'name' => 'Facebook',
 					),
 					array(
-						'id'   => 'oo_twitter',
+						'id'   => 'flo_twitter',
 						'type' => 'text',
 						'name' => 'Twitter',
 					),
 					array(
-						'id'   => 'oo_tumblr',
+						'id'   => 'flo_tumblr',
 						'type' => 'text',
 						'name' => 'Tumblr',
 					),
 					array(
-						'id'   => 'oo_vimeo',
+						'id'   => 'flo_vimeo',
 						'type' => 'text',
 						'name' => 'Vimeo',
 					),
 					array(
-						'id'   => 'oo_youtube',
+						'id'   => 'flo_youtube',
 						'type' => 'text',
 						'name' => 'Youtube',
 					),
@@ -252,7 +252,7 @@
 				'show_names'=> false,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_preview_image',
+						'id'   => 'flo_preview_image',
 						'type' => 'file',
 						'desc' => 'Image is used in preview listings',
 					),
@@ -268,107 +268,107 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_contact_name',
+						'id'   => 'flo_contact_name',
 						'type' => 'text',
 						'name' => 'Contact Name',
 					),
 					array(
-						'id'   => 'oo_contact_title',
+						'id'   => 'flo_contact_title',
 						'type' => 'text',
 						'name' => 'Contact Title',
 					),
 					array(
-						'id'   => 'oo_contact_email',
+						'id'   => 'flo_contact_email',
 						'type' => 'text',
 						'name' => 'Contact Email',
 						'desc' => 'ex. "name@domain.com"',
 					),
 					array(
-						'id'   => 'oo_contact_address_title',
+						'id'   => 'flo_contact_address_title',
 						'type' => 'title',
 						'name' => 'Address',
 					),
 					array(
-						'id'   => 'oo_contact_address_show',
+						'id'   => 'flo_contact_address_show',
 						'type' => 'checkbox',
 						'name' => 'Show Address in Profile',
 						'desc' => 'If checked, the address you specify below will appear in your public profile.',
 					),
 					array(
-						'id'   => 'oo_contact_address',
+						'id'   => 'flo_contact_address',
 						'type' => 'text',
 						'name' => 'Address',
 					),
 					array(
-						'id'   => 'oo_contact_address_city',
+						'id'   => 'flo_contact_address_city',
 						'type' => 'text',
 						'name' => 'City',
 					),
 					array(
-						'id'   => 'oo_contact_address_state',
+						'id'   => 'flo_contact_address_state',
 						'type' => 'text_small',
 						'name' => 'State',
 					),
 					array(
-						'id'   => 'oo_contact_address_zip',
+						'id'   => 'flo_contact_address_zip',
 						'type' => 'text_small',
 						'name' => 'Zip Code',
 					),
 					array(
-						'id'   => 'oo_contact_address_county',
+						'id'   => 'flo_contact_address_county',
 						'type' => 'text',
 						'name' => 'County',
 					),
 
 					array(
-						'id'   => 'oo_contact_address_travel_policy',
+						'id'   => 'flo_contact_address_travel_policy',
 						'type' => 'select',
 						'name' => 'Travel Policy',
 						'options' => oo_travel_policies(),
 					),
 
 					array(
-						'id'   => 'oo_contact_address_phone1',
+						'id'   => 'flo_contact_address_phone1',
 						'type' => 'text',
 						'name' => 'Phone 1',
 					),
 					array(
-						'id'   => 'oo_contact_address_phone1_type',
+						'id'   => 'flo_contact_address_phone1_type',
 						'type' => 'select',
 						'name' => 'Phone 1 Type',
 						'options' => oo_phone_types(),
 					),
 
 					array(
-						'id'   => 'oo_contact_address_phone2',
+						'id'   => 'flo_contact_address_phone2',
 						'type' => 'text',
 						'name' => 'Phone 2',
 					),
 					array(
-						'id'   => 'oo_contact_address_phone2_type',
+						'id'   => 'flo_contact_address_phone2_type',
 						'type' => 'select',
 						'name' => 'Phone 2 Type',
 						'options' => oo_phone_types(),
 					),
 
 					array(
-						'id'   => 'oo_contact_address_phone3',
+						'id'   => 'flo_contact_address_phone3',
 						'type' => 'text',
 						'name' => 'Phone 3',
 					),
 					array(
-						'id'   => 'oo_contact_address_phone3_type',
+						'id'   => 'flo_contact_address_phone3_type',
 						'type' => 'select',
 						'name' => 'Phone 3 Type',
 						'options' => oo_phone_types(),
 					),
 					array(
-						'id'   => 'oo_contact_qr_title',
+						'id'   => 'flo_contact_qr_title',
 						'type' => 'title',
 						'name' => 'QR code',
 					),
 					array(
-						'id'   => 'oo_contact_qr_content',
+						'id'   => 'flo_contact_qr_content',
 						'type' => 'title',
 						'name' => oo_qr_codes(),
 					),				
@@ -386,49 +386,49 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_additional_spaces',
+						'id'   => 'flo_additional_spaces',
 						'type' => 'text_small',
 						'name' => 'Number of Spaces Available',
 						'desc' => 'Enter the number of spaces your venue has available.',
 					),
 					array(
-						'id'   => 'oo_additional_capacity',
+						'id'   => 'flo_additional_capacity',
 						'type' => 'text_small',
 						'name' => 'Capacity',
 						'desc' => 'Enter the service capacity for your venue(s).',
 					),
 					array(
-						'id'   => 'oo_additional_footage',
+						'id'   => 'flo_additional_footage',
 						'type' => 'text_small',
 						'name' => 'Square Footage',
 						'desc' => 'Enter the square footage of your venue(s).',
 					),
 					array(
-						'id'   => 'oo_additional_cathering',
+						'id'   => 'flo_additional_cathering',
 						'type' => 'text',
 						'name' => 'Catering Policy',
 						'desc' => 'Enter your venue(s) catering policy.',
 					),
 					array(
-						'id'   => 'oo_additional_alcohool',
+						'id'   => 'flo_additional_alcohool',
 						'type' => 'checkbox',
 						'name' => 'Alcohol Policy',
 						'desc' => 'Yes, outside alcohol vendors are permitted.',
 					),
 					array(
-						'id'   => 'oo_additional_accomodations',
+						'id'   => 'flo_additional_accomodations',
 						'type' => 'checkbox',
 						'name' => 'Onsite Accommodations',
 						'desc' => 'Yes, onsite accommodations are available at this venue',
 					),
 					array(
-						'id'   => 'oo_additional_handicap',
+						'id'   => 'flo_additional_handicap',
 						'type' => 'checkbox',
 						'name' => 'Handicap Accessible',
 						'desc' => 'Yes, this venue is handicap accessible',
 					),
 					array(
-						'id'   => 'oo_additional_accepted_payments',
+						'id'   => 'flo_additional_accepted_payments',
 						'type' => 'multicheck',
 						'name' => 'Payment Acceptance',
 						'desc' => 'Check all forms of payment you accept for service.',
@@ -447,22 +447,22 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_info',
+						'id'   => 'flo_info',
 						'type' => 'textarea_small',
 						'name' => 'Issue Information',
 					),
 					array(
-						'id'   => 'oo_region',
+						'id'   => 'flo_region',
 						'type' => 'text',
 						'name' => 'Issue Region',
 					),
 					array(
-						'id'   => 'oo_premier',
+						'id'   => 'flo_premier',
 						'type' => 'checkbox',
 						'name' => 'Premier Issue',
 					),
 					array(
-						'id'   => 'oo_soldout',
+						'id'   => 'flo_soldout',
 						'type' => 'checkbox',
 						'name' => 'Sold Out',
 					),
@@ -477,13 +477,13 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_single',
+						'id'   => 'flo_single',
 						'type' => 'text',
 						'name' => 'Single Product ID',
 						'desc' => 'You can find your Product ID <a href="' . admin_url('/admin.php?page=cart66-products') .'" target="_blank">here</a>',
 					),
 					array(
-						'id'   => 'oo_box',
+						'id'   => 'flo_box',
 						'type' => 'text',
 						'name' => 'Box Product ID',
 						'desc' => 'You can find your Product ID <a href="' . admin_url('/admin.php?page=cart66-products') .'" target="_blank">here</a>',
@@ -501,62 +501,62 @@
 				'show_names'=> true,
 				'fields'	=> array(
 					array(
-						'id'   => 'oo_start_date',
+						'id'   => 'flo_start_date',
 						'type' => 'text_date',
 						'name' => 'Start Date',
 					),
 					array(
-						'id'   => 'oo_end_date',
+						'id'   => 'flo_end_date',
 						'type' => 'text_date',
 						'name' => 'End Date',
 					),
 					array(
-						'id'   => 'oo_hours',
+						'id'   => 'flo_hours',
 						'type' => 'text_small',
 						'name' => 'Hours',
 					),
 					array(
-						'id'   => 'oo_cost',
+						'id'   => 'flo_cost',
 						'type' => 'text_small',
 						'name' => 'Event Cost',
 					),
 					array(
-						'id'   => 'oo_phone',
+						'id'   => 'flo_phone',
 						'type' => 'text',
 						'name' => 'Phone Number',
 					),
 					array(
-						'id'   => 'oo_event_location',
+						'id'   => 'flo_event_location',
 						'type' => 'text',
 						'name' => 'Location',
 					),
 					array(
-						'id'   => 'oo_event_address',
+						'id'   => 'flo_event_address',
 						'type' => 'text',
 						'name' => 'Address',
 					),
 					array(
-						'id'   => 'oo_event_address_city',
+						'id'   => 'flo_event_address_city',
 						'type' => 'text',
 						'name' => 'City',
 					),
 					array(
-						'id'   => 'oo_event_address_state',
+						'id'   => 'flo_event_address_state',
 						'type' => 'text_small',
 						'name' => 'State',
 					),
 					array(
-						'id'   => 'oo_event_address_zip',
+						'id'   => 'flo_event_address_zip',
 						'type' => 'text_small',
 						'name' => 'Zip Code',
 					),
 					array(
-						'id'   => 'oo_more_url',
+						'id'   => 'flo_more_url',
 						'type' => 'text',
 						'name' => 'More Information URL',
 					),
 					array(
-						'id'   => 'oo_description',
+						'id'   => 'flo_description',
 						'type' => 'textarea',
 						'name' => 'Event Description',
 					),
@@ -572,7 +572,7 @@
 				'show_names'=> false,
 				'fields'	=> array(
 					array(
-						'id'   		=> 'oo_author',
+						'id'   		=> 'flo_author',
 						'type' 		=> 'select',
 						'options'	=> oo_metabox_vendors_select(),
 					),
