@@ -253,7 +253,6 @@
 											</dt>
 											<dd>
 												<?php
-												var_dump(oo_get_meta('additional_accepted_payments', false));
 													if (sizeof(oo_get_meta('additional_accepted_payments', false)) == 0) { echo "-"; }
 													foreach (oo_get_meta('additional_accepted_payments', false) as $payment): ?>
 													<span>
