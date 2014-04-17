@@ -154,7 +154,7 @@
 												Spaces Available
 											</dt>
 											<dd>
-												<?php 	if (!empty(oo_get_meta('additional_spaces'))) {
+												<?php 	if (oo_get_meta('additional_spaces') != '') {
 															oo_meta('additional_spaces');
 														}
 														else {
@@ -168,7 +168,7 @@
 												Capacity
 											</dt>
 											<dd>
-												<?php 	if (!empty(oo_get_meta('additional_capacity'))) {
+												<?php 	if (oo_get_meta('additional_capacity') != '') {
 															oo_meta('additional_capacity');
 														}
 														else {
@@ -182,7 +182,7 @@
 												Square Footage
 											</dt>
 											<dd>
-												<?php 	if (!empty(oo_get_meta('additional_footage'))) {
+												<?php 	if (oo_get_meta('additional_footage') != '') {
 															oo_meta('additional_footage');
 														}
 														else {
@@ -196,7 +196,7 @@
 												Catering Policy
 											</dt>
 											<dd>
-												<?php 	if (!empty(oo_get_meta('additional_cathering'))) {
+												<?php 	if (oo_get_meta('additional_cathering') != '') {
 															oo_meta('additional_cathering');
 														}
 														else {
