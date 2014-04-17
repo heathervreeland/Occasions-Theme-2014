@@ -3,6 +3,8 @@
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) {
 		die ('Please do not load this page directly. Thanks!');
 	}
+	$type = get_post_type();
+	$comment_type = $type == 'venue' ? "Review" : "Comment";
 ?>
 <a name="comments"></a>
 <section class="comments">
@@ -11,18 +13,18 @@
 	<?php
 	return; endif; ?>
 	<header class="comments-head cf">
-		<h2><?php printf(_n('One Comment', '%1$s Comments', get_comments_number(), 'oo_theme'), number_format_i18n(get_comments_number())); ?></h2>	
+		<h2><?php printf(_n('One ' . $comment_type , '%1$s ' . $comment_type  . 's', get_comments_number(), 'oo_theme'), number_format_i18n(get_comments_number())); ?></h2>	
 	</header>
 	<?php if (have_comments()) : ?>
 		<ol class="commentlist">
 			<?php wp_list_comments(array('callback' => 'oo_comment', 'max_depth' => 2)); ?>
 		</ol>
 		<?php if (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-			<p class="comments-closed"><?php _e('Comments are closed.', 'oo_theme'); ?></p>
+			<p class="comments-closed"><?php _e($comment_type . 's are closed.', 'oo_theme'); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
 	<?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-		<p class="comments-closed"><?php _e('Comments are closed.', 'oo_theme'); ?></p>
+		<p class="comments-closed"><?php _e($comment_type . 's are closed.', 'oo_theme'); ?></p>
 	<?php endif; ?>
 </section>
 <?php if (comments_open()) : ?>
@@ -38,7 +40,7 @@
 			<div class="section-divider">
 				<div class="line"></div>
 				<span class="before">&#8226;</span>
-				<span class="heading">Leave a Comment</span>
+				<span class="heading">Leave a <?php echo $comment_type; ?></span>
 				<span class="after">&#8226;</span>
 			</div>	
 			<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="comment-form">
@@ -75,7 +77,7 @@
 
 				<?php comment_id_fields(); ?>
 
-				<input name="submit" class="submit nice-button" type="submit" tabindex="5" value="<?php _e('Submit Comment', 'oo_theme'); ?>" />
+				<input name="submit" class="submit nice-button" type="submit" tabindex="5" value="<?php _e('Submit ' . $comment_type , 'oo_theme'); ?>" />
 
 			</form>
 		<?php endif; // if registration required and not logged in ?>

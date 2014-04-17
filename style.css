@@ -2606,6 +2606,202 @@ footer ul#footer-nav ul li {
 }
 
 
+/************************************
+ *
+ * VENUE PROFILE PAGE
+ *
+ *************************************/
+
+#venue .post-content h1.title {
+	margin-top: 20px !important;
+	margin-bottom: 0 !important;
+}
+
+#venue .post-meta address {
+	color: #afa4cf;
+	font-family: "Oswald";
+	font-size: 16px;
+	font-weight: 300;	
+	margin-bottom: 5px !important;
+}
+
+#venue .post-meta .nice-button {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+
+#venue .post-meta .contact {
+	color: #acacac;
+	font-family: "Oswald";
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 30px !important;
+}
+
+#venue .post-meta .phone, #venue .post-meta .email {
+	padding: 0 6px;
+}
+
+.venue-share {
+	text-align: center;
+	border-top: 1px solid #cfcfcf;
+	padding: 12px;
+	font-family: "Oswald";
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: 300;
+	color: #000;
+}
+
+.venue-share a {
+	background: url("images/social_media_icons.png") no-repeat;
+	width: 27px;
+	height: 27px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-top: -7px;
+	margin-left: 5px;
+}
+
+.venue-share a:first-child {
+	margin-left: 15px;
+}
+
+.venue-share .facebook {
+	background-position: 0 -54px;
+}
+
+.venue-share .twitter {
+	background-position: -27px -54px;
+}
+
+.venue-share .pinterest {
+	background-position: -54px -54px;
+}
+
+.venue-share .rss {
+	background-position: -81px -54px;
+}
+
+.venue-share.after-story {
+	margin-top: 55px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+#venue .vendor-list-block {
+	border-bottom: 0;
+	margin-bottom: 20px;
+}
+
+#venue .vendor-list-block .detail {
+	width: 436px;
+}
+
+#venue .vendor-list-block .detail .descr {
+	margin-top: 0;
+}
+
+#venue .post-content .border-line {
+	margin-bottom: 24px;
+}
+
+#venue-gallery ul.slides {
+	border: 1px solid #e0e0e0;
+	background: #f5f5f5;
+	height: 400px;
+	overflow: hidden;
+}
+
+#venue-gallery figure {
+	margin: 10px;
+	overflow: hidden;
+}
+
+#venue-gallery figure img {
+	margin-bottom: 0 !important;
+	max-height: 380px;
+}
+
+#venue-gallery .flex-direction-nav {
+	z-index: 10;
+	bottom: -60px !important;
+}
+
+#venue-gallery .flex-next, #venue-gallery .flex-prev  {
+	display: block;
+	font-family: "Oswald";
+	color: #000 !important;
+	font-size: 15px;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 23px;
+	height: 40px;
+}
+
+#venue-gallery .flex-next {
+	background-image: url("images/parrow_next.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
+	padding-right: 19px;
+}
+
+#venue-gallery .flex-prev {
+	background-image: url("images/parrow_previous.png");
+	background-repeat: no-repeat;
+	background-position: left 0;
+	padding-left: 19px;
+}
+
+#venue-information {
+	font-size: 16px;
+}
+
+#venue-information {
+	font-family: "Oswald";
+	font-size: 16px;
+}
+
+#venue-information .service dl {
+	margin: 0 -25px;
+	overflow: hidden;
+	font: 600 14px 'Raleway', sans-serif;
+	color: #2a2b2c;
+}
+
+#venue-information .service dr {
+	background: #f4f2f3;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#venue-information .service dl dr:nth-child(odd) {
+	padding-top: 10px;
+}
+
+#venue-information .service dl dr:nth-child(even) {
+	background: #fff;
+}
+
+#venue-information .service dl dt, #venue-information .service dl dd {
+	float: left;
+	width: 50%;
+	height: 30px;
+}
+
+#venue-information .service dl dt {
+	padding-left: 25px;
+	clear: both;
+}
+
+#venue-information .service dl dd {
+	padding-right: 25px;
+	font-weight: 300;
+}
+
+
 /* FlexSlider Necessary Styles
 *********************************/
 .flexslider {
@@ -2770,8 +2966,6 @@ html[xmlns] .slides {
   height: 12px;
   text-transform: uppercase;
   color: #2a2b2c;
-  background-image: url(../img/arrows-green-h.png);
-  background-repeat: no-repeat;
 }
 .gallery .flex-prev:hover,
 .gallery .flex-next:hover {
@@ -2782,12 +2976,18 @@ html[xmlns] .slides {
   background-position: 0 50%;
   float: left;
   margin-left: 20px;
+  background-image: url("images/parrow_previous.png");
+	background-repeat: no-repeat;
+	background-position: left 0;
 }
 .gallery .flex-next {
   padding-right: 10px;
   background-position: 100% 50%;
   float: right;
   margin-right: 20px;
+  background-image: url("images/parrow_next.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 .gallery-image {
   position: relative;

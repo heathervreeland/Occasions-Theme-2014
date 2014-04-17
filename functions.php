@@ -441,6 +441,39 @@ if ( ! function_exists("get_prev_next_post_links") ) {
 	}
 }
 
+if ( ! function_exists("get_prev_next_venue_links") ) {
+	function get_prev_next_venue_links() {
+		global $wp_query;
+			
+		$prev = be_previous_post_link('<li class="prev">%link</li>', 'Prev Vendor', true, '', array('region', 'venue-type'), false);
+		$next = be_next_post_link('<li class="next">%link</li>', 'Next Vendor', true, '', array('region', 'venue-type'), false);
+
+
+		echo '<div class="prev_next_links">';
+		if($prev)
+			echo '	<a href="' . $prev["link"] . '">
+						<div class="prev-post">
+							<h2>Previous Venue</h2>
+							<span>' . $prev["title"] . '</span>
+						</div>
+					</a>
+				';
+		if($next)
+			echo '  <a href="' . $next["link"] . '">
+						<div class="next-post ' . $both . '">
+							<h2>Next Venue</h2>
+							<span>' . $next["title"] . '</span>
+						</div>
+					</a>
+				';
+		echo '</div>';
+
+		// return array('previous' => empty($prevpost) ? null : $prevpost, 'next' => empty($nextpost) ? null : $nextpost );
+
+	}
+}
+
+
 if ( ! function_exists("get_nice_image") ) {
 	function get_nice_image($size) {
 		if(get_the_post_thumbnail() != '') {
