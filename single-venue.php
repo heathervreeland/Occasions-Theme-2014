@@ -172,7 +172,7 @@
 															oo_meta('additional_capacity');
 														}
 														else {
-															"-";														}
+															"-";
 														}
 												?>
 											</dd>
