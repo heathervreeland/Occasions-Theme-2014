@@ -242,7 +242,7 @@
 															echo "Yes";
 														}
 														else {
-															echo "No";														}
+															echo "No";
 														}
 												?>
 											</dd>
