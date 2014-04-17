@@ -154,7 +154,13 @@
 												Spaces Available
 											</dt>
 											<dd>
-												<?php echo !empty(oo_get_meta('additional_spaces')) ? oo_meta('additional_spaces') : "-"; ?>
+												<?php 	if (!empty(oo_get_meta('additional_spaces'))) {
+															oo_meta('additional_spaces');
+														}
+														else {
+															"-";
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -162,7 +168,13 @@
 												Capacity
 											</dt>
 											<dd>
-												<?php echo !empty(oo_get_meta('additional_capacity')) ? oo_meta('additional_capacity') : "-"; ?>
+												<?php 	if (!empty(oo_get_meta('additional_capacity'))) {
+															oo_meta('additional_capacity');
+														}
+														else {
+															"-";														}
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -170,7 +182,13 @@
 												Square Footage
 											</dt>
 											<dd>
-												<?php echo !empty(oo_get_meta('additional_footage')) ? oo_meta('additional_footage') : "-"; ?>
+												<?php 	if (!empty(oo_get_meta('additional_footage'))) {
+															oo_meta('additional_footage');
+														}
+														else {
+															"-";
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -178,7 +196,13 @@
 												Catering Policy
 											</dt>
 											<dd>
-												<?php echo !empty(oo_get_meta('additional_cathering')) ? oo_meta('additional_cathering') : "-"; ?>
+												<?php 	if (!empty(oo_get_meta('additional_cathering'))) {
+															oo_meta('additional_cathering');
+														}
+														else {
+															echo "-";
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -186,7 +210,13 @@
 												Alcohol Policy
 											</dt>
 											<dd>
-												<?php echo oo_get_meta('additional_alcohool') ? 'Yes, outside alcohol vendors are permitted' : 'No' ?>
+												<?php 	if (oo_get_meta('additional_alcohool')) {
+															echo "Yes, outside alcohol vendors are permitted";
+														}
+														else {
+															echo "No";	
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -194,7 +224,13 @@
 												Onsite Accommodations
 											</dt>
 											<dd>
-												<?php echo oo_get_meta('additional_accomodations') ? 'Yes' : 'No' ?>
+												<?php 	if (oo_get_meta('additional_accomodations')) {
+															echo "Yes";
+														}
+														else {
+															echo "No";	
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
@@ -202,7 +238,13 @@
 												Handicap Accessible
 											</dt>
 											<dd>
-												<?php echo oo_get_meta('additional_handicap') ? 'Yes' : 'No' ?>
+												<?php 	if (oo_get_meta('additional_handicap')) {
+															echo "Yes";
+														}
+														else {
+															echo "No";														}
+														}
+												?>
 											</dd>
 										</dr>
 										<dr>
