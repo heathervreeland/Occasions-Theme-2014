@@ -109,7 +109,7 @@
 					</ul>
 
 					<div class="button-separator">
-						<a href="#" class="nice-button">View More</a>
+						<a href="/<?php echo $state->slug . "/" . $city->slug; ?>/events" class="nice-button">View More</a>
 					</div>
 
 				<?php endif; ?>

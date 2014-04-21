@@ -15,9 +15,14 @@
 
 		<p id="breadcrumbs">
 			<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a></span> • 
-			<span typeof="v:Breadcrumb"><a href="/vendors" rel="v:url" property="v:title">Vendors &amp; Venues</a></span> • 
-			<span typeof="v:Breadcrumb"><a href="/vendors/<?php echo $city->slug; ?>" rel="v:url" property="v:title"><?php echo $city->name; ?></a></span> • 
-			<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title"><?php echo $city->name . " " . $service->name; ?></span></span>
+			<?php if ( $city->parent) { ?>
+				<span typeof="v:Breadcrumb"><a href="/<?php echo $state->slug; ?>/events" rel="v:url" property="v:title"><?php echo $state->name; ?></a></span> • 
+				<span typeof="v:Breadcrumb"><a href="/<?php echo $state->slug; ?>/<?php echo $city->slug; ?>/events" rel="v:url" property="v:title"><?php echo $city->name; ?></a></span> • 
+				<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">Events</span></span>
+			<?php } else { ?>
+				<span typeof="v:Breadcrumb"><a href="/<?php echo $state->slug; ?>/events" rel="v:url" property="v:title"><?php echo $state->name; ?></a></span> • 
+				<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">Events</span></span>
+			<?php } ?>
 		</p>
 
 
