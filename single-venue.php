@@ -17,6 +17,8 @@
 
 				$city = oo_get_venue_city();
 				$service = oo_get_venue_service();
+				$state = get_state_from_region($city);
+
 
 				add_filter('the_content','wrap_image_credits', 20);
 			?>
@@ -25,7 +27,7 @@
 				<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a></span> • 
 				<span typeof="v:Breadcrumb"><a href="/vendors" rel="v:url" property="v:title">Vendors &amp; Venues</a></span> • 
 				<span typeof="v:Breadcrumb"><a href="/vendors/<?php echo $city->slug; ?>" rel="v:url" property="v:title"><?php echo $city->name; ?></a></span> • 
-				<span typeof="v:Breadcrumb"><a href="/vendors/<?php echo $city->slug; ?>-weddings/<?php echo $service->slug;?>" rel="v:url" property="v:title"><?php echo $city->name . " " . $service->name; ?></a></span> • 
+				<span typeof="v:Breadcrumb"><a href="/<?php echo $state->slug; ?>/<?php echo $city->slug; ?>-weddings/<?php echo $service->slug;?>" rel="v:url" property="v:title"><?php echo $city->name . " " . $service->name; ?></a></span> • 
 				<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title"><?php the_title() ?></span></span>
 			</p>
 
