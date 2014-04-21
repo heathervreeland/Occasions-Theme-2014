@@ -370,3 +370,113 @@ function oo_metabox_vendors_select() {
 }
 
 
+/* Review functions */
+
+
+
+function oo_additional_fields () {
+    echo '<p class="comment-form-title">'.
+    '<label for="title">' . __( 'Comment Title' ) . '</label>'.
+    '<input id="title" name="title" type="text" size="30"  tabindex="5" /></p>';
+
+    echo '<p class="comment-form-rating">'.
+    '<label for="rating">'. __('Rating') . '<span class="required">*</span></label>
+    <span class="commentratingbox">';
+
+        //Current rating scale is 1 to 5. If you want the scale to be 1 to 10, then set the value of $i to 10.
+        for( $i=1; $i <= 5; $i++ )
+        echo '<span class="commentrating"><input type="radio" name="rating" id="rating" value="'. $i .'"/>'. $i .'</span>';
+
+    echo'</span></p>';
+
+}
+
+
+
+
+// Save the review rating
+add_action( 'comment_post', 'oo_save_review_meta_data' );
+function oo_save_review_meta_data($comment_id) {
+    if (isset( $_POST['rating']) && $_POST['rating'] != '') {
+        $rating = (int) $_POST['rating'];
+        if ($rating > 5 || $rating < 1) {
+            $rating = 5;
+        }
+        add_comment_meta($comment_id, 'rating', $rating);
+    }
+}
+
+
+
+
+
+// Review callback
+function ootheme_review($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment; ?>
+
+    <li <?php comment_class(); ?> data-comment-id="<?php echo $comment->comment_ID?>">
+        <div id="review-<?php comment_ID(); ?>" class="comment-container">
+            <header class="review-author comment-author vcard cf">
+                <?php printf(__('<cite class="fn">%s</cite>', 'flotheme'), get_comment_author_link()); ?>
+                <span class="stars stars<?php echo get_comment_meta($comment->comment_ID, 'rating', true) ?>"></span>
+                <time datetime="<?php echo comment_date('Y-m-d'); ?>"><?php printf(__('Posted on %1$s', 'flotheme'), get_comment_date(),  get_comment_time()); ?></time>
+                <?php edit_comment_link(__('(Edit)', 'flotheme'), '', ''); ?>
+            </header>
+            <?php if ($comment->comment_approved == '0') : ?>
+                <p class="waiting"><?php _e('Your comment is awaiting moderation.', 'flotheme'); ?></p>
+            <?php endif; ?>
+            <section class="comment-body"><?php comment_text() ?></section>
+        </div>
+    </li>    
+<?}
+
+
+// Add an edit option to comment editing screen
+add_action( 'add_meta_boxes_comment', 'oo_extend_comment_add_meta_box' );
+function oo_extend_comment_add_meta_box() {
+    add_meta_box( 'title', __( 'Review Ratings' ), 'oo_extend_comment_meta_box', 'comment', 'normal', 'high' );
+}
+
+function oo_extend_comment_meta_box ( $comment ) {
+    $rating = get_comment_meta( $comment->comment_ID, 'rating', true );
+    wp_nonce_field( 'extend_comment_update', 'extend_comment_update', false );
+    ?>
+    <p>
+        <label for="rating"><?php _e( 'Rating: ' ); ?></label>
+            <span class="commentratingbox">
+            <?php for( $i=1; $i <= 5; $i++ ) {
+                echo '<span class="commentrating"><input type="radio" name="rating" id="rating" value="'. $i .'"';
+                if ( $rating == $i ) echo ' checked="checked"';
+                echo ' />'. $i .' </span>';
+                }
+            ?>
+            </span>
+    </p>
+    <?php
+}
+
+// Update comment meta data from comment editing screen
+add_action( 'edit_comment', 'oo_extend_comment_edit_metafields' );
+function oo_extend_comment_edit_metafields( $comment_id ) {
+    if( ! isset( $_POST['extend_comment_update'] ) || ! wp_verify_nonce( $_POST['extend_comment_update'], 'extend_comment_update' ) ) return;
+
+    if ( ( isset( $_POST['rating'] ) ) && ( $_POST['rating'] != '') ):
+    $rating = wp_filter_nohtml_kses($_POST['rating']);
+    update_comment_meta( $comment_id, 'rating', $rating );
+    else :
+    delete_comment_meta( $comment_id, 'rating');
+    endif;
+
+}
+
+// Add the filter to check whether the comment meta data has been filled
+
+add_filter( 'preprocess_comment', 'oo_verify_comment_meta_data' );
+function oo_verify_comment_meta_data( $commentdata ) {
+    global $post;
+    if ( ! isset( $_POST['rating'] ) && get_post_type($post->ID) == 'venue' )
+    wp_die( __( 'Error: You did not add a rating. Hit the Back button on your Web browser and resubmit your comment with a rating.' ) );
+    return $commentdata;
+}
+
+

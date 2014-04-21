@@ -543,6 +543,7 @@ function oo_comment($comment, $args, $depth) {
 				<?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
 			</div>
 		</div>
+	</li>
 <?php }
 
 

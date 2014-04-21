@@ -1886,6 +1886,11 @@ footer ul#footer-nav ul li {
 	margin-bottom: 24px;
 }
 
+.comments ol.commentlist li.comment .comment-container .review-author.comment-author,
+.comments ol.commentlist li.pingback .comment-container .review-author.comment-author {
+	padding-left: 0px;
+}
+
 .comments ol.commentlist li.comment .comment-container .comment-author img,
 .comments ol.commentlist li.pingback .comment-container .comment-author img {
 	position: absolute;
@@ -2061,6 +2066,59 @@ footer ul#footer-nav ul li {
 .comment-form .area2 {
 	margin-bottom: 40px;
 }
+
+
+.comment-form .areareview label.title {
+	font: 300 26px 'Oswald', sans-serif;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #333;
+	margin-top: 22px;
+}
+
+.comment-form .areareview ul {
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.comment-form .areareview ul li {
+}
+
+.comment-form .areareview .col-md-4 {
+	padding-left: 2px;
+}
+
+.comment-form .areareview .stars {
+	background-image: url("images/star_review_small.png");
+	background-repeat: no-repeat;
+	background-position: -101px 0;
+	position: relative;
+	top: 7px;
+	width: 100px;
+	height: 22px;
+	display: inline-block;
+}
+
+.comment-form .areareview .stars.stars1 {
+	background-position: -80px 0;
+}
+
+.comment-form .areareview .stars.stars2 {
+	background-position: -60px 0;
+}
+
+.comment-form .areareview .stars.stars3 {
+	background-position: -40px 0;
+}
+
+.comment-form .areareview .stars.stars4 {
+	background-position: -20px 0;
+}
+
+.comment-form .areareview .stars.stars5 {
+	background-position: 0 0;
+}
+
 
 .comment-form .area3 {
 }
@@ -2800,6 +2858,39 @@ footer ul#footer-nav ul li {
 	padding-right: 25px;
 	font-weight: 300;
 }
+
+.comment-container .stars {
+	background-image: url("images/star_review_small.png");
+	background-repeat: no-repeat;
+	background-position: -101px 0;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	width: 100px;
+	height: 22px;
+	display: block;
+}
+
+.comment-container .stars.stars1 {
+	background-position: -80px 0;
+}
+
+.comment-container .stars.stars2 {
+	background-position: -60px 0;
+}
+
+.comment-container .stars.stars3 {
+	background-position: -40px 0;
+}
+
+.comment-container .stars.stars4 {
+	background-position: -20px 0;
+}
+
+.comment-container .stars.stars5 {
+	background-position: 0 0;
+}
+
 
 
 /* FlexSlider Necessary Styles
