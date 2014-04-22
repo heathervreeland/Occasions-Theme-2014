@@ -35,6 +35,23 @@ $( function() {
         }
     );
 
+    var menu = $('#menu');
+    var origOffsetY = menu.offset().top;
+
+    function scroll() {
+        if ($(window).scrollTop() >= origOffsetY) {
+            $('#menu').addClass('sticky');
+            //$('.content').addClass('menu-padding');
+        } else {
+            $('#menu').removeClass('sticky');
+            //$('.content').removeClass('menu-padding');
+        }
+
+
+    }
+
+    document.onscroll = scroll;
+
     /* Slider top */
 
     $('#featured-carousel').skdslider({delay:7000, animationSpeed: 2000,showNextPrev:true,showPlayButton:false,autoSlide:true,showNav:false,animationType:'fading'});
