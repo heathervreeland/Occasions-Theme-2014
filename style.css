@@ -2921,6 +2921,18 @@ footer ul#footer-nav ul li {
 
 
 
+/************************************
+ *
+ * EVENT PROFILE PAGE
+ *
+ *************************************/
+
+.post-container.event h2 a {
+	color: #afa4cf !important;
+}
+
+
+
 /* FlexSlider Necessary Styles
 *********************************/
 .flexslider {

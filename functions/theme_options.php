@@ -181,6 +181,62 @@ function oo_get_venue_service($id = null) {
 }
 
 
+
+
+function oo_get_post_state($post_id = NULL) {
+    if (null === $post_id) {
+        $post_id = get_the_ID();
+    }
+    $states = wp_get_post_terms($post_id, 'region', array(
+        'fields' => 'all'
+    ));
+    $state = null;
+    foreach ($states as $state) {
+        if (!$state->parent) {
+            $state = $state;
+            break;
+        }
+    }
+    return $state;
+}
+function oo_post_state($post_id = null, $link = true) {
+    $state = oo_get_post_state($post_id);
+
+    if ($link) {
+        echo '<a href="' . get_term_link($state) . '">' . $state->name . '</a>';
+    } else {
+        echo $state->name;
+    }
+}
+
+function oo_get_post_city($post_id = NULL) {
+    if (null === $post_id) {
+        $post_id = get_the_ID();
+    }
+    $cities = wp_get_post_terms($post_id, 'region', array(
+        'fields' => 'all'
+    ));
+    $city = null;
+    foreach ($cities as $city) {
+        if ($city->parent) {
+            $city = $city;
+            break;
+        }
+    }
+    return $city;
+}
+function oo_post_city($post_id = null, $link = true) {
+    $city = oo_get_post_city($post_id);
+    if ($link) {
+        echo '<a href="' . get_term_link($city) . '">' . $city->name . '</a>';
+    } else {
+        echo $city->name;
+    }
+}
+
+
+
+
 /**
  * Get all attached images. Filter by hide_form_gallery meta key
  * @param integer $id
