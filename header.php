@@ -81,12 +81,7 @@
 				</form>
 
 				<div id="top-social">
-					<ul>
-						<li><a href="#" class="facebook"></a></li>
-						<li><a href="#" class="twitter"></a></li>
-						<li><a href="#" class="pinterest"></a></li>
-						<li><a href="#" class="rss"></a></li>
-					</ul>
+					<?php oo_part("social-share-list"); ?>
 				</div>
 
 				<ul>

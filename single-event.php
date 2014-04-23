@@ -102,10 +102,7 @@
 					<div class="venue-share after-story">
 						Share This 
 
-						<a href="#" class="facebook"></a>
-						<a href="#" class="twitter"></a>
-						<a href="#" class="pinterest"></a>
-						<a href="#" class="rss"></a>
+						<?php oo_part("social-share"); ?>
 
 					</div>
 
