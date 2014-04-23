@@ -2944,6 +2944,174 @@ footer ul#footer-nav ul li {
 
 
 
+/************************************
+ *
+ * SUBSCRIPTION PAGE SUBSCRIBE
+ *
+ *************************************/
+
+
+#subscribe .annual {
+  position: relative;
+  padding: 45px 45px 32px 320px;
+  min-height: 170px;
+  background: url(../img/sidebar-subscribe-bg.jpg) 0 0 repeat;
+  margin-bottom: 40px;
+}
+#subscribe .annual h2 {
+  font: 400 21px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#subscribe .annual .region {
+  color: #ffffff;
+  font: 500 13px 'Raleway', sans-serif;
+}
+#subscribe .annual figure {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 305px;
+}
+#subscribe .annual figure img {
+  text-align: center;
+  max-width: 305px;
+  max-height: 220px;
+}
+#subscribe .annual .select-box {
+  margin-bottom: 10px;
+}
+#subscribe .annual .select-box select {
+  display: none;
+}
+#subscribe .annual .select-box .select {
+  display: block;
+  background: #f9f9f9;
+  width: 160px;
+}
+#subscribe .annual .select-box .select span {
+  display: block;
+  padding: 5px 15px;
+  background: url(../img/arrows-green-v.png) 140px -28px no-repeat;
+  color: #2a2b2c;
+  cursor: pointer;
+  font: 600 11px 'Raleway', sans-serif;
+  text-transform: uppercase;
+  line-height: 15px;
+}
+#subscribe .annual .select-box .select-wrapper {
+  position: relative;
+}
+#subscribe .annual .select-box ul {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: 200;
+  padding: 10px 20px;
+  width: 120px;
+  white-space: nowrap;
+  display: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font: 500 10px 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+#subscribe .annual .select-box ul li {
+  padding: 2px 0;
+  cursor: pointer;
+  color: #747474;
+}
+#subscribe .annual .select-box ul li.selected {
+  color: #2a2b2c;
+}
+#subscribe .annual .select-box ul li:hover {
+  color: #4fb5a5;
+}
+#subscribe .annual .ga {
+  display: none;
+}
+#subscribe .buy-now .price {
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font: 400 17px 'Oswald', sans-serif;
+  width: 140px;
+  text-transform: uppercase;
+}
+#subscribe .buy-now .price .descr {
+  font-weight: 300;
+  width: 75px;
+}
+#subscribe .soldout {
+  padding-top: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  font: 400 15px 'Oswald', sans-serif;
+}
+.issues {
+  margin-bottom: 40px;
+}
+.issues ul li {
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #f4f4f4;
+  padding: 28px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.issues ul li figure {
+  width: 45%;
+  float: left;
+}
+.issues ul li figure img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.issues ul li .detail {
+  float: right;
+  width: 48%;
+}
+.issues ul li h2 {
+  font: 400 24px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.issues ul li h2 span {
+  font-weight: 300px;
+}
+.issues ul li .premier {
+  display: block;
+  color: #ffffff;
+  background: #acc178;
+  font: 600 11px 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding-left: 28px;
+  height: 22px;
+  line-height: 22px;
+  width: 135px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.issues ul li .region {
+  color: #4fb5a5;
+}
+.issues ul li .descr {
+  color: #747474;
+  margin-bottom: 20px;
+}
+.issues ul li .buy-now {
+  margin-bottom: 10px;
+}
+
+
+
+
 /* FlexSlider Necessary Styles
 *********************************/
 .flexslider {

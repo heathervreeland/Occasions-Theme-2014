@@ -536,3 +536,89 @@ function oo_verify_comment_meta_data( $commentdata ) {
 }
 
 
+function oo_issue_cart_form($product_id = 'OOANNUAL', $ajax = false) {
+    if (null === $product_id) {
+        $product_id = "OOANNUAL";
+    }
+    $product = new Cart66Product();
+    $product->loadFromShortcode(array(
+        'item' => $product_id,
+    ));
+
+    $id = (int) $product->id;
+
+    if (!$id) {
+        return;
+    }
+
+    $trackInventory = Cart66Setting::getValue('track_inventory');
+
+    if($product->isAvailable()) {
+
+        ?>
+        <div class="buy-now">
+            <form action="<?php echo Cart66Common::getPageLink('store/cart'); ?>" method="post" id="issue-order-form-<?php echo $id ?>">
+                <span class="price">
+                    <?php echo Cart66Common::currency($product->price, true, true); ?>
+                    <?php if ($product->price_description): ?>
+                        <span class="descr">/ <?php echo $product->price_description ?></span>
+                    <?php endif ?>
+                </span>
+                <span>
+                    <input type="submit" value="Buy Now" id="issue-addtocart-<?php echo $id ?>" />
+                    <input name="item_quantity" id="issue-quantity-<?php echo $id ?>" type="hidden" value="1" />
+                    <input type='hidden' name='task' id="issue-task-<?php echo $id ?>" value='addToCart' />
+                    <input type='hidden' name='cart66ItemId' value='<?php echo $id; ?>' />
+                    <input type='hidden' name='product_url' value='<?php echo Cart66Common::getCurrentPageUrl(); ?>' />
+                </span>
+            </form>
+        </div>
+        <?php if ($ajax): ?>
+
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                (function($){
+                    <?php
+                        $url = Cart66Common::appendWurlQueryString('cart66AjaxCartRequests');
+                        if(Cart66Common::isHttps()) {
+                            $url = preg_replace('/http[s]*:/', 'https:', $url);
+
+                        } else {
+                            $url = preg_replace('/http[s]*:/', 'http:', $url);
+                        }
+                        $product_name = str_replace("'", "\'", $product->name);
+                    ?>
+                    $(document).ready(function(){
+                        $('.Cart66AjaxWarning').hide();
+                        $('#issue-addtocart-<?php echo $id ?>').click(function() {
+                            $('#issue-task-<?php echo $id ?>').val('ajax');
+                            <?php if($trackInventory): ?>
+                                inventoryCheck('<?php echo $id ?>', '<?php echo $url ?>', '<?php echo $data["ajax"] ?>', '<?php echo $product_name; ?>', '<?php echo Cart66Common::getCurrentPageUrl(); ?>', '<?php _e( "Adding..." , "cart66" ); ?>');
+                            <?php else: ?>
+                                $.issue_button_transform(
+                                    '<?php echo $id ?>',
+                                    '<?php echo $url ?>',
+                                    '<?php echo $product_name; ?>',
+                                    '<?php echo Cart66Common::getCurrentPageUrl(); ?>',
+                                    '<?php _e( "Adding..." , "cart66" ); ?>'
+                                );
+                            <?php endif; ?>
+                            return false;
+                        });
+                    })
+                })(jQuery);
+                /* ]]> */
+            </script>
+        <?php endif ?>
+
+
+        <?php
+    } else {
+        ?>
+        <p class="soldout">Sold Out</p>
+        <?php
+    }
+}
+
+
+
