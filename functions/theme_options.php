@@ -565,7 +565,7 @@ function oo_issue_cart_form($product_id = 'OOANNUAL', $ajax = false) {
                     <?php endif ?>
                 </span>
                 <span>
-                    <input type="submit" value="Buy Now" id="issue-addtocart-<?php echo $id ?>" />
+                    <input type="submit" value="Buy Now" id="issue-addtocart-<?php echo $id ?>" class="nice-button"/>
                     <input name="item_quantity" id="issue-quantity-<?php echo $id ?>" type="hidden" value="1" />
                     <input type='hidden' name='task' id="issue-task-<?php echo $id ?>" value='addToCart' />
                     <input type='hidden' name='cart66ItemId' value='<?php echo $id; ?>' />
