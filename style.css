@@ -1211,7 +1211,7 @@ text-decoration:underline;
 	font-family: "Oswald";
 	text-transform: uppercase;
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 #index_dept_grid div.col-md-3.cont p {
@@ -1399,6 +1399,7 @@ text-decoration:underline;
 	height: 97px;
 	text-align: center;
 	padding: 10px;
+	font-weight: 400;
 	background: url("images/cat_preview_bg.png") no-repeat 0 0;
 }
 
