@@ -13,7 +13,7 @@ Template Name: Home
 
 	<div class="col-md-4">
 		<div class="pull-left">
-			<a href="#">
+			<a href="/vendors">
 				<div class="tile">
 					<div class="title-cont">
 						<div class="title">Venue &amp; Vendor<br/>Guide</div>
@@ -69,7 +69,7 @@ Template Name: Home
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
 				</div>
 			</a>
-			<a href="#">
+			<a href="/subscribe">
 				<div class="tile">
 					<div class="title-cont">
 						<div class="title">Shop - Magazine <span>Subscribe to Occasions</span></div>
