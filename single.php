@@ -36,7 +36,15 @@
 
 						<h1><?php the_title(); ?></h1>
 						<p class="post-meta">Posted <span class="date"><?php echo get_the_date("F j, Y"); ?></span> by <span class="author"><?php the_author(); ?></span></p>
+							<div class="venue-share">
+								Share This Post
 
+								<a href="#" class="facebook"></a>
+								<a href="#" class="twitter"></a>
+								<a href="#" class="pinterest"></a>
+								<a href="#" class="rss"></a>
+
+							</div>
 						<div class="border-line"></div>
 
 						<?php if ($_REQUEST['nggpage'] == '') : ?>
@@ -49,19 +57,13 @@
 						<?php endif; ?>
 					</div>
 
-					<div class="share-post">
-						<span>
-							Share this post
-						</span>
+					<div class="venue-share after-story">
+						Share This Post
 
-						<div id="post-social">
-							<ul>
-								<li><a href="#" class="facebook"></a></li>
-								<li><a href="#" class="twitter"></a></li>
-								<li><a href="#" class="pinterest"></a></li>
-								<li><a href="#" class="rss"></a></li>
-							</ul>
-						</div>
+						<a href="#" class="facebook"></a>
+						<a href="#" class="twitter"></a>
+						<a href="#" class="pinterest"></a>
+						<a href="#" class="rss"></a>
 
 					</div>
 

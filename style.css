@@ -1474,6 +1474,7 @@ text-decoration:underline;
 #single-post-row .post-content .post-meta {
 	display: block;
 	margin-bottom: 35px;
+	margin-top: 25px;
 	text-align: center;
 	color: #454545;
 }
