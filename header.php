@@ -32,6 +32,8 @@
 		}
 		?>
 
+		<meta name="p:domain_verify" content="8e72c4768a22c12761df93181fba7c40"/>
+		
 		<?php wp_head(); ?>
 		
 		<?php if ( is_front_page() ) { ?>
