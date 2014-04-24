@@ -209,7 +209,7 @@ h1, h2, h3, h4 {
 	-webkit-margin-end: 0;
 }
 
-h2 {
+h2, h3 {
 	color: #47cabe;
 	font-weight: 300;
 	font-family: "Oswald";
@@ -220,6 +220,11 @@ h2 {
 	-webkit-margin-before: 0;
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 0 0 5px 0;
 }
 
 /************************************
@@ -242,6 +247,17 @@ h2 {
 .nice-button:hover {
 	color: #fff !important;
 	text-decoration: none !important;
+}
+
+
+/************************************
+ *
+ * Inputs
+ *
+ *************************************/
+
+input[type=radio] {
+	margin-left: 4px;
 }
 
 /************************************
@@ -1495,6 +1511,10 @@ text-decoration:underline;
 	border-top-style: solid;
 	border-top-width: 4px;
 	margin-bottom: 40px;
+}
+
+#single-post-row.editorial-guidelines .post-content .border-line {
+	color: #46c8bc;
 }
 
 #single-post-row .post-content {
@@ -3431,3 +3451,68 @@ html[xmlns] .slides {
   .venue-full .gallery .flex-direction-nav .flex-next {
     background-position: -178px 50%;
   }
+
+/************************************
+ *
+ * PAGE ABOUT NAVIGATION
+ *
+ *************************************/
+
+.horiz-box-nav nav ul li {
+	list-style:none;
+	text-align:center;
+	width:24%;
+	min-height:80px;
+}
+.page .horiz-box-nav nav ul li a {
+	text-decoration:none;
+}
+.horiz-box-nav nav,
+#page-about nav {
+	font: 700 12px 'Raleway', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	display: block;
+	overflow: hidden;
+}
+.horiz-box-nav nav ul,
+#page-about nav ul {
+	float: left;
+	border: 1px solid #99d6d1;
+	border-right: 0;
+}
+.horiz-box-nav nav ul li,
+#page-about nav ul li {
+	float: left;
+	border-right: 1px solid #99d6d1;
+}
+.horiz-box-nav nav ul li a,
+#page-about nav ul li a {
+	color: #2a2b2c;
+	display: block;
+	padding: 8px 18px;
+}
+.horiz-box-nav nav ul li a:hover,
+#page-about nav ul li a:hover {
+	color: #4fb5a5;
+}
+.horiz-box-nav nav ul li.current a,
+#page-about nav ul li.current a {
+	color: #ffffff;
+	background: #4fb5a5;
+	position: relative;
+}
+.horiz-box-nav nav ul li.current a:after,
+#page-about nav ul li.current a:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-top-color: #4fb5a5;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -8px;
+}
