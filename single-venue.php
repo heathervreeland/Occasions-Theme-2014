@@ -130,15 +130,18 @@
 							</div>
 						<?php endif ?>
 
-						<div class="section-breaker inside">
-							Information
-						</div>
-
-						<?php
+						<?php 
 							$video_url = oo_get_meta('video_url');
 							$downloads = oo_get_vendor_attached_files();
 							$from_the_blog = array();
 							$events = array();
+
+							if (	!(empty($downloads)) || $video_url || has_term( "venues", "service")	) {
+						?>
+						<div class="section-breaker inside">
+							Information
+						</div>
+						<?php }
 						?>
 
 						<?php // if is venue, display this section 
