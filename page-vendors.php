@@ -6,7 +6,7 @@ Template Name: Vendors
 
  	get_header(); ?>
 
-<div class="row" id="vendors-page">
+<div class="row venue" id="vendors-page">
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
 

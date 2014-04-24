@@ -16,16 +16,17 @@ Template Name: Vendors-City
 	$state = get_state_from_region($city);
  ?>
 
-<div class="row vendors-city" id="single-post-row">
+<div class="row vendors-city venue" id="single-post-row">
 
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
 
-			<?php 
-				if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-				}
-			?>
+			<p id="breadcrumbs">
+				<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a></span> • 
+				<span typeof="v:Breadcrumb"><a href="/vendors" rel="v:url" property="v:title">Vendors &amp; Venues</a></span> • 
+				<span typeof="v:Breadcrumb"><a href="/vendors/<?php echo $city->slug; ?>" rel="v:url" property="v:title"><?php echo $city->name; ?></a></span>
+			</p>
+
 			<div class="page-block" id="main">
 
 				<?php get_sidebar('blog'); ?>

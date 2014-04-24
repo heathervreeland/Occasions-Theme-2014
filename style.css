@@ -2549,8 +2549,12 @@ footer ul#footer-nav ul li {
 	border-top: 1px solid #cfcfcf;
 }
 
+#vendors-archive-list .vendor-list-block:last-child {
+	border-bottom: 0;
+}
+
 .vendor-list-block .detail {
-	width: 488px;
+	width: 436px;
 	float: left;
 }
 

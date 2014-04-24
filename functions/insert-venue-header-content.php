@@ -58,30 +58,12 @@ function insert_venue_header_content( $has_region = true ) {
   // test if the region taxonomy is a state
   if ( $region_taxonomy == 'florida' || $region_taxonomy == 'georgia' ) {
 
-    // output the page title 
-    if ( $service_name == '' || $service_name == null ) {
-      $header .= '<span class="vendor-cat-title">' . $region_name .  ' Weddings</span>';
-    } else {
-      $header .= '<span class="vendor-cat-title">' . $region_name .  ' ' . $service_name . '</span>';
-    }
-
-    if ( $has_venue_type ) {
-      $phrase = 'trusted Wedding' . $service_name;
-    } else {
-      $phrase = 'trusted Wedding vendors';
-    }
-
+    
     // out put the page description
     $header .= '<p class="top-description">Occasions is the best source to find the most ' . $phrase . ' in ' . $state->name . '.  Plus, explore wedding inspiration, party ideas, and the best local vendors for your upcoming occasion.</p>';
 
   } else {
 
-    // output the page title 
-    if ( $service_name == '' || $service_name == null ) {
-      $header .= '<span class="vendor-cat-title">' . $region_name .  ' Weddings</span>';
-    } else {
-      $header .= '<span class="vendor-cat-title">' . $region_name .  ' ' . $service_name . '</span>';
-    }
 
     /********************************************************/
     /* testing to see what type of search we are looking at */
@@ -130,4 +112,66 @@ function insert_venue_header_content( $has_region = true ) {
     return $header;
 
 }
+
+
+
+function get_service_title( $has_region = true ) {
+  // pull the region taxonomy object
+  $region = get_term_by('slug', get_query_var('region'), 'region');
+  
+  $state = get_state_from_region($region);
+
+
+    // Get the city or state human readable title
+    $region_name = $region->name; 
+    if ( $region_name == '' ) {
+      $region_name = $state->name; 
+    }
+
+    // pull the region taxonomy slug
+    $region_taxonomy = $region->taxonomy;
+
+    // get the service taxonomy obj
+    $tax_service = get_term_by('slug', get_query_var('service'), 'service');
+
+    // pull the service human readable name
+    $service_name = $tax_service->name;
+
+    // pull the service taxonomy slug 
+    $service_taxonomy_slug = $tax_service->taxonomy;
+
+    // pull the service slug
+    $service_taxonomy_type_slug = $tax_service->slug;
+
+    // pull the venue-type taxonomy obj
+    $tax_venue_type = get_term_by('slug', get_query_var('venue-type'), 'venue-type');
+
+    // pull the venue-type human readable name
+    $venue_name = $tax_venue_type->name;
+
+    // pull the venue-type slug
+    $venue_taxonomy = $tax_venue_type->taxonomy;
+
+    // pull the venue slug
+    $tax_venue_type_slug = $tax_venue_type->slug;
+
+    // set a boolean
+    $has_venue_type = false;
+    /*
+    echo '<pre>';
+    var_dump($tax_venue_type);
+    echo '</pre>';
+    */
+
+    // if there is a venue-type taxoomony set boolean to true
+    if ( $tax_venue_type ) { $has_venue_type = true; }
+
+    // Create a variable to hold the header and intro paragraph output
+
+    $header;
+
+  return $region_name .  ' ' . $service_name;;
+
+}
+
 ?>
