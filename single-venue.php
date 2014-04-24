@@ -141,7 +141,10 @@
 							$events = array();
 						?>
 
-
+						<?php // if is venue, display this section 
+							if( has_term( "venues", "service") )
+							{
+						?>
 						<div id="venue-information">
 
 							<div class="service details">
@@ -263,7 +266,9 @@
 
 									</dl>
 								</div>
-
+								<?php
+									}
+								?>
 
 								<?php if (count($downloads)): ?>
 									<div id="venue-downloads" class="tab">
