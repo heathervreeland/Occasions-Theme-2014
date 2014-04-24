@@ -453,7 +453,7 @@ if ( ! function_exists("get_prev_next_venue_links") ) {
 		if($prev)
 			echo '	<a href="' . $prev["link"] . '">
 						<div class="prev-post">
-							<h2>Previous Venue</h2>
+							<h2>Previous Company</h2>
 							<span>' . $prev["title"] . '</span>
 						</div>
 					</a>
@@ -461,7 +461,7 @@ if ( ! function_exists("get_prev_next_venue_links") ) {
 		if($next)
 			echo '  <a href="' . $next["link"] . '">
 						<div class="next-post ' . $both . '">
-							<h2>Next Venue</h2>
+							<h2>Next Company</h2>
 							<span>' . $next["title"] . '</span>
 						</div>
 					</a>
