@@ -834,27 +834,27 @@ ul#main-nav li.vendors span.icon {
 /* Sections Carousel */
 
 #sections-carousel-container {
-	height: 519px;
-	width: 334px;
+	height: 525px;
+	width: 394px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 #sections-carousel {
-	height: 519px;
-	width: 334px;
+	height: 525px;
+	width: 394px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 #sections-carousel .featured-image {
-	width: 334px;
+	width: 394px;
 	overflow: hidden;
 	margin: auto;
 }
 
 #sections-carousel .featured-image img {
-	min-height: 519px;
+	min-height: 525px;
 }
 
 #sections-carousel-container .skdslider a.prev, #sections-carousel-container .skdslider a.next {
@@ -862,8 +862,8 @@ ul#main-nav li.vendors span.icon {
 }
 
 #sections-carousel-container .sections-slide-overlay {
-	width: 318px;
-	height: 502px;
+	width: 378px;
+	height: 508px;
 	margin: 8px 8px;
 	border: 1px solid #fff;
 	position: absolute;
@@ -1088,6 +1088,15 @@ text-decoration:underline;
 	overflow: hidden;
 }
 
+#index-sections div.col-third:nth-child(3n) {
+	margin-right: 0;
+}
+
+#index-sections div.col-third {
+	float: left;
+	margin-right: 30px;
+}
+
 #index-sections .col-md-4 {
 	padding-right: 0 !important;
 	padding-left: 0 !important;
@@ -1095,8 +1104,8 @@ text-decoration:underline;
 
 #index-sections .tile {
 	position: relative;
-	width: 335px;
-	height: 247px;
+	width: 300px;
+	height: 250px;
 	margin-bottom: 25px;
 	background: #ccc;
 }
