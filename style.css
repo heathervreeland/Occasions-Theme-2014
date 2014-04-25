@@ -555,6 +555,35 @@ ul#main-nav li.vendors span.icon {
 	top: -18px;
 }
 
+#main-navigation .cities .preview-window {
+	width: 150px!important;
+	left: auto !important;
+	margin-left: -42px;
+	height: auto !important;
+}
+
+#main-navigation .cities ul li {
+	display: block;
+	border-bottom: 1px solid #cfcfcf;
+	text-align: center;
+	padding: 10px;
+}
+
+#main-navigation .cities ul li:last-child {
+	border-bottom: 0;
+}
+
+#main-navigation .cities ul li a {
+	font-family: "Raleway";
+	font-size: 13px;
+	color: #9e9993;
+	text-transform: uppercase;
+}
+
+#main-navigation .cities ul li a:hover {
+	color: #f7c97c!important;
+}
+
 .main-nav.weddings .preview-window .menu-arrow {
 	left: 353px;
 }
@@ -572,7 +601,7 @@ ul#main-nav li.vendors span.icon {
 }
 
 .main-nav.cities .preview-window .menu-arrow {
-	left: 844px;
+	left: 55px;
 }
 
 .main-nav.vendors .preview-window .menu-arrow {
@@ -3532,3 +3561,23 @@ html[xmlns] .slides {
 	left: 50%;
 	margin-left: -8px;
 }
+
+
+/************************************
+ *
+ * TERMS OF USE AND PRIVACY POLICY PAGES
+ *
+ *************************************/
+
+ .terms-of-use h1, .privacy-policy h1 {
+	color: #47cabe;
+	font-weight: 400;
+	font-family: "Oswald";
+	font-size: 2em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+ }

@@ -127,6 +127,17 @@
 							</li>
 							<li class="main-nav dept cities">
 								<a href="#" class="hv"><span class="icon"></span>Cities</a>
+								<div class="preview-window">
+									<div class="menu-arrow"></div>
+									<ul>
+										<li><a href="#">Atlanta</a></li>
+										<li><a href="#">Savannah</a></li>
+										<li><a href="#">Orlando</a></li>
+										<li><a href="#">South Florida</a></li>
+										<li><a href="#">Tampa</a></li>
+										<li><a href="#">Jacksonville</a></li>
+									</ul>
+								</div>
 							</li>
 							<li class="main-nav dept galleries">
 								<a href="#" class="hv"><span class="icon"></span>Galleries</a>
@@ -148,7 +159,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="#" class="nice-button">View All</a>
+											<a href="/entertaining-and-holidays" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -232,7 +243,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="#" class="nice-button">View All</a>
+											<a href="/parties-and-celebrations" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -316,7 +327,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="#" class="nice-button">View All</a>
+											<a href="/weddings" class="nice-button">View All</a>
 										</div>
 									</div>
 
