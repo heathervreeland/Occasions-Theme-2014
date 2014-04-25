@@ -3,47 +3,77 @@
  * Template Name: Template About Child
  */
 get_header(); ?>
-<div id="main">
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<?php $about = get_page_by_path('about'); ?>
-		<div id="page-about">
-			<?php oo_page_title($about->post_title) ?>
-			<?php oo_part('about-nav') ?>rthtrhtr
-			<article <?php post_class(); ?>>
-				<div class="story">
 
-					<?php
-						$siblings = array();
 
-						$query = new WP_Query(array(
-							'post_parent' 	=> $post->post_parent,
-							'post_type'		=> 'page',
-							'orderby'		=> 'menu_order',
-							'order'			=> 'ASC',
-							'posts_per_page'=> -1,
-						));
-					?>
-					<?php if ($query->have_posts()): ?>
-						<nav class="cf">
-							<ul>
-								<?php while($query->have_posts()) : $query->the_post(); ?>
-									<li <?php echo is_page(get_the_ID()) ? 'class="current"' : '' ?>>
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-									</li>
-								<?php endwhile; ?>
-							</ul>
-						</nav>
-					<?php endif; wp_reset_query(); ?>
+<div class="row about" id="single-post-row">
+	<div id="page-about">
+		<?php if(have_posts()) : ?>
+			<?php while(have_posts()) : the_post(); ?>
 
-								
+				<?php
+					$this_page = get_page_by_path('about'); 
 
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+					}
+
+					$categories = get_the_category();
+
+					// Get parent category to change color dynamically
+					$parent_cat;
+					foreach($categories as $cat) {
+						if ( $cat->parent != 0 )
+							$parent_cat = get_category($cat->parent);
+						else
+							$parent_cat = $cat;
+					}
+					add_filter('the_content','wrap_image_credits', 20);
+				?>
+				<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
+
+					<?php get_sidebar('blog'); ?>
+
+					<section class="post-container">
+
+						<div class="post-category-floater">
+							<span class="nice-button dept">About</span>
+						</div>
+
+						<div class="post-content story ">
+
+							<h1><?php oo_page_title($this_page->post_title) ?></h1>
+
+							<div class="border-line"></div>
+
+
+							<?php oo_part('about-nav') ?>
+							<?php if ($_REQUEST['nggpage'] == '') : ?>
+							<?php add_filter('the_content','wrap_image_credits', 20); ?>
+							<?php the_content(); ?>
+							<?php remove_filter('the_content','wrap_image_credits'); ?>
+							<?php else: ?>
+								<?php preg_match('/\[nggallery.+id=\d+\]/i', $post->post_content, $ngg); ?>
+								<?php echo do_shortcode( $ngg[0] ); ?>
+							<?php endif; ?>
+						</div>
+
+
+					</section>
 
 				</div>
-			</article>
-		</div>
-	<?php endwhile; else: ?>
-		<?php oo_part('notfound')?>
-	<?php endif; ?>
+
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+			<div class="alert alert-info">
+				<strong>No content in this loop</strong>
+			</div>
+
+		<?php endif; ?>	
+	</div>
+
 </div>
-<?php get_sidebar('about'); ?>
+
+
 <?php get_footer(); ?>

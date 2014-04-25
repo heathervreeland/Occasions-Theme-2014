@@ -87,15 +87,15 @@
 				</div>
 
 				<ul>
-					<li><a hred="#">Local Blogs</a></li>
+					<li><a href="#">Local Blogs</a></li>
 					<li>&#8226;</li>
-					<li><a hred="#">Planning Checklists</a></li>
+					<li><a href="#">Planning Checklists</a></li>
 					<li>&#8226;</li>
-					<li><a hred="#">Editor's Blog</a></li>
+					<li><a href="#">Editor's Blog</a></li>
 					<li>&#8226;</li>
-					<li><a hred="#">Get Featured</a></li>
+					<li><a href="/editorial/guaranteed-print-online-feature">Get Featured</a></li>
 					<li>&#8226;</li>
-					<li><a hred="#">Advertise</a></li>
+					<li><a href="/about/advertise">Advertise</a></li>
 				</ul>
 
 			</div>
