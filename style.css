@@ -95,6 +95,20 @@ body {
 	color: #afa4cf;
 }
 
+/* Link hovers */
+
+.weddings a:hover {
+	color: #46c8bc;
+}
+
+.parties a:hover, .parties-and-celebrations a:hover {
+	color: #fcb4a8;
+}
+
+.entertaining  a:hover {
+	color: #86bd7a;
+}
+
 /* nice-button's */
 
 .weddings .nice-button {
