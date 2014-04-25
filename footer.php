@@ -41,7 +41,7 @@
 						<li><a href="#">About</a></li>
 						<li><a href="#">Careers</a></li>
 						<li><a href="#">Print Advertising</a></li>
-						<li><a href="#">Editorial</a></li>
+						<li><a href="/editorial">Editorial</a></li>
 						<li><a href="#">Link to Us</a></li>
 						<li><a href="/subscribe">Purchase Copies</a></li>
 						<li><a href="#">Support</a></li>
