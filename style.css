@@ -515,6 +515,7 @@ ul#main-nav li.vendors span.icon {
 #main-navigation .preview-window h2 {
 	font-family: "Oswald";
 	font-size: 25px;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin: 0 0 20px 0;
 	-webkit-margin-before: 0;
@@ -1819,6 +1820,7 @@ footer ul#footer-nav {
 }
 
 footer ul#footer-nav h2 {
+	font-weight: 400;
 	margin-top: 25px;
 	padding-bottom: 2px;
 }
