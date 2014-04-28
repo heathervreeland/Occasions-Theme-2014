@@ -75,9 +75,9 @@
 		<div id="top-bar">
 			<div class="container">
 
-				<form>
+				<form action="/search" method="GET">
 					<div id="search">
-						<input type="text" id="search_terms" placeholder="SEARCH"/>
+						<input type="text" name="q" id="search_terms" placeholder="SEARCH"/>
 						<a href="#" id="search_go">GO</a>
 					</div>
 				</form>

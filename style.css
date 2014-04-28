@@ -3604,3 +3604,144 @@ html[xmlns] .slides {
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
  }
+ 
+
+
+/************************************
+ *
+ * SEARCH
+ *
+ *************************************/
+
+#page-search {
+}
+
+#page-search .results {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+#page-search .vendor.results {
+	border-bottom: 1px solid #dadada;
+}
+
+#page-search article {
+	clear: both;
+	margin: 20px 0;
+}
+
+#page-search .search-more {
+	text-align: right;
+	width: 100%;
+	margin: 20px 0;
+}
+
+#page-search article {
+	overflow: hidden;
+}
+
+#page-search article .nice-button {
+	display: block;
+}
+
+#page-search article img {
+	max-width: 150px !important;
+	margin-right: 10px !important;
+	height: auto;
+	float: left;
+}
+
+#page-search h2.results-title {
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.search-item a {
+	color: #47cabe !important;
+}
+
+.search-item h2 {
+	margin: 0 0 5px 0;;
+	font-size: 23px;
+}
+
+.search-item p {
+	margin: 10px 0 !important;
+}
+
+#page-search h3 {
+	color: #333;
+}
+
+#page-search .gsc-control-cse .gsc-search-box .gsc-search-button input {
+	color: #fff;
+}
+
+#page-search .gsc-resultsRoot .gsc-webResult {
+	border: none;
+}
+
+#page-search .gsc-resultsRoot .gsc-webResult .gsc-result {
+	border: none;
+	margin: 0 0 1.5em;
+}
+
+#page-search .gsc-resultsRoot .gsc-webResult .gs-image-box {
+	position: relative;
+	top: 8px;
+	padding-right: 10px;
+}
+
+#page-search .gsc-table-result tbody > tr .gs-title {
+	font: 200 30px 'Oswald', sans-serif;
+	margin: 0 0 .25em;
+}
+
+#page-search .gsc-table-result tbody > tr .gs-title b, #page-search .gsc-table-result tbody > tr .gs-title strong {
+	font: 200 30px 'Oswald', sans-serif;
+	font: 200 3.0 rem 'Oswald', sans-serif;
+	font-size: 30px !important;
+	font-size: 3.0 rem !important;
+}
+
+#page-search .gsc-table-result tbody > tr .gs-snippet {
+	color: #363839;
+	font: 400 12px 'Arvo', sans-serif;
+	margin: 0 0 .5em;
+	line-height: 1.7;
+}
+
+#page-search .gsc-cursor-box {
+	text-align: left;
+}
+
+.search .gsc-cursor-box .gsc-cursor .gsc-cursor-page {
+	color: #2A2B2C;
+	border: none;
+	background: #f9f9f9;
+	text-decoration: none;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	text-align: center;
+	font: 600 12px 'Raleway', sans-serif;
+	line-height: 30px;
+}
+
+#page-search .gsc-cursor-box .gsc-cursor .gsc-cursor-current-page {
+	background: none;
+}
+
+#page-search .gsc-result-info {
+	font-size: 10px;
+	font-size: 1.0 rem;
+	text-align: right;
+}
+
+#page-search .gcsc-branding {
+	display: none;
+}
