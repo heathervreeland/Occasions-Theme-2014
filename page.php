@@ -22,16 +22,29 @@
 
 					<div class="post-content story ">
 
-						<h1><?php the_title(); ?></h1>
+						<?php 
+							if($slug == "cart") {
+								oo_part("cart-layout");
+							}
+							else {
 
-						<div class="border-line"></div>
+						?>
 
-						<?php if ($_REQUEST['nggpage'] == '') : ?>
-						<?php the_content(); ?>
-						<?php else: ?>
-							<?php preg_match('/\[nggallery.+id=\d+\]/i', $post->post_content, $ngg); ?>
-							<?php echo do_shortcode( $ngg[0] ); ?>
-						<?php endif; ?>
+
+							<h1><?php the_title(); ?></h1>
+
+							<div class="border-line"></div>
+
+							<?php if ($_REQUEST['nggpage'] == '') : ?>
+							<?php the_content(); ?>
+							<?php else: ?>
+								<?php preg_match('/\[nggallery.+id=\d+\]/i', $post->post_content, $ngg); ?>
+								<?php echo do_shortcode( $ngg[0] ); ?>
+							<?php endif; ?>
+
+
+						<?php } ?>
+
 					</div>
 
 				</section>
