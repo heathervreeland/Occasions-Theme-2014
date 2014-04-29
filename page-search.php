@@ -54,7 +54,7 @@ get_header(); ?>
                             if(has_post_thumbnail($post_id)) {
                                 $post_thumbnail_id = get_post_thumbnail_id( $post_id );
                                 $img_url = wp_get_attachment_url( $post_thumbnail_id  );
-                                $thumblink = '<a href="' . $permalink . '">' . '<img src="' . $img_url . '" class="alignleft" title="' . $post->title . '"></a>';
+                                $thumblink = '<a href="' . $permalink . '" class="search-thumb">' . '<img src="' . $img_url . '" class="alignleft" title="' . $post->title . '"></a>';
                             }   
                             echo "<article class=\"search-item cf\">";
                             echo $thumblink;
@@ -101,7 +101,7 @@ get_header(); ?>
                             if(has_post_thumbnail($post_id)) {
                                 $post_thumbnail_id = get_post_thumbnail_id( $post_id );
                                 $img_url = wp_get_attachment_url( $post_thumbnail_id  );
-                                $thumblink = '<a href="' . $permalink . '">' . '<img src="' . $img_url . '" class="alignleft" title="' . $post->title . '"></a>';
+                                $thumblink = '<a href="' . $permalink . '" class="search-thumb">' . '<img src="' . $img_url . '" class="alignleft" title="' . $post->title . '"></a>';
                             }
                             echo "<article class=\"search-item cf\">";
                             echo $thumblink;
