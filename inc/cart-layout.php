@@ -5,8 +5,10 @@
 	<span class="after">•</span>
 </div>
 
+<div class="clearfix">
 <?php
 
 	the_content();
 
 ?>
+</div>
