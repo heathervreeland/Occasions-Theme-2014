@@ -7,12 +7,12 @@
 		
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen, projection" />		
-		<link href='http://fonts.googleapis.com/css?family=Antic+Didone|Raleway:400,700|Oswald:300,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Antic+Didone|Raleway:400,700|Oswald:300,400' rel='stylesheet' type='text/css'>
 		
 		<?php
 		if (oo_get_option('google_ad')) {
 		?>
-			<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+			<script type='text/javascript' src='https://partner.googleadservices.com/gampad/google_service.js'></script>
 			<script type='text/javascript'>
 				GS_googleAddAdSenseService("<?php oo_option('google_ad') ?>");
 				GS_googleEnableAllServices();
