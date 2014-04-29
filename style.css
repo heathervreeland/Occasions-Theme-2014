@@ -1133,6 +1133,10 @@ text-decoration:underline;
 	padding: 0 30px;
 }
 
+.after-divider {
+	margin-top: 70px;
+}
+
 /* Index section 1 */
 
 #index-sections {

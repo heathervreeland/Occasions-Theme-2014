@@ -5,7 +5,7 @@
 	<span class="after">•</span>
 </div>
 
-<div class="clearfix">
+<div class="after-divider">
 <?php
 
 	the_content();
