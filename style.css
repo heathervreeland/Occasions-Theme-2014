@@ -3767,3 +3767,16 @@ html[xmlns] .slides {
 .cart .after-divider h1 {
 	display: none;
 }
+
+.cart .after-divider h3 {
+	color: #000;
+	text-transform: none;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0 0 25px 0;
+}
+
+.cart .after-divider .nice-button {
+	background-color: #989c9b;
+	color: #fff;
+}

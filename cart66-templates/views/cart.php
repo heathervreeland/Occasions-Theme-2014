@@ -433,9 +433,9 @@ if(count($items)): ?>
   <div id="viewCartNav">
 	<div id="continueShopping">
         <?php if($cartImgPath): ?>
-          <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66CartContinueShopping btn secondary" >Continue Shopping</a>
+          <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66CartContinueShopping btn secondary nice-button" >Continue Shopping</a>
         <?php else: ?>
-          <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66ButtonSecondary Cart66CartContinueShopping" title="Continue Shopping"><?php _e( 'Continue Shopping' , 'cart66' ); ?></a>
+          <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66ButtonSecondary Cart66CartContinueShopping nice-button" title="Continue Shopping"><?php _e( 'Continue Shopping' , 'cart66' ); ?></a>
         <?php endif; ?>
 	</div>
 
@@ -493,9 +493,9 @@ if(count($items)): ?>
   <div id="emptyCartMsg">
   <h3><?php _e('Your Cart Is Empty','cart66'); ?></h3>
   <?php if($cartImgPath): ?>
-    <p><a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' title="Continue Shopping" class="Cart66CartContinueShopping">Continue Shopping</a>
+    <p><a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' title="Continue Shopping" class="Cart66CartContinueShopping nice-button">Continue Shopping</a>
   <?php else: ?>
-    <p><a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66ButtonSecondary" title="Continue Shopping"><?php _e( 'Continue Shopping' , 'cart66' ); ?></a>
+    <p><a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="Cart66ButtonSecondary nice-button" title="Continue Shopping"><?php _e( 'Continue Shopping' , 'cart66' ); ?></a>
   <?php endif; ?>
   </div>
   <?php
