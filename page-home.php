@@ -13,15 +13,14 @@ Template Name: Home
 
 	<div class="col-third">
 		<div class="pull-left">
-			<a href="#">
-				<div class="tile">
-					<?php oo_part('side-top-ad') ?>
-				</div>
-			</a>
-
 			<a href="/vendors">
 				<div class="tile">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
+				</div>
+			</a>
+			<a href="#">
+				<div class="tile">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
 				</div>
 			</a>
 		</div>
@@ -58,7 +57,7 @@ Template Name: Home
 		<div class="pull-right">
 			<a href="#">
 				<div class="tile">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
+					<?php oo_part('side-top-ad') ?>
 				</div>
 			</a>
 			<a href="/subscribe">
