@@ -3756,3 +3756,14 @@ html[xmlns] .slides {
 #page-search .gcsc-branding {
 	display: none;
 }
+
+
+/************************************
+ *
+ * SHOPPING CART
+ *
+ *************************************/
+
+.cart .after-divider h1 {
+	display: none;
+}
