@@ -3897,6 +3897,7 @@ html[xmlns] .slides {
 }
 
 .cart #viewCartTable {
+	margin: 0px 0px 12px 0px;
 	border: 0 !important;
 }
 
