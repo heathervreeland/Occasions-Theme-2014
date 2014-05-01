@@ -204,6 +204,9 @@ if ( ! function_exists( 'load_external_jQuery' ) ) {
 
 		wp_enqueue_script('tiled-gallery', plugins_url() .  '/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.js', array( 'jquery' ) );
 		wp_enqueue_style('tiled-gallery', plugins_url() . '/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.css', array(), '2012-09-21' );
+
+		wp_register_script( 'pnotify', get_template_directory_uri() . '/js/jquery.pnotify.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'pnotify' );
 	}  
 
 	add_action('wp_enqueue_scripts', 'load_external_jQuery');

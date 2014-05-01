@@ -3,11 +3,10 @@
 <div class="row" id="subscribe">
 
 
-	<?php 
-		if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-		}
-	?>
+	<p id="breadcrumbs">
+		<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a></span> • 
+		<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">Subscribe</span></span>
+	</p>
 	<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
 		<?php get_sidebar('blog'); ?>

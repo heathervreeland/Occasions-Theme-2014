@@ -2012,3 +2012,70 @@ var showPinterest = function (obj_id) {
 
 })(jQuery);
 
+
+// add your custom scripts here
+// as the page loads, call these scripts
+jQuery(function($) {
+  $.issue_button_transform = function (formId, ajaxurl, productName, productUrl, addingText) {
+    var buttonText = $('#issue-addtocart-' + formId).val();
+    $('#issue-addtocart-' + formId).attr('disabled', 'disabled')
+                  .addClass('disabled')
+                  .val(addingText);
+    $.issue_add_to_cart_ajax(formId, ajaxurl, productName, productUrl, buttonText);
+  };
+
+  $.issue_add_to_cart_ajax = function(formId, ajaxurl, productName, productUrl, buttonText) {
+    var itemQuantity = $('#issue-quantity-' + formId).val();
+    var cleanProductId = formId.split('_');
+    cleanProductId = cleanProductId[0];
+
+    var data = {
+      cart66ItemId: cleanProductId,
+      itemName: productName,
+      options_1: '',
+      options_2: '',
+      item_quantity: itemQuantity,
+      item_user_price: '',
+      product_url: productUrl
+    };
+
+    $.ajax({
+      type: "POST",
+      url: ajaxurl + '=2',
+      data: data,
+      dataType: 'json',
+      success: function(response) {
+        $.pnotify({
+          title: 'Item added',
+          text: '<div>"<span>' + data.itemName + '</span>" - added to cart</div><div><a href="/store/cart/">View Cart</a></div>',
+          type: 'success',
+          shadow: false
+        });
+
+        $('#issue-addtocart-' + formId).removeAttr('disabled')
+                      .removeClass('disabled')
+                      .val(buttonText);
+        ajaxUpdateCartWidgets(ajaxurl);
+        
+        if($('.customAjaxAddToCartMessage').length > 0) {
+          $('.customAjaxAddToCartMessage').show().html(response.msg);
+          $.hookExecute('customAjaxAddToCartMessage', response);
+        } else {
+          if(parseInt(response.msgId, 10) === 0){
+            $('.success_' + formId).fadeIn(300);
+            $('.success_message_' + formId).html(response.msg);
+            $('.success_' + formId).delay(2000).fadeOut(300);
+          }
+          if((response.msgId) == -1){
+            $('.warning_' + formId).fadeIn(300);
+            $('.warning_message_' + formId).html(response.msg);
+          }
+          if((response.msgId) == -2){
+            $('.error_' + formId).fadeIn(300);
+            $('.error_message_' + formId).html(response.msg);
+          }
+        }
+      }
+    });
+  };
+});
