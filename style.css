@@ -3764,26 +3764,26 @@ html[xmlns] .slides {
  *
  *************************************/
 
-.cart .item-row {
+.cart .item-row, .checkout .item-row {
 	width: 98%;
 	margin: 10px auto;
 	overflow: hidden;
 	border-bottom: 1px solid #cfcfcf;
 }
 
-.cart .item-row:last-child {
+.cart .item-row:last-child, .checkout .item-row:last-child {
 	border-bottom: 0;
 }
 
-.cart .item-row div {
+.cart .item-row div, .checkout .item-row div {
 	float: left;
 }
 
-.cart .after-divider h1 {
+.cart .after-divider h1, .checkout .after-divider h1  {
 	display: none;
 }
 
-.cart .after-divider h3 {
+.cart .after-divider h3, .checkout .after-divider h3 {
 	color: #000;
 	text-transform: none;
 	font-size: 24px;
@@ -3791,20 +3791,20 @@ html[xmlns] .slides {
 	margin: 0 0 25px 0;
 }
 
-.cart .after-divider .nice-button {
+.cart .after-divider .nice-button, .checkout .after-divider .nice-button {
 	background-color: #989c9b;
 	color: #fff;
 }
 
-.cart #cart-table {
+.cart #cart-table, .checkout #cart-table {
 	border: 3px solid #46c8bc;
 }
 
-.cart #viewCartTable td, .cart #viewCartTable th {
+.cart #viewCartTable td, .cart #viewCartTable th, .checkout #viewCartTable td, .checkout #viewCartTable th {
 	border: 0;
 }
 
-.cart #viewCartTable th {
+.cart #viewCartTable th, .checkout #viewCartTable th {
 	padding: 5px 10px;
 	margin: 0;
 	vertical-align: middle;
@@ -3814,7 +3814,7 @@ html[xmlns] .slides {
 	font-size: 14px;
 }
 
-.cart .subtotals {
+.cart .subtotals, .checkout .subtotals {
 	float: right;
 	clear: both;
 	margin-top: 30px;
@@ -3824,74 +3824,74 @@ html[xmlns] .slides {
 	width: 165px;
 }
 
-.cart .subtotal-line {
+.cart .subtotal-line, .checkout .subtotal-line {
 	display: block;
 	overflow: hidden;
 	padding: 6px;
 }
 
-.cart .subtotal-line span.price {
+.cart .subtotal-line span.price, .checkout .subtotal-line span.price {
 	float :right;
 	font-weight: 300;
 	width: 80px;
 	text-align: right;
 }
 
-.cart .subtotal-line.shipping {
+.cart .subtotal-line.shipping, .checkout .subtotal-line.shipping {
 	border-top: 1px solid #cfcfcf;
 } 
 
-.cart .nice-button.apply {
+.cart .nice-button.apply, .checkout .nice-button.apply {
 	background-color: #46c8bc;
 }
 
-.cart .haveCoupon {
+.cart .haveCoupon, .checkout .haveCoupon {
 	font-family: "Oswald";
 	font-size: 17px;
 	margin-bottom: 0;
 	margin-top: 20px;
 }
 
-.cart #couponCode input[type=text] {
+.cart #couponCode input[type=text], .checkout #couponCode input[type=text] {
 	width: 255px;
 	border: 1px solid #cfcfcf;
 	padding: 5px;
 	font-size: 13px;
 }
 
-.cart #couponCode, .cart #updateCart {
+.cart #couponCode, .cart #updateCart, .checkout #couponCode, .checkout #updateCart {
 	display: inline-block;
 	float: none;
 }
 
-.cart .nice-button.checkout {
+.cart .nice-button.checkout, .checkout .nice-button.checkout {
 	background-color: #000;
 }
 
-.cart #checkoutShopping, .cart .update-checkout {
+.cart #checkoutShopping, .cart .update-checkout, .checkout #checkoutShopping, .checkout .update-checkout {
 	float: right;
 }
 
-.cart .update-checkout .nice-button {
+.cart .update-checkout .nice-button, .checkout .update-checkout .nice-button {
 	margin-right: 4px;
 }
 
-.cart #continueShopping {
+.cart #continueShopping, .checkout #continueShopping {
 	float: left;
 	padding-top: 0 !important;
 }
 
-.cart .nice-button {
+.cart .nice-button, .checkout .nice-button {
 	height: 30px !important;
 	display: block;
 	font-size: 15px;
 }
 
-.cart .nice-button.Cart66CartContinueShopping {
+.cart .nice-button.Cart66CartContinueShopping, .checkout .nice-button.Cart66CartContinueShopping {
 	display: inline;
 }
 
-.cart .grand-total {
+.cart .grand-total, .checkout .grand-total {
 	width: 100%;
 	background: #f4f2f3;
 	border-bottom: 4px solid #000;
@@ -3905,44 +3905,44 @@ html[xmlns] .slides {
 	text-align: right;
 }
 
-.cart .grand-total span.price {
+.cart .grand-total span.price, .checkout .grand-total span.price {
 	float :right;
 	width: 80px;
 	text-align: right;
 }
 
-.cart #viewCartTable {
+.cart #viewCartTable, .checkout #viewCartTable {
 	margin: 0px 0px 12px 0px;
 	border: 0 !important;
 }
 
-.cart #viewCartTable tr td {
+.cart #viewCartTable tr td, .checkout #viewCartTable tr td {
 	vertical-align: top;
 }
 
-.cart #viewCartTable td.product-title {
+.cart #viewCartTable td.product-title, .checkout #viewCartTable td.product-title {
 	font-weight: 400;
 	font-family: "Oswald";
 	font-size: 18px;
 	text-transform: uppercase;
 }
 
-.cart #viewCartTable tr td {
+.cart #viewCartTable tr td, .checkout #viewCartTable tr td {
 	font-weight: 300;
 	font-family: "Oswald";
 	font-size: 16px;
 }
-.cart #viewCartTable th.product-title {
+.cart #viewCartTable th.product-title, .checkout #viewCartTable th.product-title {
 	width: 50%;
 }
 
-.cart input.itemQuantity, .cart input[type=text].itemQuantity {
+.cart input.itemQuantity, .cart input[type=text].itemQuantity, .checkout input.itemQuantity, .checkout input[type=text].itemQuantity {
 	width: 65px;
 	text-align: center;
 	border: 1px solid #cfcfcf;
 }
 
-.cart div.product-title {
+.cart div.product-title, .checkout div.product-title {
 	overflow: hidden;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -3951,28 +3951,28 @@ html[xmlns] .slides {
 	margin-right: 6px;
 }
 
-.cart .item-row .quantity.cart66-align-center {
+.cart .item-row .quantity.cart66-align-center, .checkout .item-row .quantity.cart66-align-center {
 	margin-right: 10px;
 	width: 108px;
 	text-align: left;
 }
 
-.cart .item-row .cart66-align-right.prices {
+.cart .item-row .cart66-align-right.prices, .checkout .item-row .cart66-align-right.prices {
 	width: 83px;
 	text-align: left;
 	margin-right: 12px;
 }
 
-.cart .item-row .cart66-align-right.prices.total {
+.cart .item-row .cart66-align-right.prices.total, .checkout .item-row .cart66-align-right.prices.total {
 	margin-right: 0;
 }
 
-.cart .item-row .deletebtn img {
+.cart .item-row .deletebtn img, .checkout .item-row .deletebtn img {
 	width: 18px !important;
 	height: auto !important;
 }
 
-.cart .product-title img {
+.cart .product-title img, .checkout .product-title img {
 	width: 85px !important;
 	height: auto !important;
 	float: left;
