@@ -138,6 +138,7 @@ if(count($items)): ?>
         <col class="col2" />
         <col class="col3" />
         <col class="col4" />
+        <col class="col5" />
       </colgroup>
     <thead>
       <tr>
@@ -149,69 +150,69 @@ if(count($items)): ?>
       </tr>
     </thead>
     <tbody>
-      <?php foreach($items as $itemIndex => $item): ?>
-        <?php
-          // Get cover images
-          global $wpdb; 
-          $sql="SELECT item_number FROM occasionsmag_cart66_products WHERE id = " . $item->getProductId();
-          $res = $wpdb->get_results($sql);
-          $sql="SELECT post_ID FROM occasionsmag_postmeta WHERE (meta_key = 'flo_single' AND meta_value = '" . $res[0]->item_number . "') OR (meta_key = 'flo_box' AND meta_value = '" . $res[0]->item_number . "')";
-          $res = $wpdb->get_results($sql);
-          $issue_id = $res[0]->post_ID;
-          $preview_image = get_the_post_thumbnail($issue_id, 'issue-preview');
+      <tr>
+        <td colspan="5">
+        <?php foreach($items as $itemIndex => $item): ?>
+          <?php
+            // Get cover images
+            global $wpdb; 
+            $sql="SELECT item_number FROM occasionsmag_cart66_products WHERE id = " . $item->getProductId();
+            $res = $wpdb->get_results($sql);
+            $sql="SELECT post_ID FROM occasionsmag_postmeta WHERE (meta_key = 'flo_single' AND meta_value = '" . $res[0]->item_number . "') OR (meta_key = 'flo_box' AND meta_value = '" . $res[0]->item_number . "')";
+            $res = $wpdb->get_results($sql);
+            $issue_id = $res[0]->post_ID;
+            $preview_image = get_the_post_thumbnail($issue_id, 'issue-preview');
 
-          Cart66Common::log('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Item option info: " . $item->getOptionInfo());
-          $product->load($item->getProductId());
-          $price = $item->getProductPrice() * $item->getQuantity();
-        ?>           
+            Cart66Common::log('[' . basename(__FILE__) . ' - line ' . __LINE__ . "] Item option info: " . $item->getOptionInfo());
+            $product->load($item->getProductId());
+            $price = $item->getProductPrice() * $item->getQuantity();
+          ?>
 
-        <tr>
-          <td class="product-title <?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?>" >
-            <?php echo $preview_image; ?>
-            <?php if(Cart66Setting::getValue('display_item_number_cart')): ?>
-              <span class="cart66-cart-item-number"><?php echo $item->getItemNumber(); ?></span>
-            <?php endif; ?>
-            <?php #echo $item->getItemNumber(); ?>
-            <?php if($item->getProductUrl() != '' && Cart66Setting::getValue('product_links_in_cart') == 1 && $fullMode): ?>
-              <a class="product_url" href="<?php echo $item->getProductUrl(); ?>"><?php echo $item->getFullDisplayName(); ?></a>
-            <?php else: ?>
-              <?php echo $item->getFullDisplayName(); ?>
-            <?php endif; ?>
-            <?php echo $item->getCustomField($itemIndex, $fullMode); ?>
-            <?php Cart66Session::drop('Cart66CustomFieldWarning'); ?>
-          </td>
-          <?php if($fullMode): ?>
-          <td class="quantity cart66-align-center<?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?>">
-            
-            <?php if($item->isSubscription() || $item->isMembershipProduct() || $product->is_user_price==1): ?>
-              <span class="subscriptionOrMembership"><?php echo $item->getQuantity() ?></span>
-            <?php else: ?>
-              <input type='text' name='quantity[<?php echo $itemIndex ?>]' value='<?php echo $item->getQuantity() ?>' class="itemQuantity"/>
-            <?php endif; ?>            
-          </td>
-          <?php else: ?>
-            <td class="cart66-align-center <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo $item->getQuantity() ?></td>
-          <?php endif; ?>
-          <td class="cart66-align-right <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($item->getProductPrice()); ?></td>
-          <td class="cart66-align-right <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($price);?></td>
-          <td class="cart66-align-right">
-            <?php $removeLink = get_permalink($cartPage->ID); ?>
-            <?php $taskText = (strpos($removeLink, '?')) ? '&task=removeItem&' : '?task=removeItem&'; ?>
-            <a href='<?php echo $removeLink . $taskText ?>itemIndex=<?php echo $itemIndex ?>' title='Remove item from cart'><img src='<?php bloginfo('template_directory'); ?>/images/icn_delete.png' alt="Remove Item" /></a>
-          </td>
-        </tr>
-        <?php if($item->hasAttachedForms()): ?>
-          <tr>
-            <td colspan="4">
-              <a href='#' class="showEntriesLink" rel="<?php echo 'entriesFor_' . $itemIndex ?>"><?php _e( 'Show Details' , 'cart66' ); ?> <?php #echo count($item->getFormEntryIds()); ?></a>
-              <div id="<?php echo 'entriesFor_' . $itemIndex ?>" class="showGfFormData" style="display: none;">
-                <?php echo $item->showAttachedForms($fullMode); ?>
+          <div class="item-row">
+              <div class="product-title <?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?>" >
+                <?php echo $preview_image; ?>
+                <?php if(Cart66Setting::getValue('display_item_number_cart')): ?>
+                  <span class="cart66-cart-item-number"><?php echo $item->getItemNumber(); ?></span>
+                <?php endif; ?>
+                <?php #echo $item->getItemNumber(); ?>
+                <?php if($item->getProductUrl() != '' && Cart66Setting::getValue('product_links_in_cart') == 1 && $fullMode): ?>
+                  <a class="product_url" href="<?php echo $item->getProductUrl(); ?>"><?php echo $item->getFullDisplayName(); ?></a>
+                <?php else: ?>
+                  <?php echo $item->getFullDisplayName(); ?>
+                <?php endif; ?>
+                <?php echo $item->getCustomField($itemIndex, $fullMode); ?>
+                <?php Cart66Session::drop('Cart66CustomFieldWarning'); ?>
               </div>
-            </td>
-          </tr>
-        <?php endif;?>      
-      <?php endforeach; ?>
-    
+              <?php if($fullMode): ?>
+              <div class="quantity cart66-align-center<?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?>">
+                
+                <?php if($item->isSubscription() || $item->isMembershipProduct() || $product->is_user_price==1): ?>
+                  <span class="subscriptionOrMembership"><?php echo $item->getQuantity() ?></span>
+                <?php else: ?>
+                  <input type='text' name='quantity[<?php echo $itemIndex ?>]' value='<?php echo $item->getQuantity() ?>' class="itemQuantity"/>
+                <?php endif; ?>            
+              </div>
+              <?php else: ?>
+                <div class="cart66-align-center <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo $item->getQuantity() ?></div>
+              <?php endif; ?>
+              <div class="cart66-align-right prices <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($item->getProductPrice()); ?></div>
+              <div class="cart66-align-right prices total<?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($price);?></div>
+              <div class="cart66-align-right deletebtn">
+                <?php $removeLink = get_permalink($cartPage->ID); ?>
+                <?php $taskText = (strpos($removeLink, '?')) ? '&task=removeItem&' : '?task=removeItem&'; ?>
+                <a href='<?php echo $removeLink . $taskText ?>itemIndex=<?php echo $itemIndex ?>' title='Remove item from cart'><img src='<?php bloginfo('template_directory'); ?>/images/icn_delete.png' alt="Remove Item" /></a>
+              </div>
+          </div>
+
+          <?php if($item->hasAttachedForms()): ?>
+                <a href='#' class="showEntriesLink" rel="<?php echo 'entriesFor_' . $itemIndex ?>"><?php _e( 'Show Details' , 'cart66' ); ?> <?php #echo count($item->getFormEntryIds()); ?></a>
+                <div id="<?php echo 'entriesFor_' . $itemIndex ?>" class="showGfFormData" style="display: none;">
+                  <?php echo $item->showAttachedForms($fullMode); ?>
+                </div>
+          <?php endif;?>      
+        <?php endforeach; ?>
+        </td>
+      </tr>
       <?php if(Cart66Session::get('Cart66Cart')->requireShipping()): ?>
         
         

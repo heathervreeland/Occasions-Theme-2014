@@ -3764,6 +3764,21 @@ html[xmlns] .slides {
  *
  *************************************/
 
+.cart .item-row {
+	width: 98%;
+	margin: 10px auto;
+	overflow: hidden;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+.cart .item-row:last-child {
+	border-bottom: 0;
+}
+
+.cart .item-row div {
+	float: left;
+}
+
 .cart .after-divider h1 {
 	display: none;
 }
@@ -3927,8 +3942,34 @@ html[xmlns] .slides {
 	border: 1px solid #cfcfcf;
 }
 
-.cart .product-title {
+.cart div.product-title {
 	overflow: hidden;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 400;
+	width: 52%;
+	margin-right: 6px;
+}
+
+.cart .item-row .quantity.cart66-align-center {
+	margin-right: 10px;
+	width: 108px;
+	text-align: left;
+}
+
+.cart .item-row .cart66-align-right.prices {
+	width: 83px;
+	text-align: left;
+	margin-right: 12px;
+}
+
+.cart .item-row .cart66-align-right.prices.total {
+	margin-right: 0;
+}
+
+.cart .item-row .deletebtn img {
+	width: 18px !important;
+	height: auto !important;
 }
 
 .cart .product-title img {
