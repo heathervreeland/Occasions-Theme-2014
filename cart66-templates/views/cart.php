@@ -425,7 +425,6 @@ if(count($items)): ?>
 
   </div>
 
-</form>
 
   <?php if($fullMode): ?>
     
@@ -495,7 +494,8 @@ if(count($items)): ?>
     	} 
 
     	 ?>
-	
+	</form>
+
 	</div>
 	
 	
