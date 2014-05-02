@@ -3963,6 +3963,10 @@ html[xmlns] .slides {
 	margin-right: 12px;
 }
 
+.cart .item-row .qty, .checkout .item-row .qty {
+	width: 114px;
+}
+
 .cart .item-row .cart66-align-right.prices.total, .checkout .item-row .cart66-align-right.prices.total {
 	margin-right: 0;
 }
@@ -3978,6 +3982,10 @@ html[xmlns] .slides {
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+
+.checkout .item-row .deletebtn {
+	display: none;
 }
 
 #cart-widget {
@@ -4001,4 +4009,72 @@ html[xmlns] .slides {
 
 #cart-widget a {
 	color: #000;
+}
+
+
+/* CHECKOUT */
+
+#billingInfo, #shippingInfo, #paymentInfo {
+	width: 100% !important;
+	float: none !important;
+	overflow: hidden;
+	margin: 0 0 25px 0 !important;
+	padding: 0 0 25px 0;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+#billingInfo ul, #paymentInfo ul, #shippingInfo ul {
+	overflow: hidden;
+}
+
+#billingInfo ul li, #shippingInfo ul li, #paymentInfo ul li {
+	text-align: left;
+	float: left;
+	width: 340px;
+	margin-right: 40px;
+}
+
+#paymentInfo ul li {
+	float: none;
+}
+
+#billingInfo ul li:nth-child(even), #shippingInfo ul li:nth-child(even), #paymentInfo ul li:nth-child(even) {
+	margin-right: 0;
+}
+
+#billingInfo input, #shippingInfo input, #paymentInfo input {
+	width: 338px !important;
+	height: 30px !important;
+	border: 1px solid #cfcfcf;
+}
+
+#paymentInfo li.expiration select {
+	width: 110px !important;
+	display: inline-block;
+}
+
+#paymentInfo li.ccv {
+	font-size: 12px;
+}
+
+#paymentInfo li.ccv p.description {
+	margin: 0!important;
+	font-style: normal;
+}
+
+#paymentInfo li.ccv input {
+	width: 50px !important;
+}
+
+#billingInfo label, #shippingInfo label, #paymentInfo label {
+	text-align: left;
+	font-family: "Oswald";
+	font-size: 16px;
+	width: auto;
+}
+
+#billingInfo select, #shippingInfo select, #paymentInfo select {
+	width: 338px;
+	height: 30px !important;
+	border: 1px solid #cfcfcf;
 }

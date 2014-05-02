@@ -184,7 +184,7 @@ if(count($items)): ?>
                 <?php Cart66Session::drop('Cart66CustomFieldWarning'); ?>
               </div>
               <?php if($fullMode): ?>
-              <div class="quantity cart66-align-center<?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?>">
+              <div class="quantity cart66-align-center<?php if($item->hasAttachedForms()) { echo " noBottomBorder"; } ?> ">
                 
                 <?php if($item->isSubscription() || $item->isMembershipProduct() || $product->is_user_price==1): ?>
                   <span class="subscriptionOrMembership"><?php echo $item->getQuantity() ?></span>
@@ -193,7 +193,7 @@ if(count($items)): ?>
                 <?php endif; ?>            
               </div>
               <?php else: ?>
-                <div class="cart66-align-center <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo $item->getQuantity() ?></div>
+                <div class="cart66-align-center quantity <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo $item->getQuantity() ?></div>
               <?php endif; ?>
               <div class="cart66-align-right prices <?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($item->getProductPrice()); ?></div>
               <div class="cart66-align-right prices total<?php if($item->hasAttachedForms()) { echo "noBottomBorder"; } ?>"><?php echo Cart66Common::currency($price);?></div>
@@ -338,7 +338,7 @@ if(count($items)): ?>
               </select>
             </th>
           </tr>
-          <?php elseif(!$fullMode): ?>
+          <?php elseif(!$fullMode && false): ?>
           <tr>
             <th colspan='4' class="alignRight"><?php _e( 'Shipping Method' , 'cart66' ); ?>: 
               <?php 
