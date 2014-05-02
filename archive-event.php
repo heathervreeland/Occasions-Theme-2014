@@ -31,7 +31,7 @@
 			<section class="post-container">
 
 				<div class="post-category-floater venue">
-					<span class="nice-button dept">Event Vendors</span>
+					<span class="nice-button dept"><?php echo $city->name; ?> Events</span>
 				</div>	
 
 				<div class="post-content story venue">
