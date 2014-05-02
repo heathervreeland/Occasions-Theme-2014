@@ -1,7 +1,11 @@
-<?php get_header(); ?>
+<?php
+	get_header();
+
+ ?>
 
 <div class="row" id="subscribe">
 
+	<?php oo_part("cart-widget"); ?>
 
 	<p id="breadcrumbs">
 		<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a></span> • 

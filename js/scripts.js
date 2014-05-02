@@ -2045,17 +2045,19 @@ jQuery(function($) {
       data: data,
       dataType: 'json',
       success: function(response) {
-        $.pnotify({
-          title: 'Item added',
-          text: '<div>"<span>' + data.itemName + '</span>" - added to cart</div><div><a href="/store/cart/">View Cart</a></div>',
-          type: 'success',
-          shadow: false
-        });
+        // $.pnotify({
+        //   title: 'Item added',
+        //   text: '<div>"<span>' + data.itemName + '</span>" - added to cart</div><div><a href="/store/cart/">View Cart</a></div>',
+        //   type: 'success',
+        //   shadow: false
+        // });
 
         $('#issue-addtocart-' + formId).removeAttr('disabled')
                       .removeClass('disabled')
                       .val(buttonText);
-        ajaxUpdateCartWidgets(ajaxurl);
+        // ajaxUpdateCartWidgets(ajaxurl);
+
+        updateCartInfo(ajaxurl);
         
         if($('.customAjaxAddToCartMessage').length > 0) {
           $('.customAjaxAddToCartMessage').show().html(response.msg);
@@ -2079,3 +2081,23 @@ jQuery(function($) {
     });
   };
 });
+
+function updateCartInfo(url) {
+
+  $.ajax({
+        type: "POST",
+        url: url + '=3',
+        data: {},
+        dataType: 'json',
+        success: function(response) {
+          if(response.summary.count != 1)
+          {
+            $("#cart-widget .item-count").html(response.summary.count + " Items");
+          }
+          else {
+            $("#cart-widget .item-count").html(response.summary.count + " Item");
+          }
+          $("#cart-widget .amount").html(response.summary.amount);
+        }
+      });
+}
