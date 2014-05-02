@@ -4,12 +4,10 @@
 	$term = get_terms('region', array('slug' => $city));
 	$city = $term[0];
 	$state = get_state_from_region($city);
-    // get the service taxonomy obj
-    $service = get_term_by('slug', get_query_var('service'), 'service');
 
  ?>
 
-<div class="row page">
+<div class="row page" id="single-post-row">
 
 	<?php if(have_posts()) : ?>
 
@@ -32,7 +30,11 @@
 
 			<section class="post-container">
 
-				<div class="post-content story ">
+				<div class="post-category-floater venue">
+					<span class="nice-button dept">Event Vendors</span>
+				</div>	
+
+				<div class="post-content story venue">
 
 					<?php echo insert_venue_header_content(); ?>
 
