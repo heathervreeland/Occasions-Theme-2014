@@ -26,12 +26,26 @@
 							if($slug == "cart") {
 								oo_part("cart-layout");
 							}
+							else if ($slug == "checkout") {
+								oo_part("checkout-layout");
+							}
 							else {
 
 						?>
 
-
+							<?php
+								if( $slug == "cart" || $slug == "checkout" )
+								{
+									//blank for now
+								}
+								else
+								{
+									?>
 							<h1><?php the_title(); ?></h1>
+									<?php
+								}
+								?>
+							
 
 							<div class="border-line"></div>
 

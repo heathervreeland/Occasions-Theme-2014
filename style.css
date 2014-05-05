@@ -4023,6 +4023,10 @@ html[xmlns] .slides {
 	border-bottom: 1px solid #cfcfcf;
 }
 
+#billingInfo h2 {
+	margin-bottom: 25px !important;
+}
+
 #billingInfo ul, #paymentInfo ul, #shippingInfo ul {
 	overflow: hidden;
 }
@@ -4066,12 +4070,35 @@ html[xmlns] .slides {
 	width: 50px !important;
 }
 
+#paymentInfo p.description {
+	margin-top: 25px !important;
+}
+
+#Cart66CheckoutButtonDiv {
+	float: none;
+	width: auto;
+	margin-left: 0 !important;
+	text-align: right;
+}
+
+.checkout .nice-button {
+	float: right;
+	background-color: #000;
+}
+
 #billingInfo label, #shippingInfo label, #paymentInfo label {
 	text-align: left;
 	font-family: "Oswald";
 	font-size: 16px;
 	width: auto;
 }
+
+#billingInfo label span, #shippingInfo label span, #paymentInfo label span {
+	color: #a40c0b;
+	font-size: 12px;
+	vertical-align: top;
+}
+
 
 #billingInfo select, #shippingInfo select, #paymentInfo select {
 	width: 338px;

@@ -57,17 +57,17 @@ if(count($errors)) {
         <ul id="billingAddress" class="cf">
 
           <li>
-            <label for="billing-firstName"><?php _e( 'First Name' , 'cart66' ); ?></label>
+            <label for="billing-firstName"><?php _e( 'First Name' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="billing-firstName" name="billing[firstName]" value="<?php Cart66Common::showValue($b['firstName']); ?>">
           </li>
 
           <li>
-            <label for="billing-lastName"><?php _e( 'Last Name' , 'cart66' ); ?></label>
+            <label for="billing-lastName"><?php _e( 'Last Name' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="billing-lastName" name="billing[lastName]" value="<?php Cart66Common::showValue($b['lastName']); ?>">
           </li>
 
           <li>
-            <label for="payment-email"><?php _e( 'Email' , 'cart66' ); ?></label>
+            <label for="payment-email"><?php _e( 'Email' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="payment-email" name="payment[email]" value="<?php Cart66Common::showValue($p['email']); ?>">
           </li>
           
@@ -78,7 +78,7 @@ if(count($errors)) {
           
 
           <li>
-            <label for="billing-address"><?php _e( 'Street Address' , 'cart66' ); ?></label>
+            <label for="billing-address"><?php _e( 'Street Address' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="billing-address" name="billing[address]" value="<?php Cart66Common::showValue($b['address']); ?>">
           </li>
 
@@ -88,11 +88,11 @@ if(count($errors)) {
           </li>
 
           <li>
-            <label for="billing-city"><?php _e( 'City' , 'cart66' ); ?></label>
+            <label for="billing-city"><?php _e( 'City' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="billing-city" name="billing[city]" value="<?php Cart66Common::showValue($b['city']); ?>">
           </li>
 
-          <li><label for="billing-state_text" class="short billing-state_label"><?php _e( 'State' , 'cart66' ); ?></label>
+          <li><label for="billing-state_text" class="short billing-state_label"><?php _e( 'State' , 'cart66' ); ?><span>*</span></label>
             <input type="text" name="billing[state_text]" value="<?php Cart66Common::showValue($b['state']); ?>" id="billing-state_text" class="ajax-tax state_text_field" />
             <select id="billing-state" class="ajax-tax required" title="State billing address" name="billing[state]">
               <option value="0">&nbsp;</option>
@@ -107,12 +107,12 @@ if(count($errors)) {
             </select>
           </li>
           <li>
-            <label for="billing-zip" class="billing-zip_label"><?php _e( 'Zip code' , 'cart66' ); ?></label>
+            <label for="billing-zip" class="billing-zip_label"><?php _e( 'Zip code' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="billing-zip" name="billing[zip]" value="<?php Cart66Common::showValue($b['zip']); ?>" class="ajax-tax" />
           </li>
 
           <li>
-            <label for="billing-country" class="short"><?php _e( 'Country' , 'cart66' ); ?></label>
+            <label for="billing-country" class="short"><?php _e( 'Country' , 'cart66' ); ?><span>*</span></label>
             <select title="country" id="billing-country" name="billing[country]" class="billing_countries">
               <?php foreach(Cart66Common::getCountries() as $code => $name): ?>
                 <option value="<?php echo $code ?>" <?php if($code == $billingCountryCode) { echo 'selected="selected"'; } ?>><?php echo $name ?></option>
@@ -227,7 +227,7 @@ if(count($errors)) {
         
           <?php if($gatewayName != 'Cart66ManualGateway'): ?>
           <li>
-            <label for="payment-cardType">Card Type:</label>
+            <label for="payment-cardType">Card Type<span>*</span></label>
             <select id="payment-cardType" name="payment[cardType]">
               <?php foreach($data['gateway']->getCreditCardTypes() as $name => $value): ?>
                 <option value="<?php echo $value ?>"><?php echo $name ?></option>
@@ -236,12 +236,12 @@ if(count($errors)) {
           </li>
         
           <li>
-            <label for="payment-cardNumber"><?php _e( 'Card Number' , 'cart66' ); ?>:</label>
+            <label for="payment-cardNumber"><?php _e( 'Card Number' , 'cart66' ); ?><span>*</span></label>
             <input type="text" id="payment-cardNumber" name="payment[cardNumber]" value="<?php Cart66Common::showValue($p['cardNumber']); ?>">
           </li>
         
           <li class="expiration">
-            <label for="payment-cardExpirationMonth"><?php _e( 'Expiration' , 'cart66' ); ?>:</label>
+            <label for="payment-cardExpirationMonth"><?php _e( 'Expiration' , 'cart66' ); ?><span>*</span></label>
             <select id="payment-cardExpirationMonth" name="payment[cardExpirationMonth]">
               <option value=''></option>
               <?php 
@@ -274,7 +274,7 @@ if(count($errors)) {
           </li>
           
           <li class="ccv">
-            <label for="payment-securityId"><?php _e( 'Security ID' , 'cart66' ); ?>:</label>
+            <label for="payment-securityId"><?php _e( 'Security ID' , 'cart66' ); ?><span>*</span></label>
             <p class="description"><?php _e( 'Security code on back of card' , 'cart66' ); ?></p>
             <input type="text" id="payment-securityId" name="payment[securityId]" value="<?php Cart66Common::showValue($p['securityId']); ?>">
           </li>
@@ -282,6 +282,7 @@ if(count($errors)) {
           <?php endif; ?>
 
           </ul>
+          <p class="description"><?php _e( 'Your receipt will be on the next page and also immediately emailed to you. <strong>We respect your privacy!</strong>' , 'cart66' ); ?></p>
 
         </div><!-- #paymentInfo -->
       </div><!-- #ccInfo -->
@@ -408,11 +409,10 @@ if(count($errors)) {
         <?php endif; ?>
         <input type="hidden" name="confirm_url" value="<?php echo $url; ?>" id="confirm-url" />
         <?php if($cartImgPath): ?>
-          <input id="Cart66CheckoutButton" class="confirm-order" type="submit" value="<?php _e( 'Complete Order' , 'cart66' ); ?>" name="Complete Order"/>
+          <input id="Cart66CheckoutButton" class="nice-button" type="submit" value="<?php _e( 'Complete Order' , 'cart66' ); ?>" name="Complete Order"/>
         <?php else: ?>
-          <input id="Cart66CheckoutButton" class="confirm-order Cart66ButtonPrimary Cart66CompleteOrderButton" type="submit"  value="<?php _e( 'Complete Order' , 'cart66' ); ?>" name="Complete Order"/>
+          <input id="Cart66CheckoutButton" class="nice-button Cart66ButtonPrimary Cart66CompleteOrderButton" type="submit"  value="<?php _e( 'Complete Order' , 'cart66' ); ?>" name="Complete Order"/>
         <?php endif; ?>
 
-        <p class="description"><?php _e( 'Your receipt will be on the next page and also immediately emailed to you. <strong>We respect your privacy!</strong>' , 'cart66' ); ?></p>
       </div>
 </form>
