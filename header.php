@@ -143,7 +143,7 @@
 								<a href="#" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 							<li class="main-nav dept entertaining">
-								<a href="#" class="hv"><span class="icon"></span>Entertaining</a>
+								<a href="/entertaining-and-holidays" class="hv"><span class="icon"></span>Entertaining</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -226,7 +226,7 @@
 								</div>
 							</li>
 							<li class="main-nav dept parties">
-								<a href="#" class="hv"><span class="icon"></span>Parties</a>
+								<a href="/parties-and-celebrations" class="hv"><span class="icon"></span>Parties</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -310,7 +310,7 @@
 								</div>
 							</li>
 							<li class="main-nav dept weddings">
-								<a href="#" class="hv"><span class="icon"></span>Weddings</a>
+								<a href="/weddings" class="hv"><span class="icon"></span>Weddings</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -394,6 +394,14 @@
 								</div>
 							</li>
 						</ul>
+						<div class="search_secondary">
+							<form action="/search" method="GET">
+								<div id="search2">
+									<input type="text" name="q" id="search_terms" placeholder="SEARCH"/>
+									<a href="#" id="search_go2">GO</a>
+								</div>
+							</form>
+						</div>
 					</div><!-- /.navbar-collapse -->
 				</nav>
 			</div>
