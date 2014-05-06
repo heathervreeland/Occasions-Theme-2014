@@ -55,7 +55,7 @@ Template Name: Home
 
 	<div class="col-third">
 		<div class="pull-right">
-			<a href="#">
+			<a href="#" id="sections-ad">
 				<div class="tile">
 					<?php oo_part('side-top-ad') ?>
 				</div>
