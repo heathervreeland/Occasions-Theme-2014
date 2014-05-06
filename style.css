@@ -4474,6 +4474,8 @@ html[xmlns] .slides {
 
 	.venue-share {
 		font-size: 22px;
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 
 	/************************************
