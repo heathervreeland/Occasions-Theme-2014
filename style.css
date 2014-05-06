@@ -4165,6 +4165,11 @@ html[xmlns] .slides {
 		display: none;
 	}
 
+	.section-divider span.heading {
+		font-size: 30px;
+		padding: 0 5px;
+	}
+
 	/************************************
 	 *
 	 * NAVIGATION
