@@ -4324,6 +4324,18 @@ html[xmlns] .slides {
 		display: none;
 	}
 
+	#sections-carousel-container {
+		width: auto;
+	}
+
+	#sections-carousel-container .sections-slide-overlay {
+		width: 95%;
+	}
+
+	#sections-carousel {
+		width: auto;
+	}
+
 	#index_vv {
 		height: auto;
 	}
