@@ -437,10 +437,11 @@ ul#main-nav {
 	font-size: 17px;
 	position: absolute;
 	top: 0;
+	padding-left: 309px;
 }
 
 ul#main-nav li.dept {
-	float: right;
+	float: left;
 	display: block;
 	text-align: center;
 	padding: 18px 24px 15px 24px;
@@ -4154,6 +4155,32 @@ html[xmlns] .slides {
 		width: 100%;
 	}
 
+	#main-container {
+		position: relative;
+		top: 84px;
+		overflow: hidden;
+	}
+
+	.section-divider .line, .section-divider .before, .section-divider .after {
+		display: none;
+	}
+
+	/************************************
+	 *
+	 * NAVIGATION
+	 *
+	 *************************************/
+
+	ul#main-nav {
+		padding-left: 0;
+	}
+
+	#menu {
+		position: fixed;
+		top: 0;
+		z-index: 100000000000;
+	}
+
 	.navbar-collapse {
 		margin-left: -15px;
 		margin-right: -15px;
@@ -4218,12 +4245,86 @@ html[xmlns] .slides {
 		width: 264px;
 	}
 
+	/************************************
+	 *
+	 * INDEX
+	 *
+	 *************************************/
+
+	 #index-sections {
+	 	margin-top: 0;
+	 }
+
+
 	/* slider */
 	.skdslider {
-		display: none !important;
+		height: auto;
 	}
 
-	/* Footer */
+	.skdslider a.prev, .skdslider a.next {
+		display: none;
+	}
+
+	#featured-carousel {
+		height: auto;
+	}
+
+	#featured-carousel .skdslider {
+		height: 440px;
+	}
+
+	#featured-carousel .skdslider ul.slides li img {
+		min-height: 310px;
+	}
+
+	#featured-carousel .featured-meta {
+		background: #fff;
+	}
+
+	#featured-carousel .featured-meta .nice-button {
+		display: none;
+	}
+
+	#featured-carousel .featured-meta h1 a {
+		top: 0;
+	}
+
+	.skdslider:after {
+		content: '';
+		padding-top: 0;
+		display: block;
+	}
+
+	#index-sections div.col-third {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	#index-sections div.col-third .pull-left {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	#index-sections div.col-third .pull-right {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#index-sections .tile {
+		width: 100%;
+		height: auto;
+	}
+
+	#index-sections .tile img {
+		width: 100%;
+	}
+
+	/************************************
+	 *
+	 * FOOTER
+	 *
+	 *************************************/
+
 
 	ul#footer-nav {
 		width: 95%;

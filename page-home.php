@@ -75,7 +75,7 @@ Template Name: Home
 	<div class="section-divider">
 		<div class="line"></div>
 		<span class="before">&#8226;</span>
-		<span class="heading">Venue &amp; Vendor</span>
+		<span class="heading">Venues &amp; Vendors</span>
 		<span class="after">&#8226;</span>
 	</div>
 

@@ -122,55 +122,38 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse">
 						<ul id="main-nav">
-							<li class="main-nav dept vendors">
-								<a href="<?php echo get_permalink( get_page_by_path( 'vendors' ) ) ?>" class="hv"><span class="icon"></span>Vendors</a>
-							</li>
-							<li class="main-nav dept cities">
-								<a href="#" class="hv"><span class="icon"></span>Cities</a>
-								<div class="preview-window">
-									<div class="menu-arrow"></div>
-									<ul>
-										<li><a href="#">Atlanta</a></li>
-										<li><a href="#">Savannah</a></li>
-										<li><a href="#">Orlando</a></li>
-										<li><a href="#">South Florida</a></li>
-										<li><a href="#">Tampa</a></li>
-										<li><a href="#">Jacksonville</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="main-nav dept galleries">
-								<a href="#" class="hv"><span class="icon"></span>Galleries</a>
-							</li>
-							<li class="main-nav dept entertaining">
-								<a href="/entertaining-and-holidays" class="hv"><span class="icon"></span>Entertaining</a>
+
+							<li class="main-nav dept weddings">
+								<a href="/weddings" class="hv"><span class="icon"></span>Weddings</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
 									<div class="submenu_categories">
 										<div class="sub_container">
 											<h2>Categories</h2>
+											
 											<ul>
 												<?php 
-													$cats = get_subcategories('entertaining-and-holidays');
+													$cats = get_subcategories('weddings');
 													foreach($cats as $cat) {
 												?>
 												<li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
 												<?php } ?>
 											</ul>
 
-											<a href="/entertaining-and-holidays" class="nice-button">View All</a>
+											<a href="/weddings" class="nice-button">View All</a>
 										</div>
 									</div>
 
 									<div class="submenu_recent">
 										<div class="sub_container">
 											<?php
-												// get most recent entertaining and holidays post 
+												// get most recent weddings post 
 
-												$most_recent = get_most_recent_featured_post_from_category('entertaining-and-holidays', 4);
+												$most_recent = get_most_recent_featured_post_from_category('weddings', 4);
 												$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 												if($most_recent->have_posts()) : 
+												$counter = 0;
 												while($most_recent->have_posts()) : 
 													$most_recent->the_post();
 													foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
@@ -194,7 +177,6 @@
 											?>
 										</div>
 									</div>
-
 
 									<div class="submenu_features">
 										<div class="sub_container">
@@ -309,37 +291,36 @@
 
 								</div>
 							</li>
-							<li class="main-nav dept weddings">
-								<a href="/weddings" class="hv"><span class="icon"></span>Weddings</a>
+
+							<li class="main-nav dept entertaining">
+								<a href="/entertaining-and-holidays" class="hv"><span class="icon"></span>Entertaining</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
 									<div class="submenu_categories">
 										<div class="sub_container">
 											<h2>Categories</h2>
-											
 											<ul>
 												<?php 
-													$cats = get_subcategories('weddings');
+													$cats = get_subcategories('entertaining-and-holidays');
 													foreach($cats as $cat) {
 												?>
 												<li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
 												<?php } ?>
 											</ul>
 
-											<a href="/weddings" class="nice-button">View All</a>
+											<a href="/entertaining-and-holidays" class="nice-button">View All</a>
 										</div>
 									</div>
 
 									<div class="submenu_recent">
 										<div class="sub_container">
 											<?php
-												// get most recent weddings post 
+												// get most recent entertaining and holidays post 
 
-												$most_recent = get_most_recent_featured_post_from_category('weddings', 4);
+												$most_recent = get_most_recent_featured_post_from_category('entertaining-and-holidays', 4);
 												$recent_featured_posts = array_merge(array_slice($most_recent->posts,0,2), $recent_featured_posts);
 												if($most_recent->have_posts()) : 
-												$counter = 0;
 												while($most_recent->have_posts()) : 
 													$most_recent->the_post();
 													foreach(get_the_category() as $category) { $post_cat =  $category->name; $post_cat_slug = $category->slug; break;}
@@ -363,6 +344,7 @@
 											?>
 										</div>
 									</div>
+
 
 									<div class="submenu_features">
 										<div class="sub_container">
@@ -393,6 +375,28 @@
 
 								</div>
 							</li>
+							<li class="main-nav dept galleries">
+								<a href="#" class="hv"><span class="icon"></span>Galleries</a>
+							</li>
+
+							<li class="main-nav dept cities">
+								<a href="#" class="hv"><span class="icon"></span>Cities</a>
+								<div class="preview-window">
+									<div class="menu-arrow"></div>
+									<ul>
+										<li><a href="#">Atlanta</a></li>
+										<li><a href="#">Savannah</a></li>
+										<li><a href="#">Orlando</a></li>
+										<li><a href="#">South Florida</a></li>
+										<li><a href="#">Tampa</a></li>
+										<li><a href="#">Jacksonville</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="main-nav dept vendors">
+								<a href="<?php echo get_permalink( get_page_by_path( 'vendors' ) ) ?>" class="hv"><span class="icon"></span>Vendors</a>
+							</li>
+							
 						</ul>
 						<div class="search_secondary">
 							<form action="/search" method="GET">
