@@ -1502,7 +1502,7 @@ text-decoration:underline;
 }
 
 .category-block:hover h2 {
-	background: url("images/cat_preview_bg.png") no-repeat -300px 0;
+	background: url("images/cat_preview_bg.png") no-repeat -500px 0;
 }
 
 .category-block .date {
@@ -4209,6 +4209,9 @@ html[xmlns] .slides {
 		float: none;
 		display: block;
 		margin: 10px auto;
+		background: url('images/OccOnline_logo_m.png') no-repeat;
+		width: 220px;
+		height: 55px;
 	}
 
 	.preview-window {
@@ -4398,6 +4401,25 @@ html[xmlns] .slides {
 		padding: 18px;
 		text-align: center;
 	}
+
+
+	/************************************
+	 *
+	 * CATEGORIES
+	 *
+	 *************************************/
+
+	 #category_list ul li {
+	 	width: auto;
+	 	margin-right: 0;
+	 }
+
+	.category-block .category-post-preview img {
+		width: 500px;
+		height: auto;
+		margin-left: 0;
+	}
+
 
 	/************************************
 	 *
