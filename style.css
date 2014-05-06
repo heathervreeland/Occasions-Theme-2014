@@ -4147,6 +4147,10 @@ html[xmlns] .slides {
 
 @media screen and (max-width : 480px) {
 
+	#sidebar {
+		display: none;
+	}
+
 	img {
 		max-width: 100%;
 	}
@@ -4161,6 +4165,10 @@ html[xmlns] .slides {
 		overflow: hidden;
 	}
 
+	.section-divider {
+		height: 90px;
+	}
+
 	.section-divider .line, .section-divider .before, .section-divider .after {
 		display: none;
 	}
@@ -4168,6 +4176,12 @@ html[xmlns] .slides {
 	.section-divider span.heading {
 		font-size: 30px;
 		padding: 0 5px;
+	}
+
+
+	.section-divider.top-divider {
+		position: relative;
+		top: 0;
 	}
 
 	/************************************
@@ -4425,6 +4439,75 @@ html[xmlns] .slides {
 		margin-left: 0;
 	}
 
+
+
+	/************************************
+	 *
+	 * POSTS
+	 *
+	 *************************************/
+
+	 section.post-container {
+	 	width: auto;
+	 	float: none;
+	 }
+
+	 .page-block {
+	 	padding-top: 0;
+	 }
+
+
+	/************************************
+	 *
+	 * VENDORS PAGE
+	 *
+	 *************************************/
+
+	#vendors-page .section-divider.top-divider {
+		display: none;
+	}
+
+	#vendors-page #index_vv {
+		display: none;
+	}
+
+	#vendors-page #index_vv_celebration {
+		display: none;
+	}
+
+	#vendors-page #index_vv_map {
+		display: none;
+	}
+
+	#vendors-page .post-content p {
+		display: none;
+	}
+
+	#vendors-page .location-box {
+		float: none;
+		width: auto;
+		padding: 25px;
+	}
+
+	#vendors-page .location-box.florida {
+		margin-left: 0;
+		width: auto;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	#vendors-page .location-box h2 {
+		text-align: center;
+	}
+
+	#vendors-page .location-box ul {
+		text-align: center;
+	}
+
+	#vendors-page .location-box ul li {
+		float: none;
+		width: auto;
+	}
 
 	/************************************
 	 *
