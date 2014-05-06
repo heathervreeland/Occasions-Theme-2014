@@ -4147,6 +4147,10 @@ html[xmlns] .slides {
 
 @media screen and (max-width : 480px) {
 
+	#breadcrumbs {
+		display: none;
+	}
+
 	#sidebar {
 		display: none;
 	}
@@ -4455,6 +4459,18 @@ html[xmlns] .slides {
 	 .page-block {
 	 	padding-top: 0;
 	 }
+
+	 #single-post-row {
+	 	padding-top: 30px;
+	 }
+
+	 #single-post-row .page-block {
+	 	overflow: visible;
+	 }
+
+	 .post-category-floater {
+		width: 100%;
+	}
 
 
 	/************************************
