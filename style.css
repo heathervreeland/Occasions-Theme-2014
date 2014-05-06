@@ -4407,9 +4407,13 @@ html[xmlns] .slides {
 
 
 	ul#footer-nav {
-		width: 95%;
+		width: 100%;
 		text-align: center;
 		margin:; 0 auto;
+	}
+
+	ul#footer-nav .col-md-3 {
+		width: 100%;
 	}
 
 	ul#footer-nav li h2.brand {
