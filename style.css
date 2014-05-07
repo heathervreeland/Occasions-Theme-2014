@@ -4147,6 +4147,10 @@ html[xmlns] .slides {
 
 @media screen and (max-width : 480px) {
 
+	.row {
+		padding: 10px;
+	}
+
 	#breadcrumbs {
 		display: none;
 	}
@@ -4478,6 +4482,20 @@ html[xmlns] .slides {
 		margin-right: -10px;
 	}
 
+	.you_may_like .post_grid_block {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#single-post-row .post-content {
+		padding: 10px;
+	}
+
+	#single-post-row .post-content .border-line {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
 	/************************************
 	 *
 	 * VENDORS PAGE
@@ -4529,6 +4547,20 @@ html[xmlns] .slides {
 		float: none;
 		width: auto;
 	}
+
+	#vendors-page .post-content {
+		padding: 15px;
+	}
+
+	/************************************
+	 *
+	 * COMMENTS	
+	 *
+	 *************************************/
+
+	 #comments-container {
+	 }
+
 
 	/************************************
 	 *

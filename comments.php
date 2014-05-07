@@ -7,7 +7,7 @@
 	$comment_type = $type == 'venue' ? "Review" : "Comment";
 ?>
 <a name="comments"></a>
-<div class="<?php echo $type == 'venue' ? "reviews" : ""?>">
+<div class="<?php echo $type == 'venue' ? "reviews" : ""?>" id="comments-container">
 	<section class="comments <?php echo $type == 'venue' ? "reviews-list" : ""?>">
 		<?php if (post_password_required()) : ?>
 			<p class="comments-protected"><?php _e('This post is password protected. Enter the password to view comments.', 'oo_theme'); ?></p>
