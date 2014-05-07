@@ -379,21 +379,6 @@ if(count($items)): ?>
     </table>
   </div>
 
-    
-  <div class="subtotals">
-    <div class="subtotal-line">
-      <?php _e( 'Subtotal' , 'cart66' ); ?>:
-      <span class="price"><?php echo Cart66Common::currency($subtotal); ?></span>
-    </div>
-
-    <?php if(Cart66Session::get('Cart66Cart')->requireShipping()): ?>
-      <div class="subtotal-line shipping">
-        <?php _e( 'Shipping' , 'cart66' ); ?>:
-        <span class="price"><?php echo Cart66Common::currency($shipping) ?></span>
-      </div>
-    <?php endif; ?>
-
-  </div>
 
   <div class="apply-coupon">
     <?php if($fullMode && Cart66Common::activePromotions()): ?>
@@ -415,6 +400,22 @@ if(count($items)): ?>
         </div>
     <?php endif; ?>
   </div>
+    
+  <div class="subtotals">
+    <div class="subtotal-line">
+      <?php _e( 'Subtotal' , 'cart66' ); ?>:
+      <span class="price"><?php echo Cart66Common::currency($subtotal); ?></span>
+    </div>
+
+    <?php if(Cart66Session::get('Cart66Cart')->requireShipping()): ?>
+      <div class="subtotal-line shipping">
+        <?php _e( 'Shipping' , 'cart66' ); ?>:
+        <span class="price"><?php echo Cart66Common::currency($shipping) ?></span>
+      </div>
+    <?php endif; ?>
+
+  </div>
+
 
 
   <div class="grand-total">
@@ -429,48 +430,53 @@ if(count($items)): ?>
   <?php if($fullMode): ?>
     
   <div id="viewCartNav">
-	<div id="continueShopping">
+
+  <div class="shop-btn-floater">
+
+    <div class="update-checkout">
+      <?php if($fullMode): ?>
+          <?php if($cartImgPath && Cart66Common::urlIsLIve($updateTotalImg)): ?>
+            <input class="nice-button" type="image" src='<?php echo $updateTotalImg ?>' value="<?php _e( 'Update Cart' , 'cart66' ); ?>" name="updateCart"/>
+          <?php else: ?>
+            <input type='submit' name='updateCart' value='<?php _e( 'Update Cart' , 'cart66' ); ?>' class="nice-button" />
+          <?php endif; ?>
+        <?php endif; ?>
+    </div>
+
+    <?php
+      $checkoutImg = false;
+      if($cartImgPath) {
+        $checkoutImg = $cartImgPath . 'checkout.png';
+      }
+    ?>
+    <?php
+      if(number_format(Cart66Setting::getValue('minimum_amount'), 2, '.', '') > number_format(Cart66Session::get('Cart66Cart')->getSubTotal(), 2, '.', '') && Cart66Setting::getValue('minimum_cart_amount') == 1): ?>
+    <?php else: ?>
+      <div id="checkoutShopping">
+        <?php
+          $checkoutUrl = Cart66Setting::getValue('auth_force_ssl') ? str_replace('http://', 'https://', get_permalink($checkoutPage->ID)) : get_permalink($checkoutPage->ID);
+        ?>
+        <?php if($checkoutImg): ?>
+          <a id="Cart66CheckoutButton" class="nice-button checkout" href='<?php echo $checkoutUrl; ?>'>Checkout</a>
+        <?php else: ?>
+          <a id="Cart66CheckoutButton" href='<?php echo $checkoutUrl; ?>' class="nice-button checkout" title="Continue to Checkout"><?php _e( 'Checkout' , 'cart66' ); ?></a>
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+    <?php else: ?>
+      <div id="Cart66CheckoutReplacementText">
+          <?php echo Cart66Setting::getValue('cart_terms_replacement_text');  ?>
+      </div>
+    <?php endif; ?>
+  </div>
+
+
+  <div id="continueShopping">
         <?php if($cartImgPath): ?>
           <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="nice-button" >Continue Shopping</a>
         <?php else: ?>
           <a href='<?php echo Cart66Session::get('Cart66LastPage'); ?>' class="nice-button" title="Continue Shopping"><?php _e( 'Continue Shopping' , 'cart66' ); ?></a>
         <?php endif; ?>
-	</div>
-
-  <?php
-    $checkoutImg = false;
-    if($cartImgPath) {
-      $checkoutImg = $cartImgPath . 'checkout.png';
-    }
-  ?>
-  <?php
-    if(number_format(Cart66Setting::getValue('minimum_amount'), 2, '.', '') > number_format(Cart66Session::get('Cart66Cart')->getSubTotal(), 2, '.', '') && Cart66Setting::getValue('minimum_cart_amount') == 1): ?>
-  <?php else: ?>
-    <div id="checkoutShopping">
-      <?php
-        $checkoutUrl = Cart66Setting::getValue('auth_force_ssl') ? str_replace('http://', 'https://', get_permalink($checkoutPage->ID)) : get_permalink($checkoutPage->ID);
-      ?>
-      <?php if($checkoutImg): ?>
-        <a id="Cart66CheckoutButton" class="nice-button checkout" href='<?php echo $checkoutUrl; ?>'>Checkout</a>
-      <?php else: ?>
-        <a id="Cart66CheckoutButton" href='<?php echo $checkoutUrl; ?>' class="nice-button checkout" title="Continue to Checkout"><?php _e( 'Checkout' , 'cart66' ); ?></a>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
-  <?php else: ?>
-    <div id="Cart66CheckoutReplacementText">
-        <?php echo Cart66Setting::getValue('cart_terms_replacement_text');  ?>
-    </div>
-  <?php endif; ?>
-
-  <div class="update-checkout">
-    <?php if($fullMode): ?>
-      <?php if($cartImgPath && Cart66Common::urlIsLIve($updateTotalImg)): ?>
-        <input class="nice-button" type="image" src='<?php echo $updateTotalImg ?>' value="<?php _e( 'Update Cart' , 'cart66' ); ?>" name="updateCart"/>
-      <?php else: ?>
-        <input type='submit' name='updateCart' value='<?php _e( 'Update Cart' , 'cart66' ); ?>' class="nice-button" />
-      <?php endif; ?>
-    <?php endif; ?>
   </div>
 
 	
