@@ -4588,6 +4588,10 @@ html[xmlns] .slides {
 	 	float: none;
 	 }
 
+	 .cart #viewCartTable tr td, .checkout #viewCartTable tr td {
+		font-size: 14px;
+	}
+
 	 #viewCartTable td, #viewCartTable th {
 		padding: 2px 2px;
 	}
@@ -4605,7 +4609,7 @@ html[xmlns] .slides {
 	}
 
 	.cart .item-row .cart66-align-right.prices, .checkout .item-row .cart66-align-right.prices {
-		width: 50px;
+		width: 45px;
 	}
 
 	.cart .item-row .quantity.cart66-align-center, .checkout .item-row .quantity.cart66-align-center {
