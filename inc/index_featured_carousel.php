@@ -1,5 +1,5 @@
 <?php
-	
+	global $post;
 	// Get cover stories
 	$cover_stories = get_cover_stories();
 	// Get the latest featured posts
@@ -10,9 +10,13 @@
 
 
 <?php
+	while($cover_stories->have_posts()) : $cover_stories->the_post();
 
-	while($cover_stories->have_posts()) : 
-
+		$pid = get_the_ID();
+		$title = get_the_title($pid);
+		$permalink = get_permalink($pid);
+?>
+<?
 		/* get gallery pictures... or pictures in post */
 		$album_pics = get_post_gallery_images(get_the_ID());
 		$album_images = array();
@@ -57,8 +61,8 @@
 					<li class="<?php echo $post_cat_slug; ?>">
 						<div class="featured-meta">
 							<div class="container">
-								<a href="<?php the_permalink(); ?>" class="nice-button">View Article</a>
-								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></a></h1>
+								<a href="<?php echo $permalink;  ?>" class="nice-button">View Article</a>
+								<a href="<?php echo $permalink;  ?>"><h1><?php echo $title; ?></a></h1>
 							</div>
 						</div>
 						<div class="featured-image"><img src="<?php echo $pic; ?>"/></div>
@@ -73,7 +77,7 @@
 						<div class="featured-meta">
 							<div class="container">
 								<a href="#" class="nice-button">View Article</a>
-								<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></a></h1>
+								<a href="<?php echo $permalink;  ?>"><h1><?php echo $title; ?></a></h1>
 							</div>
 						</div>
 						<div class="featured-image"><img src="<?php echo $pic->guid; ?>"/></div>
