@@ -89,7 +89,7 @@ Template Name: Home
 				network of only the most talented, quality-centric wedding venues and party<br/>
 				services in the special events industry.
 			</p>
-			<a href="#" class="nice-button">Find my Vendors</a>
+			<a href="/vendors" class="nice-button">Find my Vendors</a>
 			<span class="pink cele3">Don't see your company listed? Click to learn about our memberships</span>
 		</div>
 		<img src="<?php echo get_template_directory_uri(); ?>/images/map_picture_vendors_section.png" id="index_vv_map"/>
@@ -107,49 +107,60 @@ Template Name: Home
 	</div>
 
 	<div id="index_dept_grid">
-		<div class="col-md-3 one cont">
-			<div>
-				<span>Galleries</span>
-				<p>A curated collection of the most inspire wedding &amp; party images we've featured. Pin away.</p>
+		<a href="/galleries">
+			<div class="col-md-3 one cont">
+				<div>
+					<span>Galleries</span>
+					<p>A curated collection of the most inspire wedding &amp; party images we've featured. Pin away.</p>
+				</div>
 			</div>
-		</div>
+		</a>
 		<div class="col-md-3 two"></div>
-		<div class="col-md-3 three cont">
-			<div>
-				<span>Real Weddings</span>
-				<p>Chosen for their style, unique-details and great vendors these real wedding are guaranteed to inspire.</p>
+		<a href="/real-weddings">
+			<div class="col-md-3 three cont">
+				<div>
+					<span>Real Weddings</span>
+					<p>Chosen for their style, unique-details and great vendors these real wedding are guaranteed to inspire.</p>
+				</div>
 			</div>
-		</div>
+		</a>	
 		<div class="col-md-3 four"></div>
 
 		<div class="col-md-3 five"></div>
-		<div class="col-md-3 six cont">
-			<div>
-				<span>Tools &amp; Checklists</span>
-				<p>Budgets, Checklists and Vendor Interviews will put your party planning in motion</p>
+		<a href="#">
+			<div class="col-md-3 six cont">
+				<div>
+					<span>Tools &amp; Checklists</span>
+					<p>Budgets, Checklists and Vendor Interviews will put your party planning in motion</p>
+				</div>
 			</div>
-		</div>
+		</a>
 		<div class="col-md-3 seven"></div>
-		<div class="col-md-3 eight cont">
-			<div>
-				<span>Holiday Inspirations</span>
-				<p>Tasty Recipes and beautiful seasonal settings bound to bring out your inner hostess skills</p>
+		<a href="/entertaining-and-holidays/holiday-party-ideas">
+			<div class="col-md-3 eight cont">
+				<div>
+					<span>Holiday Inspirations</span>
+					<p>Tasty Recipes and beautiful seasonal settings bound to bring out your inner hostess skills</p>
+				</div>
 			</div>
-		</div>
-
-		<div class="col-md-3 nine cont">
-			<div>
-				<span>Party Ideas</span>
-				<p>Make everyday an occasion with ideas from birthday parties to bridal shows</p>
+		</a>
+		<a href="/entertaining-and-holidays/holiday-party-ideas">
+			<div class="col-md-3 nine cont">
+				<div>
+					<span>Party Ideas</span>
+					<p>Make everyday an occasion with ideas from birthday parties to bridal shows</p>
+				</div>
 			</div>
-		</div>
+		</a>
 		<div class="col-md-3 ten"></div>
-		<div class="col-md-3 eleven cont">
-			<div>
-				<span>From the Editors</span>
-				<p>Insider insights and a behind-the-scenes look from the team at Occasions</p>
+		<a href="/from-the-editor">
+			<div class="col-md-3 eleven cont">
+				<div>
+					<span>From the Editors</span>
+					<p>Insider insights and a behind-the-scenes look from the team at Occasions</p>
+				</div>
 			</div>
-		</div>
+		</a>
 		<div class="col-md-3 twelve"></div>
 	</div>
 

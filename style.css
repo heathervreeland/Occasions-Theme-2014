@@ -4577,6 +4577,12 @@ html[xmlns] .slides {
 	 #comments-container {
 	 }
 
+	.comment-form .submit {
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+
 
 	 /************************************
 	 *

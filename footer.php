@@ -40,14 +40,14 @@
 						<li><a href="/">Home</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/about/careers">Careers</a></li>
-						<li><a href="http://mediakit.occasionsonline.com">Print Advertising</a></li>
+						<li><a href="/advertise">Print Advertising</a></li>
 						<li><a href="/editorial">Editorial</a></li>
 						<li><a href="/about/badges">Link to Us</a></li>
 						<li><a href="/subscribe">Purchase Copies</a></li>
 						<li><a href="/support">Support</a></li>
 						<li><a href="/privacy-policy">Privacy Policy</a></li>
 						<li><a href="/terms-of-use">Terms of Use</a></li>
-						<li><a href="/editorial/guaranteed-print-online-feature">Get Featured</a></li>
+						<li><a href="/editorial/overview">Get Featured</a></li>
 						<li><a href="/support">Update Address</a></li>
 					</ul>
 
