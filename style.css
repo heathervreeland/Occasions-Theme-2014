@@ -937,6 +937,43 @@ ul#main-nav li.vendors span.icon {
 	z-index: 10;
 }
 
+#sections-carousel .featured-meta {
+	z-index: 800;
+	width: 100%;
+	height: 130px;
+	border-top: 4px solid #46c8bc;
+	position: absolute;
+	background: url("images/featured_meta_bg.png") repeat-x transparent;
+	top: 395px;
+	text-align: center;
+}
+
+#sections-carousel .featured-meta h1 {
+	line-height: 30px;
+}
+
+#sections-carousel .featured-meta .container {
+	width: 100%;
+}
+
+#sections-carousel .featured-meta .nice-button {
+	position: relative;
+	z-index: 5;
+	top: 100px;
+}
+
+#sections-carousel .featured-meta a h1 {
+	color: #000;
+	font-family: "Antic Didone";
+	font-size: 22px;
+	width: auto;
+	text-align: center;
+	margin: 15px auto;
+	position: relative;
+	top: -20px;
+}
+
+
 /** Carousel **/
 
 .skdslider {

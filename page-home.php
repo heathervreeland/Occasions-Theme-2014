@@ -37,10 +37,27 @@ Template Name: Home
 						if($recent_featured_posts) : 
 							$counter = 0;
 							foreach($recent_featured_posts as $post) {
+
+								$category = get_the_category($post->ID); $category = $category[0];
+								if($category->category_parent == "0") {
+									$post_cat_slug = $category->slug;
+								}
+								else {
+									$parent = get_category($category->category_parent);
+									$post_cat_slug = $parent->slug;
+								}
 					?>
-						<li>
+						<li class="<?php echo $post_cat_slug; ?>">
 							<a href="<?php echo get_permalink($post->ID); ?>"><div class="sections-slide-overlay"></div></a>
-							<div class="featured-image"><?php get_nice_image("large"); ?></div>
+							<div class="featured-image">
+								<div class="featured-meta">
+									<div class="container">
+										<a href="<?php echo get_permalink($post->ID);  ?>" class="nice-button">View Article</a>
+										<a href="<?php echo get_permalink($post->ID);  ?>"><h1><?php echo $post->post_title; ?></h1></a>
+									</div>
+								</div>
+								<?php get_nice_image("large"); ?>
+							</div>
 						</li>
 					<?php
 							}
