@@ -2964,7 +2964,7 @@ footer ul#footer-nav ul li {
 #venue-information .service dl dt, #venue-information .service dl dd {
 	float: left;
 	width: 50%;
-	height: 30px;
+	min-height: 30px;
 }
 
 #venue-information .service dl dt {
@@ -4691,6 +4691,42 @@ html[xmlns] .slides {
 	.cart .after-divider .nice-button, .checkout .after-divider .nice-button {
 		width: 100%;
 		display: block;
+	}
+
+	.checkout #continueShopping {
+		display: none;
+	}
+
+	.checkout #Cart66CheckoutReplacementText {
+		display: none;
+	}
+
+	.checkout #Cart66CheckoutButtonDiv .nice-button {
+		float: none;
+		width: 100%;
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	.checkout .phorm2 {
+		min-width: 0 !important;
+	}
+
+	#billingInfo ul li, #shippingInfo ul li, #paymentInfo ul li {
+		float: none;
+		width: 100%;
+	}
+
+	#billingInfo input, #shippingInfo input, #paymentInfo input {
+		width: 100% !important;
+	}
+
+	#billingInfo select, #shippingInfo select, #paymentInfo select {
+		width: 100%;
+	}
+
+	.checkout .after-divider, .cart .after-divider {
+		padding-top: 0;
 	}
 
 	/************************************
