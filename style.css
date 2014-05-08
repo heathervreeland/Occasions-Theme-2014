@@ -4415,8 +4415,17 @@ html[xmlns] .slides {
 		width: 95%;
 	}
 
+	#sections-carousel .featured-image {
+		width: 100%;
+	}	
+
 	#sections-carousel {
 		width: auto;
+	}
+
+	#sections-carousel .featured-meta .container {
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	#index_vv {
