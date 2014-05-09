@@ -151,147 +151,146 @@
 						<div id="venue-information">
 
 							<div class="service details">
-									<h2>Venue Details</h2>
-									
-									<dl class="cf">
-										<dr>
-											<dt>
-												Spaces Available
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_spaces') != '') {
-															oo_meta('additional_spaces');
-														}
-														else {
-															"-";
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Capacity
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_capacity') != '') {
-															oo_meta('additional_capacity');
-														}
-														else {
-															"-";
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Square Footage
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_footage') != '') {
-															oo_meta('additional_footage');
-														}
-														else {
-															"-";
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Catering Policy
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_cathering') != '') {
-															oo_meta('additional_cathering');
-														}
-														else {
-															echo "-";
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Alcohol Policy
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_alcohool')) {
-															echo "Yes, outside alcohol vendors are permitted";
-														}
-														else {
-															echo "No";	
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Onsite Accommodations
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_accomodations')) {
-															echo "Yes";
-														}
-														else {
-															echo "No";	
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												Handicap Accessible
-											</dt>
-											<dd>
-												<?php 	if (oo_get_meta('additional_handicap')) {
-															echo "Yes";
-														}
-														else {
-															echo "No";
-														}
-												?>
-											</dd>
-										</dr>
-										<dr>
-											<dt>
-												We Accept
-											</dt>
-											<dd>
-												<?php
-													if (sizeof(oo_get_meta('additional_accepted_payments', false)) == 0) { echo "-"; }
-													foreach (oo_get_meta('additional_accepted_payments', false) as $payment): ?>
-													<span>
-														<img src="<?php echo get_template_directory_uri() . '/images/payments/logo-' . strtolower($payment) . '.jpg' ?>" alt="<?php $payment ?>" />
-													</span>
-												<?php endforeach ?>
-											</dd>
-										</dr>
+								<h2>Venue Details</h2>
+								
+								<dl class="cf">
+									<dr>
+										<dt>
+											Spaces Available
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_spaces') != '') {
+														oo_meta('additional_spaces');
+													}
+													else {
+														"-";
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Capacity
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_capacity') != '') {
+														oo_meta('additional_capacity');
+													}
+													else {
+														"-";
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Square Footage
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_footage') != '') {
+														oo_meta('additional_footage');
+													}
+													else {
+														"-";
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Catering Policy
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_cathering') != '') {
+														oo_meta('additional_cathering');
+													}
+													else {
+														echo "-";
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Alcohol Policy
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_alcohool')) {
+														echo "Yes, outside alcohol vendors are permitted";
+													}
+													else {
+														echo "No";	
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Onsite Accommodations
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_accomodations')) {
+														echo "Yes";
+													}
+													else {
+														echo "No";	
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											Handicap Accessible
+										</dt>
+										<dd>
+											<?php 	if (oo_get_meta('additional_handicap')) {
+														echo "Yes";
+													}
+													else {
+														echo "No";
+													}
+											?>
+										</dd>
+									</dr>
+									<dr>
+										<dt>
+											We Accept
+										</dt>
+										<dd>
+											<?php
+												if (sizeof(oo_get_meta('additional_accepted_payments', false)) == 0) { echo "-"; }
+												foreach (oo_get_meta('additional_accepted_payments', false) as $payment): ?>
+												<span>
+													<img src="<?php echo get_template_directory_uri() . '/images/payments/logo-' . strtolower($payment) . '.jpg' ?>" alt="<?php $payment ?>" />
+												</span>
+											<?php endforeach ?>
+										</dd>
+									</dr>
 
-									</dl>
-								</div>
-								<?php
-									}
-								?>
-
-								<?php if (count($downloads)): ?>
-									<div id="venue-downloads" class="tab">
-										<h2>Downloads</h2>
-										<?php foreach($downloads as $file):?>
-											<li>
-												<a href="<?php echo $file->guid; ?>" rel="external"><strong><?php echo $file->post_title; ?></strong></a> 
-											</li>
-										<?php endforeach; ?>
-									</div>
-								<?php endif ?>
-
-								<?php if ($video_url): ?>
-									<div id="venue-video" class="tab">
-										<h2>Video</h2>
-										<?php echo wp_oembed_get($video_url, array('width' => '600', 'height' => '400')) ?>
-									</div>
-								<?php endif ?>
-
+								</dl>
+							</div>
 						</div>
+						<?php
+							}
+						?>
+
+						<?php if (count($downloads)): ?>
+							<div id="venue-downloads" class="tab">
+								<h2>Downloads</h2>
+								<?php foreach($downloads as $file):?>
+									<li>
+										<a href="<?php echo $file->guid; ?>" rel="external"><strong><?php echo $file->post_title; ?></strong></a> 
+									</li>
+								<?php endforeach; ?>
+							</div>
+						<?php endif ?>
+
+						<?php if ($video_url): ?>
+							<div id="venue-video" class="tab">
+								<h2>Video</h2>
+								<?php echo wp_oembed_get($video_url, array('width' => '600', 'height' => '400')) ?>
+							</div>
+						<?php endif ?>
 
 					</div>				
 
