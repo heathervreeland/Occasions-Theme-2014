@@ -6,7 +6,7 @@ get_header(); ?>
 
 
 <div class="row editorial-guidelines" id="single-post-row">
-	<div id="page-about">
+	<div id="page-editorial">
 		<?php if(have_posts()) : ?>
 			<?php while(have_posts()) : the_post(); ?>
 
@@ -31,8 +31,6 @@ get_header(); ?>
 				?>
 				<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
-					<?php get_sidebar('blog'); ?>
-
 					<section class="post-container">
 
 						<div class="post-category-floater">
@@ -41,12 +39,11 @@ get_header(); ?>
 
 						<div class="post-content story ">
 
-							<h1><?php oo_page_title($this_page->post_title) ?></h1>
+							<h1><?php the_title(); ?></h1>
 
 							<div class="border-line"></div>
 
 
-							<?php oo_part('nav-w-short-titles') ?>
 							<?php if ($_REQUEST['nggpage'] == '') : ?>
 							<?php add_filter('the_content','wrap_image_credits', 20); ?>
 							<?php the_content(); ?>
@@ -59,6 +56,9 @@ get_header(); ?>
 
 
 					</section>
+
+					<?php oo_part('nav-w-short-titles') ?>
+					<?php get_sidebar('blog'); ?>
 
 				</div>
 

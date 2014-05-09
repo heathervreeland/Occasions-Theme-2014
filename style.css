@@ -3594,7 +3594,7 @@ html[xmlns] .slides {
 }
 
 .horiz-box-nav nav .title,
-#page-about nav .title {
+#page-about nav .title, #page-editorial nav .title {
 	width: 100%;
 	text-align: center;
 	background-color: #9e9e9e;
@@ -3605,7 +3605,7 @@ html[xmlns] .slides {
 }
 
 .horiz-box-nav nav,
-#page-about nav {
+#page-about nav, #page-editorial nav {
 	font: 700 12px 'Raleway', sans-serif;
 	text-transform: uppercase;
 	margin-bottom: 0;
@@ -3615,33 +3615,33 @@ html[xmlns] .slides {
 }
 
 .horiz-box-nav nav ul,
-#page-about nav ul {
+#page-about nav ul, #page-editorial nav ul {
 	border: 2px solid #9e9e9e;
 	width: 300px;
 }
 .horiz-box-nav nav ul li,
-#page-about nav ul li {
+#page-about nav ul li, #page-editorial nav ul li {
 	border-bottom: 1px solid #9e9e9e;
 }
 
 .horiz-box-nav nav ul li:last-child,
-#page-about nav ul li:last-child {
+#page-about nav ul li:last-child, #page-editorial nav ul li:last-child {
 	border-bottom: 0;
 }
 
 .horiz-box-nav nav ul li a,
-#page-about nav ul li a {
+#page-about nav ul li a, #page-editorial nav ul li a {
 	font-weight: normal;
 	color: #9e9e9e;
 	display: block;
 	padding: 8px 18px;
 }
 .horiz-box-nav nav ul li a:hover,
-#page-about nav ul li a:hover {
+#page-about nav ul li a:hover, #page-editorial nav ul li a:hover {
 	color: #46c8bc;
 }
 .horiz-box-nav nav ul li.current a,
-#page-about nav ul li.current a {
+#page-about nav ul li.current a, #page-editorial nav ul li.current a {
 	color: #46c8bc;
 	position: relative;
 }
@@ -4707,30 +4707,30 @@ html[xmlns] .slides {
 	}
 
 	.horiz-box-nav nav .title,
-	#page-about nav .title {
+	#page-about nav .title, #page-editorial nav .title {
 		display: none;
 	}
 
 	.horiz-box-nav nav,
-	#page-about nav {
+	#page-about nav, #page-editorial nav {
 		display: block;
 		overflow: hidden;
 		float: none;
 	}
 
 	.horiz-box-nav nav ul,
-	#page-about nav ul {
+	#page-about nav ul, #page-editorial nav ul {
 		border: 1px solid #cfcfcf;
 		width: 100%;
 	}
 
 	.horiz-box-nav nav ul li,
-	#page-about nav ul li {
+	#page-about nav ul li, #page-editorial nav ul li {
 		border-bottom: 1px solid #cfcfcf;
 	}
 
 	.horiz-box-nav nav ul li a:hover,
-	#page-about nav ul li a:hover {
+	#page-about nav ul li a:hover, #page-editorial nav ul li a:hover {
 		color: #46c8bc;
 	}
 
@@ -4748,6 +4748,18 @@ html[xmlns] .slides {
 	#page-about ul li:nth-child(2), #page-about ul li:nth-child(3), #page-about ul li:nth-child(4) {
 		display: none;
 	}
+
+	/* Editorial page specific */
+	#page-editorial {
+		padding-top: 200px;
+	}
+
+	#page-editorial nav {
+		position: absolute;
+		top: -225px;
+		width: 100%;
+	}
+
 
 	/************************************
 	 *
