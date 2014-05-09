@@ -919,7 +919,10 @@ ul#main-nav li.vendors span.icon {
 }
 
 #sections-carousel .featured-image img {
-	min-height: 525px;
+	height: 610px !important;
+	width: auto !important;
+	margin-left: -10%;
+	min-width: 500px;
 }
 
 #sections-carousel-container .skdslider a.prev, #sections-carousel-container .skdslider a.next {
