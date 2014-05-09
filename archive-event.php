@@ -6,7 +6,7 @@
 	$state = get_state_from_region($city);
 	$terms = get_term_children( $city->term_id, 'region' );
 	if(empty($terms)) {
-		$terms = [$city->term_id];
+		$terms = array($city->term_id);
 	}
 
 	$querystr = "
