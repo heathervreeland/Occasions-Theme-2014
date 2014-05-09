@@ -2834,6 +2834,10 @@ footer ul#footer-nav ul li {
 	margin-bottom: 0 !important;
 }
 
+#venue.event .post-content h1.title {
+	margin-bottom: 20px !important;
+}
+
 #venue .post-meta address {
 	color: #afa4cf;
 	font-family: "Oswald";
@@ -2918,6 +2922,10 @@ footer ul#footer-nav ul li {
 
 #venue .vendor-list-block .detail .descr {
 	margin-top: 0;
+}
+
+#single-post-row .post-content .descr p {
+	margin: 0px 0 20px;
 }
 
 #venue .post-content .border-line {

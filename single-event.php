@@ -7,7 +7,7 @@
 
  ?>
 
-<div class="row" id="single-event-row">
+<div class="row" id="single-post-row">
 
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
@@ -33,13 +33,27 @@
 
 				<?php get_sidebar('blog'); ?>
 
-				<section class="post-container venue event" id="venue">
+				<section class="post-container venue event single-event" id="venue">
+
+					<div class="post-category-floater">
+						<span class="nice-button dept">Events</span>
+					</div>
 
 					<div class="post-content story ">
-							<div class="vendor-list-block event">
-								
-								<h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
+						<h1 class="title"><?php the_title(); ?></h1>
+
+						<div class="venue-share">
+							Share This 
+
+							<?php oo_part("social-share"); ?>
+
+						</div>
+
+
+						<div class="border-line"></div>
+
+							<div class="vendor-list-block event">
 
 								<div class="vendor-list-block-actions">
 									<figure>
@@ -98,13 +112,6 @@
 
 
 					</div>		
-
-					<div class="venue-share after-story">
-						Share This 
-
-						<?php oo_part("social-share"); ?>
-
-					</div>
 
 					<?php if( $city->parent ) { ?>
 						<div class="section-breaker">
