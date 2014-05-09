@@ -4633,18 +4633,69 @@ html[xmlns] .slides {
 		width: 100%;
 	}
 
+	/************************************
+	 *
+	 * VENDORS & VENUES	
+	 *
+	 *************************************/
 
-	 /************************************
+	.venues-list ul.col-md-4 {
+		padding-right: 0;
+	}
+
+	.venues-list ul.col-md-4 li {
+		text-align: center;
+	}
+
+	.services-list.col-md-6 {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.services-list.col-md-6 li {
+		text-align: center;
+	}
+
+	.vendor-list-block-actions {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+
+	.vendor-list-block .detail {
+		width: 100%;
+		float: none;
+	}
+
+	.vendor-list-block .detail h2 {
+		text-align: center;
+	}
+
+	.vendor-list-block-actions figure {
+		width: 100%;
+		height: 142px;
+		overflow: hidden;
+	}
+
+	.vendor-list-block-actions figure img {
+		width: 100% !important;
+		height: auto !important;
+		max-width: none !important;
+		margin-left: 0;
+	}
+
+
+	/************************************
 	 *
 	 * SHOP / PURCHASE COPIES	
 	 *
 	 *************************************/
 
-	 #cart-widget {
+	#cart-widget {
 	 	float: none;
 	 }
 
-	 .cart #viewCartTable tr td, .checkout #viewCartTable tr td {
+	.cart #viewCartTable tr td, .checkout #viewCartTable tr td {
 		font-size: 14px;
 	}
 
@@ -4652,7 +4703,7 @@ html[xmlns] .slides {
 		padding: 2px 2px;
 	}
 
-	 .cart .item-row img, .checkout .item-row img {
+	.cart .item-row img, .checkout .item-row img {
 	 	display: none;
 	 }
 
