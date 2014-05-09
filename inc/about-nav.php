@@ -12,6 +12,7 @@
 ?>
 <?php if ($query->have_posts()): ?>
 	<nav class="cf">
+		<div class="title">More Links</div>
 		<ul>
 			<?php while($query->have_posts()) : $query->the_post(); ?>
 				<li <?php echo is_page(get_the_ID()) ? 'class="current"' : '' ?>>

@@ -3592,55 +3592,60 @@ html[xmlns] .slides {
 .page .horiz-box-nav nav ul li a {
 	text-decoration:none;
 }
+
+.horiz-box-nav nav .title,
+#page-about nav .title {
+	width: 100%;
+	text-align: center;
+	background-color: #9e9e9e;
+	padding: 6px;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #fff;
+}
+
 .horiz-box-nav nav,
 #page-about nav {
 	font: 700 12px 'Raleway', sans-serif;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	margin-bottom: 0;
 	display: block;
 	overflow: hidden;
+	float: right;
 }
+
 .horiz-box-nav nav ul,
 #page-about nav ul {
-	float: left;
-	border: 1px solid #99d6d1;
-	border-right: 0;
+	border: 2px solid #9e9e9e;
+	width: 300px;
 }
 .horiz-box-nav nav ul li,
 #page-about nav ul li {
-	float: left;
-	border-right: 1px solid #99d6d1;
+	border-bottom: 1px solid #9e9e9e;
 }
+
+.horiz-box-nav nav ul li:last-child,
+#page-about nav ul li:last-child {
+	border-bottom: 0;
+}
+
 .horiz-box-nav nav ul li a,
 #page-about nav ul li a {
-	color: #2a2b2c;
+	font-weight: normal;
+	color: #9e9e9e;
 	display: block;
 	padding: 8px 18px;
 }
 .horiz-box-nav nav ul li a:hover,
 #page-about nav ul li a:hover {
-	color: #4fb5a5;
+	color: #46c8bc;
 }
 .horiz-box-nav nav ul li.current a,
 #page-about nav ul li.current a {
-	color: #ffffff;
-	background: #4fb5a5;
+	color: #46c8bc;
 	position: relative;
 }
-.horiz-box-nav nav ul li.current a:after,
-#page-about nav ul li.current a:after {
-	top: 100%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-top-color: #4fb5a5;
-	border-width: 8px;
-	left: 50%;
-	margin-left: -8px;
-}
+
 
 
 /************************************
@@ -4684,6 +4689,65 @@ html[xmlns] .slides {
 		margin-left: 0;
 	}
 
+
+	/************************************
+	 *
+	 * ABOUT PAGE	
+	 *
+	 *************************************/
+
+	.horiz-box-nav nav ul li {
+		list-style:none;
+		text-align:center;
+		width:24%;
+		min-height:80px;
+	}
+	.page .horiz-box-nav nav ul li a {
+		text-decoration:none;
+	}
+
+	.horiz-box-nav nav .title,
+	#page-about nav .title {
+		display: none;
+	}
+
+	.horiz-box-nav nav,
+	#page-about nav {
+		display: block;
+		overflow: hidden;
+		float: none;
+	}
+
+	.horiz-box-nav nav ul,
+	#page-about nav ul {
+		border: 1px solid #cfcfcf;
+		width: 100%;
+	}
+
+	.horiz-box-nav nav ul li,
+	#page-about nav ul li {
+		border-bottom: 1px solid #cfcfcf;
+	}
+
+	.horiz-box-nav nav ul li a:hover,
+	#page-about nav ul li a:hover {
+		color: #46c8bc;
+	}
+
+	/* About page specific */
+	#page-about {
+		padding-top: 100px;
+	}
+
+	#page-about nav {
+		position: absolute;
+		top: -125px;
+		width: 100%;
+	}
+
+	#page-about ul li:nth-child(2), #page-about ul li:nth-child(3), #page-about ul li:nth-child(4) {
+		display: none;
+	}
 
 	/************************************
 	 *
