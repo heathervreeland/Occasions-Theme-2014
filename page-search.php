@@ -13,8 +13,6 @@ get_header(); ?>
       ?>
       <div class="page-block" id="main">
 
-        <?php get_sidebar('blog'); ?>
-
         <section class="post-container">
 
           <div class="post-category-floater">
@@ -121,6 +119,8 @@ get_header(); ?>
             </section>
 
         </section>
+        
+        <?php get_sidebar('blog'); ?>
 
       </div>
 

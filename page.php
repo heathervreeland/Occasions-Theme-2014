@@ -16,8 +16,6 @@
 			?>
 			<div class="page-block <?php echo $slug; ?>" id="main">
 
-				<?php get_sidebar('blog'); ?>
-
 				<section class="post-container">
 
 					<div class="post-content story ">
@@ -62,6 +60,8 @@
 					</div>
 
 				</section>
+
+				<?php get_sidebar('blog'); ?>
 
 			</div>
 

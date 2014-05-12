@@ -24,11 +24,28 @@ License: GNU General Public License v2 or later
 
 
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1280px) {
 
 	.container {
 		width: 1058px;
+	}
+
+}
+
+@media (min-width: 481px) {
+	.container {
+		width: 1058px;
+	}
+
+	.navbar-collapse.collapse {
+		display: block!important;
+		height: auto!important;
+		padding-bottom: 0;
+		overflow: visible!important;
+	}
+
+	.navbar-header {
+		float: left;
 	}
 
 }
@@ -65,6 +82,7 @@ ul {
 }
 
 body {
+	min-width: 1200px;
 	font-family: 'Raleway';
 }
 
@@ -4216,6 +4234,10 @@ html[xmlns] .slides {
 
 
 @media screen and (max-width : 480px) {
+
+	body {
+		min-width: auto;
+	}
 
 	.row {
 		padding: 10px;

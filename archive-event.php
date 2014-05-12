@@ -64,8 +64,6 @@
 
 		<div class="page-block vendors-archive" id="main">
 
-			<?php get_sidebar('blog'); ?>
-
 			<section class="post-container">
 
 				<div class="post-category-floater venue">
@@ -128,6 +126,8 @@
 
 
 			</section>
+
+			<?php get_sidebar('blog'); ?>
 
 		</div>
 

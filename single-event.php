@@ -31,8 +31,6 @@
 
 			<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
-				<?php get_sidebar('blog'); ?>
-
 				<section class="post-container venue event single-event" id="venue">
 
 					<div class="post-category-floater">
@@ -128,6 +126,8 @@
 					<?php } ?>
 
 				</section>
+
+				<?php get_sidebar('blog'); ?>
 
 			</div>
 

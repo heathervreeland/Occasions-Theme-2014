@@ -33,8 +33,6 @@
 
 			<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
-				<?php get_sidebar('blog'); ?>
-
 				<section class="post-container venue" id="venue">
 
 					<div class="post-category-floater">
@@ -314,6 +312,8 @@
 						comments_template(); ?>
 
 				</section>
+
+				<?php get_sidebar('blog'); ?>
 
 			</div>
 

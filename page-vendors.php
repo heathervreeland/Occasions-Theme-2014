@@ -20,8 +20,6 @@ Template Name: Vendors
 	?>
 	<div class="page-block <?php echo $parent_cat->slug; ?>" id="main">
 
-		<?php get_sidebar('blog'); ?>
-
 		<section class="post-container">
 
 			<div class="section-divider top-divider">
@@ -87,6 +85,8 @@ Template Name: Vendors
 			</div>
 
 		</section>
+
+		<?php get_sidebar('blog'); ?>
 
 	</div>
 
