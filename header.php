@@ -382,12 +382,12 @@
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
-										<li><a href="#">Atlanta</a></li>
-										<li><a href="#">Savannah</a></li>
-										<li><a href="#">Orlando</a></li>
-										<li><a href="#">South Florida</a></li>
-										<li><a href="#">Tampa</a></li>
-										<li><a href="#">Jacksonville</a></li>
+										<li><a href="/georgia/atlanta">Atlanta</a></li>
+										<li><a href="/georgia/savannah">Savannah</a></li>
+										<li><a href="/florida/orlando">Orlando</a></li>
+										<li><a href="/florida/south-florida">South Florida</a></li>
+										<li><a href="/florida/tampa">Tampa</a></li>
+										<li><a href="/florida/jacksonville">Jacksonville</a></li>
 									</ul>
 								</div>
 							</li>
