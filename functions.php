@@ -526,6 +526,88 @@ if ( ! function_exists("get_nice_image") ) {
 }
 
 
+function flo_exclude_search_pages($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'post');
+	}
+
+	return $query;
+}
+if( !is_admin() ) add_filter('pre_get_posts', 'flo_exclude_search_pages');
+
+
+
+
+function oo_custom_posts_per_page($query)
+{
+	if (isset($query->query_vars['ignore_filter_changes']) && $query->query_vars['ignore_filter_changes']) {
+		return;
+	}
+	if (isset($query->query_vars['service']) && $query->query_vars['service']) {
+		$query->set('post_type', 'venue');
+	}
+
+	if (isset($query->query_vars['venue-type']) && $query->query_vars['venue-type']) {
+		$query->set('post_type', 'venue');
+
+		$query->set('service', 'venues');
+
+
+		// // search only for venues
+		// $query->tax_query->queries[] = array(
+		// 	'taxonomy' 			=> 'service',
+		// 	'terms'	   			=> array('venues'),
+		// 	'include_children'	=> 1,
+		// 	'field'				=> 'slug',
+		// 	'operator'			=> 'IN',
+		// );
+	}
+
+	if (isset($query->query_vars['region']) && $query->query_vars['region']) {
+		if (!in_array($query->query_vars['post_type'], array('venue', 'event'))) {
+			$query->set('post_type', 'venue');
+		}
+	}
+
+	if (isset($query->query_vars['post_type'])) {
+	    switch ($query->query_vars['post_type']) {
+	        case 'event':
+	        	if (!$query->query_vars['posts_per_page']) {
+	        		$query->query_vars['posts_per_page'] = 3;
+	        	}
+	            break;
+	        case 'venue':
+	        	if (!$query->query_vars['posts_per_page']) {
+	        		$query->query_vars['posts_per_page'] = 20;
+	        	}
+	            break;
+	        default:
+	            break;
+	    }
+	}
+
+    return $query;
+}
+if(!is_admin()) {
+    add_filter('pre_get_posts', 'oo_custom_posts_per_page');
+}
+
+function oo_query_post_types($query) {
+	if (isset($query->query_vars['norewrite'])) {
+		return;
+	}
+	if ($query->is_tax('region') || $query->is_tax('service') || $query->is_tax('venue-type')) {
+		if (!in_array($query->query_vars['post_type'], array('venue', 'event'))) {
+			$query->set('post_type', array('venue'));
+		}
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'oo_query_post_types');
+
+
+
+
 /*****************************
 	CUSTOM REWRITE RULES     *
 ******************************/
@@ -545,14 +627,140 @@ function oo_add_rewrite_rules() {
 		'(florida|georgia)/([\w\d\-]+)/events/?$'					   				=> 'index.php?post_type=event' . '&region=' . $wp_rewrite->preg_index(2) . '&norewrite=1',
 		'(florida|georgia)/([\w\d\-]+)/events/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=event&paged=' . $wp_rewrite->preg_index(3) . '&region=' . $wp_rewrite->preg_index(2) . '&norewrite=1', // . '&type=' . $wp_rewrite->preg_index(3),
 
-	);
 
+		'(florida|georgia)/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(1) . '&paged=' . $wp_rewrite->preg_index(2),
+		'(florida|georgia)/([\w\d\-]+)/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
+
+
+		'(florida|georgia)/?$' 					=> 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(1) . '&paged=' . $wp_rewrite->preg_index(2),
+		'(florida|georgia)/([\w\d\-]+)/?$' 					=> 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
+
+
+
+	);
 	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 	
 }
 add_action( 'generate_rewrite_rules', 'oo_add_rewrite_rules' );
 
 
+
+
+function oo_multi_taxonomy_template()
+{
+	global $wp_query;
+	$templates = array();
+
+	if(is_tax()) {
+		$mytaxs = $wp_query->query_vars;
+
+		// redirect if the events by region selected
+		if (is_tax('region') && get_post_type() == 'event') {
+			set_query_var('posts_per_page', 2);
+			return STYLESHEETPATH.'/archive-event.php';
+		}
+
+		// redirect if the top region (state) is selected
+		if (is_tax('region')) {
+			$term = get_term_by('slug', $mytaxs['region'], 'region');
+			if (!$term->parent) {
+				return STYLESHEETPATH.'/taxonomy-region-level-top.php';
+			}
+		}
+
+		// find the right template for two taxonomies
+		$temp = "taxonomy";
+		foreach ($mytaxs as $taxname=>$taxval) {
+			if ($taxname=='service' || $taxname=='region' || $taxname=='venue-type') {
+				$temp .= "-{$taxname}";
+			}
+		}
+		$templates[] = $temp;
+		$templates[] = "taxonomy";
+		$located = oo_find_template($templates);
+
+		if($located) {
+			return $located;
+		}
+	}
+
+	return '';
+}
+add_filter('taxonomy_template',   'oo_multi_taxonomy_template', 1000);
+
+function oo_find_template($templates, $extension = 'php'){
+	$located = '';
+	// find the first available
+	foreach((array)$templates as $template){
+		$fn = "{$template}.{$extension}";
+		// highest priority - child theme 'templates' folder / or parent theme (if a child theme is not active)
+		if(file_exists(STYLESHEETPATH.'/templates/'.$fn)) {
+			$located = STYLESHEETPATH.'/templates/'.$fn;
+			break;
+		// child/parent theme root folder
+		} elseif(file_exists(STYLESHEETPATH.'/'.$fn)) {
+			$located = STYLESHEETPATH.'/'.$fn;
+			break;
+		// lowest priority - parent theme 'templates' folder
+		} elseif(file_exists(TEMPLATEPATH.'/templates/'.$fn)) {
+			$located = TEMPLATEPATH.'/templates/'.$fn;
+			break;
+		}
+	}
+	return $located;
+}
+
+
+function oo_og_meta_image() {
+	echo oo_get_og_meta_image();
+}
+function oo_get_og_meta_image() {
+	global $post;
+	$thumbdone=false;
+	$og_image='';
+	
+	//Featured image
+	if (function_exists('get_post_thumbnail_id')) {
+		$attachment_id = get_post_thumbnail_id($post->ID);
+		if ($attachment_id) {
+			$og_image = wp_get_attachment_url($attachment_id, false);
+			$thumbdone = true;
+		}
+	}
+	
+	//From post/page content
+	if (!$thumbdone) {
+		$image = oo_parse_first_image($post->post_content);
+		if ($image) {
+			preg_match('~src="([^"]+)"~si', $image, $matches);
+			if (isset($matches[1])) {
+				$image = $matches[1];
+				$pos = strpos($image, site_url());
+				if ($pos === false) {
+					if (stristr($image, 'http://') || stristr($image, 'https://')) {
+						$og_image = $image;
+					} else {
+						$og_image = site_url() . $image;
+					}
+				} else {
+					$og_image = $image;
+				}
+				$thumbdone=true;
+			}
+		}
+	}
+	
+	//From media gallery
+	if (!$thumbdone) {
+		$image = oo_get_first_attached_image($post->ID);
+		if ($image) {
+			$og_image = wp_get_attachment_url($image->ID, false);
+			$thumbdone = true;
+		}
+	}
+	
+	return $og_image;
+}
 
 
 /**
