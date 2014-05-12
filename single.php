@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+	oo_part("mobile_ad");
+?>
+
 <div class="row" id="single-post-row">
 
 	<?php if(have_posts()) : ?>

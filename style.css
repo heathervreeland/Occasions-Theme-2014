@@ -93,6 +93,9 @@ body {
 }
 
 
+.mobile_ad {
+	display: none;
+}
 
 /************************************
  *
@@ -4244,6 +4247,12 @@ html[xmlns] .slides {
 
 	body {
 		min-width: 0 !important;
+	}
+
+	.mobile_ad {
+		display: block;
+		width: 320px;
+		margin: 10px auto;
 	}
 
 	.row {
