@@ -1,3 +1,4 @@
+<?php if( wpmd_is_notphone() ) : ?>
 <aside id="sidebar">
 
 	<?php oo_part('side-top-ad') ?>
@@ -10,6 +11,6 @@
 	<?php dynamic_sidebar('ootheme-lower'); ?>
 
 </aside>
+<?php endif; ?>
 
-					
 					
