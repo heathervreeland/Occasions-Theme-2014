@@ -4236,7 +4236,7 @@ html[xmlns] .slides {
 @media screen and (max-width : 480px) {
 
 	body {
-		min-width: none !important;
+		min-width: 0 !important;
 	}
 
 	.row {
