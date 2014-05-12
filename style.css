@@ -696,6 +696,11 @@ ul#main-nav li.vendors span.icon {
 	padding: 0 13px 13px 0;
 }
 
+.submenu_features .features_block .post-image {
+	width: 100%;
+	height: auto;
+}
+
 .submenu_features .features_block .post-content {
 	float: left;
 	display: block;
