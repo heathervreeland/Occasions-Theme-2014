@@ -11,6 +11,8 @@ Template Name: Home
 
 <div class="row" id="index-sections">
 
+	<? oo_part("mobile_ad_home"); ?>
+
 	<div class="col-third">
 		<div class="pull-left">
 			<a href="/vendors">
