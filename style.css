@@ -4281,6 +4281,10 @@ html[xmlns] .slides {
 		overflow: hidden;
 	}
 
+	.home.page #main-container {
+		top: 30px;
+	}
+
 	.section-divider {
 		height: 90px;
 	}
