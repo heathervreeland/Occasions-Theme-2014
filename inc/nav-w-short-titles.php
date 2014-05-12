@@ -31,7 +31,7 @@
         if ( $nav_title[0] == '' ) continue;
       ?>
 				<li <?php echo is_page(get_the_ID()) ? 'class="current"' : '' ?>>
-					<a href="<?php the_permalink(); ?>"><?php echo $nav_title[0]; ?></a>
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           <? //var_dump($nav_title); ?>
 				</li>
 			<?php endwhile; ?>

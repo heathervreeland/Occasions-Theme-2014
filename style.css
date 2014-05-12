@@ -3656,6 +3656,7 @@ html[xmlns] .slides {
 .horiz-box-nav nav ul li,
 #page-about nav ul li, #page-editorial nav ul li {
 	border-bottom: 1px solid #9e9e9e;
+	text-align: center;
 }
 
 .horiz-box-nav nav ul li:last-child,
@@ -3666,6 +3667,7 @@ html[xmlns] .slides {
 .horiz-box-nav nav ul li a,
 #page-about nav ul li a, #page-editorial nav ul li a {
 	font-weight: normal;
+	text-transform: capitalize;
 	color: #9e9e9e;
 	display: block;
 	padding: 8px 18px;
