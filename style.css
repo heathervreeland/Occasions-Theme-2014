@@ -4236,7 +4236,7 @@ html[xmlns] .slides {
 @media screen and (max-width : 480px) {
 
 	body {
-		min-width: auto;
+		min-width: none !important;
 	}
 
 	.row {
@@ -4256,7 +4256,7 @@ html[xmlns] .slides {
 	}
 
 	.container {
-		width: 100%;
+		width: 100% !important;
 	}
 
 	#main-container {
