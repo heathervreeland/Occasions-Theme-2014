@@ -18,35 +18,37 @@ get_header(); ?>
           <div class="post-category-floater">
             <span class="nice-button dept">Search</span>
           </div>
-
+<?php
+        //venues
+        $s = isset($_GET["q"]) ? $_GET["q"] : "";
+        $args = array(
+            'post_type' => 'venue',
+            'post_status' => 'publish',
+            'posts_per_page' => 20
+        );
+        //search post_meta field 'flo_description' for venues.
+        $args['meta_query'][] = array(
+            'key' => 'flo_description',
+            'value' => $s,
+            'compare' => 'LIKE',
+        );
+?>
           <div class="post-content story ">
 
-            <h1>Search Results</h1>
+            <h1>Search Results for "<i><?php echo strip_tags($s); ?></i>"</h1>
 
             <div class="border-line"></div>
 
             <section class="vendor results">
                 <h2 class="results-title">Vendors</h2>
                 <?php
-                    //venues
-                    $s = isset($_GET["q"]) ? $_GET["q"] : "";
-                    $args = array(
-                        'post_type' => 'venue',
-                        'post_status' => 'publish',
-                    );
-                    //search post_meta field 'flo_description' for venues.
-                    $args['meta_query'][] = array(
-                        'key' => 'flo_description',
-                        'value' => $s,
-                        'compare' => 'LIKE',
-                    );
-
+                    
                     $posts = new WP_Query($args);
                     $num = $posts->found_posts?$posts->found_posts:"0";
                     echo "<h3>We found ".$num." vendors matching your search.</h3>";
                     if ( $posts->have_posts() ) :
                         $j-1;
-                        while ( $posts->have_posts() && $j < 5 ) : $posts->the_post();
+                        while ( $posts->have_posts()) : $posts->the_post();
                             $post_id = get_the_id();
                             $permalink = get_permalink($post_id);
                             if(has_post_thumbnail($post_id)) {
@@ -84,7 +86,7 @@ get_header(); ?>
                     $args = array(
                         's' => $s,
                         'post_type' => 'post',
-                        'posts_per_page' => 10
+                        'posts_per_page' => 20
                     );
                     $posts = new WP_Query( $args );
                     //$posts = new WP_Query("s=$s&post_type=post&posts_per_page=10");
@@ -93,7 +95,7 @@ get_header(); ?>
                     echo "<h3>We found ".$num." articles matching your search.</h3>";
                     if ( $posts->have_posts() ) :
                         $i-1;
-                        while ( $posts->have_posts() && $i < 5 ) : $posts->the_post();
+                        while ( $posts->have_posts()) : $posts->the_post();
                             $post_id = get_the_id();
                             $permalink = get_permalink($post_id);
                             if(has_post_thumbnail($post_id)) {
