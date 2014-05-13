@@ -114,7 +114,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo home_url(); ?>">Occasions Online</a>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>" alt="Occasions Online - Wedding Planning, Party Ideas, and Occasions" title="Occasions Online - Wedding Planning, Party Ideas, and Occasions">Occasions Online - Wedding Planning, Party Ideas, and Occasions</a>
 					</div>
 			 
 					<!-- Collect the nav links, forms, and other content for toggling -->
