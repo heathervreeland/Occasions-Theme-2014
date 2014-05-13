@@ -4348,6 +4348,11 @@ html[xmlns] .slides {
 		padding: 0 5px;
 	}
 
+	.section-divider h1.heading {
+		font-size: 30px;
+		padding: 0 5px;
+	}
+
 
 	.section-divider.top-divider {
 		position: relative;
@@ -4864,6 +4869,41 @@ html[xmlns] .slides {
 		width: 100%;
 	}
 
+
+	/************************************
+	 *
+	 * CITIES PAGE
+	 *
+	 *************************************/
+
+
+	.cities .location-box.georgia {
+		width: 100%;
+	}
+
+	.cities .location-box {
+		float: none;
+		border: 1px solid #cfcfcf;
+		padding: 25px 25px 25px 25px;
+		display: block;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	.cities .location-box ul li {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+
+	.cities .location-box.florida {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.cities .location-box h2 {
+		color: #f7c97c;
+	}
 
 	/************************************
 	 *
