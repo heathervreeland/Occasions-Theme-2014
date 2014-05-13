@@ -378,7 +378,7 @@
 							</li>
 
 							<li class="main-nav dept cities">
-								<a href="#" class="hv"><span class="icon"></span>Cities</a>
+								<a href="/cities" class="hv"><span class="icon"></span>Cities</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>

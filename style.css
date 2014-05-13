@@ -234,6 +234,10 @@ body {
 	border-top-color: #afa4cf;
 }
 
+.cities .border-line {
+	border-top-color: #f7c97c;
+}
+
 /* button separator */
 
 .button-separator {
@@ -1765,6 +1769,33 @@ text-decoration:underline;
 
 .prev_next_links .next-post.both {
 	border-left: 1px solid #414141;
+}
+
+
+/************************************
+ *
+ * CITIES PAGE
+ *
+ *************************************/
+
+
+.cities .location-box.georgia {
+	width: 240px;
+}
+
+.cities .location-box {
+	float: left;
+	border: 1px solid #cfcfcf;
+	padding: 25px 25px 25px 25px;
+}
+
+.cities .location-box.florida {
+	margin-left: 22px;
+	width: 408px;
+}
+
+.cities .location-box h2 {
+	color: #f7c97c;
 }
 
 /************************************

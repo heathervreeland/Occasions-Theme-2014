@@ -96,8 +96,8 @@
 					<h2>Local Editions</h2>
 
 					<ul>
-						<li><a href="#">Florida</a></li>
-						<li><a href="#">Georgia</a></li>
+						<li><a href="/florida">Florida</a></li>
+						<li><a href="/georgia">Georgia</a></li>
 					</ul>
 
 				</li>
