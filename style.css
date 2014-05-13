@@ -3822,6 +3822,7 @@ html[xmlns] .slides {
 .search-item h2 a {
 	color: #000 !important;
 	text-transform: capitalize;
+	letter-spacing: 0px;
 }
 
 .search-item p {
