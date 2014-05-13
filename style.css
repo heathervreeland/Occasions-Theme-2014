@@ -1216,6 +1216,19 @@ text-decoration:underline;
 	padding: 0 30px;
 }
 
+.section-divider h1.heading {
+	margin: 0 auto;
+	display: inline;
+	font-family: "Antic Didone";
+	font-size: 37px;
+	color: #000;
+	background: #fff;
+	position: relative;
+	top: 30px;
+	line-height: 52px;
+	padding: 0 30px;
+}
+
 .after-divider {
 	padding-top: 70px;
 }

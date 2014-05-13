@@ -9,7 +9,7 @@
 	<div class="section-divider">
 		<div class="line"></div>
 		<span class="before">&#8226;</span>
-		<span class="heading"><?php single_cat_title(); ?></span>
+		<h1 class="heading"><?php single_cat_title(); ?></h1>
 		<span class="after">&#8226;</span>
 	</div>
 
