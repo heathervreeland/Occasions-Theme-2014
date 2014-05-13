@@ -891,7 +891,8 @@ ul#main-nav li.vendors span.icon {
 }
 
 #featured-carousel .featured-image img {
-	
+	width: 100%;
+	height: auto;
 }
 
 #featured-carousel .featured-meta {

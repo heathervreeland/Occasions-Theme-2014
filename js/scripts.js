@@ -52,10 +52,6 @@ $( function() {
 
     document.onscroll = scroll;
 
-    /* Slider top */
-
-    $('#featured-carousel').skdslider({delay:7000, animationSpeed: 2000,showNextPrev:true,showPlayButton:false,autoSlide:true,showNav:false,animationType:'fading'});
-
     /* Slider Sections */
     $('#sections-carousel').skdslider({delay:7000, animationSpeed: 1000,showNextPrev:true,showPlayButton:false,autoSlide:true,showNav:false,animationType:'fading'});
 
