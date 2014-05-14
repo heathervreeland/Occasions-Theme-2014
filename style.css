@@ -950,10 +950,8 @@ ul#main-nav li.vendors span.icon {
 }
 
 #sections-carousel .featured-image img {
-	height: 610px !important;
-	width: auto !important;
-	margin-left: -10%;
-	min-width: 500px;
+	height: auto !important;
+	width: 394px !important;
 }
 
 #sections-carousel-container .skdslider a.prev, #sections-carousel-container .skdslider a.next {

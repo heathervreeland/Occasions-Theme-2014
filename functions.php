@@ -515,11 +515,11 @@ if ( ! function_exists("get_nice_image") ) {
 				'post_mime_type' => 'image'
 			));
 			if(empty($images)) {
-				echo "<img src=\"" . catch_that_image() . "\"/>";
+				echo "<img src=\"" . catch_that_image() . "\" class=\"non-default\"/>";
 			}
 			else {
 				$images = reset($images);
-				echo "<img src=\"" . $images->guid . "\"/>";
+				echo "<img src=\"" . $images->guid . "\" class=\"non-default\"/>";
 			}
 		}
 	}

@@ -623,6 +623,12 @@
 					'height'	=> 230,
 					'crop'		=> true,
 				),
+				array(
+					'name'		=> 'post-carousel-crop',
+					'width'		=> 394,
+					'height'	=> 525,
+					'crop'		=> true,
+				),
 			),
 
 			'venue' => array(

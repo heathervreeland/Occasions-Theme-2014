@@ -58,7 +58,7 @@ Template Name: Home
 										<a href="<?php echo get_permalink($post->ID);  ?>"><h1><?php echo $post->post_title; ?></h1></a>
 									</div>
 								</div>
-								<?php get_nice_image("large"); ?>
+								<?php the_post_thumbnail('post-carousel-crop'); ?>
 							</div>
 						</li>
 					<?php
