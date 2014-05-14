@@ -1233,7 +1233,7 @@ var showPinterest = function (obj_id) {
                 f = document.createElement("div");
                 f.setAttribute("id", "tpm_Control");
                 t_img = new Image;
-                t_img.src = "http://d3io1k5o0zdpqr.cloudfront.net/images/about/LogoAbout.png";
+                t_img.src = "/wp-content/themes/occasions2014/images/pinit.png";
                 f.appendChild(t_img);
                 t_a = document.createElement("a");
                 t_a.href = "#";

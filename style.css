@@ -871,6 +871,16 @@ ul#main-nav li.vendors span.icon {
 	line-height: 1.8em;
 }
 
+.tpmImagePreview .tpmImg {
+	border: none;
+	height: 200px;
+	width: 200px;
+	opacity: 1;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
 /************************************
  *
  * INDEX
