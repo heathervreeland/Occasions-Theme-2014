@@ -13,6 +13,8 @@
 		<span class="after">&#8226;</span>
 	</div>
 
+	<div class="cat-description"><?php echo category_description(); ?></div>
+
 	<?php if(have_posts()) : ?>
 
 		<ul>

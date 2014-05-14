@@ -1546,6 +1546,14 @@ text-decoration:underline;
 	overflow: hidden;
 }
 
+#category_list .cat-description {
+	display: block;
+	width: 70%;
+	margin: -25px auto 50px auto;
+	text-align: center;
+	font-size: 14px;
+}
+
 #category_list .col-md-3 {
 	padding-left: 0;
 	padding-right: 0;
@@ -4617,10 +4625,18 @@ html[xmlns] .slides {
 	 *
 	 *************************************/
 
-	 #category_list ul li {
+	#category_list ul li {
 	 	width: auto;
 	 	margin-right: 0;
 	 }
+
+	#category_list .cat-description {
+		display: block;
+		width: 100%;
+		margin: 0 auto 30px auto;
+		text-align: center;
+		font-size: 13px;
+	}
 
 	.category-block .category-post-preview img {
 		width: 500px;
