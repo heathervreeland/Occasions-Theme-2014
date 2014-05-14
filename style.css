@@ -881,6 +881,11 @@ ul#main-nav li.vendors span.icon {
 	top: 0;
 }
 
+#tpm_Control img {
+	margin: 0 !important;
+	width: 199px;
+}
+
 /************************************
  *
  * INDEX
