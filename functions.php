@@ -536,8 +536,6 @@ function flo_exclude_search_pages($query) {
 if( !is_admin() ) add_filter('pre_get_posts', 'flo_exclude_search_pages');
 
 
-
-
 function oo_custom_posts_per_page($query)
 {
 	if (isset($query->query_vars['ignore_filter_changes']) && $query->query_vars['ignore_filter_changes']) {

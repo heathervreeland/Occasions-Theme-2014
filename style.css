@@ -1628,6 +1628,10 @@ text-decoration:underline;
 	font-weight: 700;
 }
 
+.editors-blog .post-content.story {
+	margin-bottom: 50px;
+}
+
 /************************************
  *
  * Post Page
@@ -4656,8 +4660,6 @@ html[xmlns] .slides {
 		height: auto;
 		margin-left: 0;
 	}
-
-
 
 	/************************************
 	 *
