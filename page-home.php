@@ -146,7 +146,7 @@ Template Name: Home
 		<div class="col-md-3 four"></div>
 
 		<div class="col-md-3 five"></div>
-		<a href="#">
+		<a href="/tools-checklists">
 			<div class="col-md-3 six cont">
 				<div>
 					<span>Tools &amp; Checklists</span>

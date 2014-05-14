@@ -374,7 +374,7 @@
 								</div>
 							</li>
 							<li class="main-nav dept galleries">
-								<a href="#" class="hv"><span class="icon"></span>Galleries</a>
+								<a href="/galleries" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 
 							<li class="main-nav dept cities">
