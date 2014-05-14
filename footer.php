@@ -19,9 +19,18 @@
 				</div>
 
 				<div id="footer-news">
-					<form>
+					<?php $subscription = 'OccasionsMagazine'; ?>
+					<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup3939" accept-charset="UTF-8" onsubmit="return verifyRequired3939();" >
 						<span class="start">Newsletter</span>
-						<input type="text" id="newsletter_email" placeholder="YOUR EMAIL"/>
+						<input type="hidden" name="redirect" value="http://www.occasionsonline.com/newsletter/thank-you/">
+		                <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html">
+		                <input type="hidden" name="listid" value="79427">
+		                <input type="hidden" name="specialid:79427" value="SSDD">
+		                <input type="hidden" name="clientid" value="1194751">
+		                <input type="hidden" name="formid" value="3939">
+		                <input type="hidden" name="reallistid" value="1">
+		                <input type="hidden" name="doubleopt" value="0">
+						<input type="text" class="subscription_email" name="fields_email" id="newsletter_email" placeholder="YOUR EMAIL"/>
 	            		<span><a href="#" id="newsletter_signup">Sign Me Up!</a></span>
             		</form>
 				</div>
@@ -29,6 +38,7 @@
 			</div>
 
 		</div>
+
 
 		<div class="container">
 			<ul id="footer-nav">
