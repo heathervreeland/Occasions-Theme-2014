@@ -5,20 +5,20 @@
 function oo_add_scripts($hook) {
 	
 	// Add general scripts & styles
-	wp_enqueue_style('flotheme_admin_css', FLOTHEME_URL . '/assets/css/admin.css', array(), FLOTHEME_THEME_VERSION);
-	wp_enqueue_script('flotheme_colorpicker', FLOTHEME_URL.'/assets/js/colorpicker.js', array('jquery'));
-	wp_enqueue_script('flotheme_admin_js', FLOTHEME_URL . '/assets/js/admin.js', array('jquery', 'flotheme_colorpicker'), FLOTHEME_THEME_VERSION);
+	wp_enqueue_style('flotheme_admin_css', OOTHEME_URL . '/assets/css/admin.css', array(), FLOTHEME_THEME_VERSION);
+	wp_enqueue_script('flotheme_colorpicker', OOTHEME_URL.'/assets/js/colorpicker.js', array('jquery'));
+	wp_enqueue_script('flotheme_admin_js', OOTHEME_URL . '/assets/js/admin.js', array('jquery', 'flotheme_colorpicker'), FLOTHEME_THEME_VERSION);
 	
 	// Add scripts for metaboxes
   	if ( $hook == 'post.php' || $hook == 'post-new.php' || $hook == 'page-new.php' || $hook == 'page.php' ) {
-		wp_enqueue_script( 'flotheme_metaboxes', FLOTHEME_URL . '/assets/js/metaboxes.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox') );
-		wp_enqueue_script( 'flotheme_shortcodes', FLOTHEME_URL . '/assets/js/shortcodes.js', array( 'jquery', 'thickbox') );
+		wp_enqueue_script( 'flotheme_metaboxes', OOTHEME_URL . '/assets/js/metaboxes.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox') );
+		wp_enqueue_script( 'flotheme_shortcodes', OOTHEME_URL . '/assets/js/shortcodes.js', array( 'jquery', 'thickbox') );
   	}
 	
 	// Add scripts for Theme Options page
 	if (in_array($hook, array('toplevel_page_flotheme'))) {
 		wp_enqueue_script('jquery-ui-core');
-		wp_enqueue_script('options-custom', FLOTHEME_URL.'/assets/js/options-custom.js', array('jquery'));
+		wp_enqueue_script('options-custom', OOTHEME_URL.'/assets/js/options-custom.js', array('jquery'));
 		// Add inline scripts for Theme Options page
 		if (function_exists('flotheme_options_custom_scripts')) {
 			add_action('admin_head', 'flotheme_options_custom_scripts');
@@ -31,7 +31,7 @@ add_action( 'admin_enqueue_scripts', 'oo_add_scripts', 10 );
  * Add Flotheme Options to Admin Navigation 
  */
 function oo_add_admin_menu() {
-	add_menu_page('', __('Flotheme', 'flotheme'), 'edit_theme_options', 'flotheme', false, FLOTHEME_URL . '/assets/images/flotheme_icon_16.png', 3);
+	add_menu_page('', __('Flotheme', 'flotheme'), 'edit_theme_options', 'flotheme', false, OOTHEME_URL . '/assets/images/flotheme_icon_16.png', 3);
 	add_submenu_page('flotheme', __('Theme Options', 'flotheme'), __('Theme Options', 'flotheme'), 'edit_theme_options', 'flotheme','optionsframework_page');
 	
 	add_submenu_page('flotheme', __('Sliders', 'flotheme'), __('Sliders', 'flotheme'), 'edit_theme_options', 'flotheme_sliders','flotheme_sliders_page');	
@@ -144,7 +144,7 @@ function oo_post_type_icons() {
 			foreach (flotheme_get_post_types() as $type => $config) {
 				?>
 					#menu-posts-<?php echo $type ?> .wp-menu-image {
-						background: url(<?php echo FLOTHEME_URL ?>/assets/images/post_type_icons/<?php echo $type ?>.png) no-repeat 6px -17px !important;
+						background: url(<?php echo OOTHEME_URL ?>/assets/images/post_type_icons/<?php echo $type ?>.png) no-repeat 6px -17px !important;
 					}
 					#menu-posts-<?php echo $type ?>:hover .wp-menu-image {
 						background-position: 6px 7px !important;
