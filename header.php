@@ -87,7 +87,7 @@
 				</div>
 
 				<ul>
-					<li><a href="#">Planning Checklists</a></li>
+					<li><a href="/coming-soon">Planning Checklists</a></li>
 					<li>&#8226;</li>
 					<li><a href="/from-the-editor">Editor's Blog</a></li>
 					<li>&#8226;</li>
