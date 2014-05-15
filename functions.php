@@ -761,6 +761,16 @@ function oo_get_og_meta_image() {
 }
 
 
+/* HOTFIX FOR MEDIA UPLOAD */
+
+function icl_load_jquery_ui() {
+	wp_enqueue_script( 'jquery-ui-dialog', false, array('jquery'), false, true );
+}
+
+add_action( 'admin_enqueue_scripts', 'icl_load_jquery_ui' );
+
+
+
 /**
  * Comment callback function 
  * @param object $comment
