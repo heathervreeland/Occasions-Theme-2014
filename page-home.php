@@ -126,7 +126,7 @@ Template Name: Home
 	</div>
 
 	<div id="index_dept_grid">
-		<a href="/galleries">
+		<a href="/coming-soon">
 			<div class="col-md-3 one cont">
 				<div>
 					<span>Galleries</span>
@@ -146,7 +146,7 @@ Template Name: Home
 		<div class="col-md-3 four"></div>
 
 		<div class="col-md-3 five"></div>
-		<a href="/tools-checklists">
+		<a href="/coming-soon">
 			<div class="col-md-3 six cont">
 				<div>
 					<span>Tools &amp; Checklists</span>
