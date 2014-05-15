@@ -20,7 +20,7 @@ Template Name: Home
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
 				</div>
 			</a>
-			<a href="#">
+			<a href="/coming-soon">
 				<div class="tile">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
 				</div>
