@@ -618,8 +618,8 @@ function oo_add_rewrite_rules() {
 		'vendors/([\w\d\-]+)/?$' => 'index.php?pagename=vendors-in-city&tag=' . $wp_rewrite->preg_index(1),
 		'(florida|georgia)/([\w\d\-]+)-weddings/([\w\d\-]+)/?$' => 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(2) . '&service=' . $wp_rewrite->preg_index(3),
 		'(florida|georgia)/([\w\d\-]+)-weddings/([\w\d\-]+)/page/([0-9]{1,})/?$' => 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(2) . '&service=' . $wp_rewrite->preg_index(3) . '&paged=' . $wp_rewrite->preg_index(4),
-		'([\w\d\-]+)-weddings/([\w\d\-]+)/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&&service=' . $wp_rewrite->preg_index(2),
-		'([\w\d\-]+)-weddings/([\w\d\-]+)/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&&service=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
+		'([\w\d\-]+)-weddings/([\w\d\-]+)/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&service=' . $wp_rewrite->preg_index(2),
+		'([\w\d\-]+)-weddings/([\w\d\-]+)/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&service=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
 
 
 		'(florida|georgia)/events/?$'					   							=> 'index.php?post_type=event'. '&region=' . $wp_rewrite->preg_index(1) . '&norewrite=1',

@@ -12,7 +12,7 @@
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/event-planning-and-coordination"><?php echo $city->name; ?> Day-Of Coordination</a></li>
 								
 								<li class="service-title"><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/photographers"><h2>Photographers</h2></a></li>
-								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-photographers"><?php echo $city->name; ?> Wedding Photographers</a></li>
+								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-photographers-2"><?php echo $city->name; ?> Wedding Photographers</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/bar-bat-mitzvah-photographers"><?php echo $city->name; ?> Bar/Bat Mitzvah Photographers</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/photobooth"><?php echo $city->name;; ?> Photobooths</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-videographers"><?php echo $city->name;; ?> Wedding Videographers</a></li>
