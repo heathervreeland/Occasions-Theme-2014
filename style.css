@@ -4500,6 +4500,14 @@ html[xmlns] .slides {
 		min-height: 310px;
 	}
 
+	#featured-carousel .featured-image img {
+		min-height: 0;
+		height: 310px;
+		min-width: 0;
+		width: auto;
+		max-width: none;
+	}
+
 	#featured-carousel .featured-meta {
 		background: #fff;
 	}
