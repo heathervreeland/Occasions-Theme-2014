@@ -38,12 +38,12 @@
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/bartenders-2"><?php echo $city->name;; ?> Bartenders</a></li>
 								
 								<li class="service-title"><h2>Stationery &amp; Invitations</h2></li>
-								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-invitations"><?php echo $city->name;; ?> Wedding Invitations</a></li>
+								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-invitations-1"><?php echo $city->name;; ?> Wedding Invitations</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/party-invitations"><?php echo $city->name;; ?> Party Invitations</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-calligraphy"><?php echo $city->name;; ?> Wedding Calligraphy</a></li>
 								
 								<li class="service-title"><h2>Cakes &amp; Dessert</h2></li>
-								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-cakes-2"><?php echo $city->name;; ?> Wedding Cakes</a></li>
+								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-cakes-1"><?php echo $city->name;; ?> Wedding Cakes</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/grooms-cakes"><?php echo $city->name;; ?> Groom's Cakes</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/party-cakes"><?php echo $city->name;; ?> Party Cakes</a></li>
 							</ul>
