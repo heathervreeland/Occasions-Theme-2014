@@ -15,12 +15,12 @@ Template Name: Home
 
 	<div class="col-third">
 		<div class="pull-left">
-			<a href="/vendors">
+			<a href="/vendors/">
 				<div class="tile">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
 				</div>
 			</a>
-			<a href="/coming-soon">
+			<a href="/coming-soon/">
 				<div class="tile">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
 				</div>
@@ -79,7 +79,7 @@ Template Name: Home
 					<?php oo_part('side-top-ad') ?>
 				</div>
 			</a>
-			<a href="/subscribe">
+			<a href="/subscribe/">
 				<div class="tile">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_shop.jpg"/>
 				</div>
@@ -108,7 +108,7 @@ Template Name: Home
 				network of only the most talented, quality-centric wedding venues and party<br/>
 				services in the special events industry.
 			</p>
-			<a href="/vendors" class="nice-button">Find my Vendors</a>
+			<a href="/vendors/" class="nice-button">Find my Vendors</a>
 			<span class="pink cele3">Don't see your company listed? Click to learn about our memberships</span>
 		</div>
 		<img src="<?php echo get_template_directory_uri(); ?>/images/map_picture_vendors_section.png" id="index_vv_map"/>
@@ -126,7 +126,7 @@ Template Name: Home
 	</div>
 
 	<div id="index_dept_grid">
-		<a href="/coming-soon">
+		<a href="/coming-soon/">
 			<div class="col-md-3 one cont">
 				<div>
 					<span>Galleries</span>
@@ -135,7 +135,7 @@ Template Name: Home
 			</div>
 		</a>
 		<div class="col-md-3 two"></div>
-		<a href="/real-weddings">
+		<a href="/real-weddings/">
 			<div class="col-md-3 three cont">
 				<div>
 					<span>Real Weddings</span>
@@ -146,7 +146,7 @@ Template Name: Home
 		<div class="col-md-3 four"></div>
 
 		<div class="col-md-3 five"></div>
-		<a href="/coming-soon">
+		<a href="/coming-soon/">
 			<div class="col-md-3 six cont">
 				<div>
 					<span>Tools &amp; Checklists</span>
@@ -155,7 +155,7 @@ Template Name: Home
 			</div>
 		</a>
 		<div class="col-md-3 seven"></div>
-		<a href="/entertaining-and-holidays/holiday-party-ideas">
+		<a href="/entertaining-and-holidays/holiday-party-ideas/">
 			<div class="col-md-3 eight cont">
 				<div>
 					<span>Holiday Inspirations</span>
@@ -163,7 +163,7 @@ Template Name: Home
 				</div>
 			</div>
 		</a>
-		<a href="/entertaining-and-holidays/holiday-party-ideas">
+		<a href="/entertaining-and-holidays/holiday-party-ideas/">
 			<div class="col-md-3 nine cont">
 				<div>
 					<span>Party Ideas</span>
@@ -172,7 +172,7 @@ Template Name: Home
 			</div>
 		</a>
 		<div class="col-md-3 ten"></div>
-		<a href="/from-the-editor">
+		<a href="/from-the-editor/">
 			<div class="col-md-3 eleven cont">
 				<div>
 					<span>From the Editors</span>
