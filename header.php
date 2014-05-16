@@ -75,7 +75,7 @@
 		<div id="top-bar">
 			<div class="container">
 
-				<form action="/search" method="GET">
+				<form action="/search/" method="GET">
 					<div id="search">
 						<input type="text" name="q" id="search_terms" placeholder="SEARCH"/>
 						<a href="#" id="search_go">GO</a>
@@ -87,13 +87,13 @@
 				</div>
 
 				<ul>
-					<li><a href="/coming-soon">Planning Checklists</a></li>
+					<li><a href="/coming-soon/">Planning Checklists</a></li>
 					<li>&#8226;</li>
-					<li><a href="/from-the-editor">Editor's Blog</a></li>
+					<li><a href="/from-the-editor/">Editor's Blog</a></li>
 					<li>&#8226;</li>
-					<li><a href="/editorial/overview">Get Featured</a></li>
+					<li><a href="/editorial/overview/">Get Featured</a></li>
 					<li>&#8226;</li>
-					<li><a href="/advertise">Advertise</a></li>
+					<li><a href="/advertise/">Advertise</a></li>
 				</ul>
 
 			</div>
@@ -122,7 +122,7 @@
 						<ul id="main-nav">
 
 							<li class="main-nav dept weddings">
-								<a href="/weddings" class="hv"><span class="icon"></span>Weddings</a>
+								<a href="/weddings/" class="hv"><span class="icon"></span>Weddings</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -139,7 +139,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/weddings" class="nice-button">View All</a>
+											<a href="/weddings/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -206,7 +206,7 @@
 								</div>
 							</li>
 							<li class="main-nav dept parties">
-								<a href="/parties-and-celebrations" class="hv"><span class="icon"></span>Parties</a>
+								<a href="/parties-and-celebrations/" class="hv"><span class="icon"></span>Parties</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -223,7 +223,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/parties-and-celebrations" class="nice-button">View All</a>
+											<a href="/parties-and-celebrations/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -291,7 +291,7 @@
 							</li>
 
 							<li class="main-nav dept entertaining">
-								<a href="/entertaining-and-holidays" class="hv"><span class="icon"></span>Entertaining</a>
+								<a href="/entertaining-and-holidays/" class="hv"><span class="icon"></span>Entertaining</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -307,7 +307,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/entertaining-and-holidays" class="nice-button">View All</a>
+											<a href="/entertaining-and-holidays/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -374,20 +374,20 @@
 								</div>
 							</li>
 							<li class="main-nav dept galleries">
-								<a href="/coming-soon" class="hv"><span class="icon"></span>Galleries</a>
+								<a href="/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 
 							<li class="main-nav dept cities">
-								<a href="/cities" class="hv"><span class="icon"></span>Cities</a>
+								<a href="/cities/" class="hv"><span class="icon"></span>Cities</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
-										<li><a href="/georgia/atlanta">Atlanta</a></li>
-										<li><a href="/georgia/savannah">Savannah</a></li>
-										<li><a href="/florida/orlando">Orlando</a></li>
-										<li><a href="/florida/south-florida">South Florida</a></li>
-										<li><a href="/florida/tampa">Tampa</a></li>
-										<li><a href="/florida/jacksonville">Jacksonville</a></li>
+										<li><a href="/georgia/atlanta/">Atlanta</a></li>
+										<li><a href="/georgia/savannah/">Savannah</a></li>
+										<li><a href="/florida/orlando/">Orlando</a></li>
+										<li><a href="/florida/south-florida/">South Florida</a></li>
+										<li><a href="/florida/tampa/">Tampa</a></li>
+										<li><a href="/florida/jacksonville/">Jacksonville</a></li>
 									</ul>
 								</div>
 							</li>
