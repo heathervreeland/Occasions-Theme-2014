@@ -240,7 +240,10 @@ Template Name: Home
 					<div class="content">
 						<h1><a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h1>
 					</div>
-					<p class="post-meta">Posted <span class="date"><?php echo date_format($date, "F j, Y"); ?></span> by <span class="author"><?php echo get_the_author($post->ID); ?></span></p>
+					<?php
+						$author_meta = get_the_author_meta('display_name', $post->post_author);
+					?>
+					<p class="post-meta">Posted <span class="date"><?php echo date_format($date, "F j, Y"); ?></span> by <span class="author"><?php echo $author_meta; ?></span></p>
 				</div>
 
       
