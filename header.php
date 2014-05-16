@@ -39,7 +39,9 @@
 		<?php if ( is_front_page() ) { ?>
 
 			<script>
-				$(function() {
+				jQuery(function($) {
+					jQuery.noConflict();
+
 					$('.jcarousel').jcarousel();
 
 					$('.jcarousel-control-prev')

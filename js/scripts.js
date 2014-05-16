@@ -1,8 +1,9 @@
 /* Document ready */
 
-$( function() {
+jQuery( function($) {
+    jQuery.noConflict();
 
-    var _window = jQuery(window);
+    var _window = $(window);
 
 	/************************************
 	 *
