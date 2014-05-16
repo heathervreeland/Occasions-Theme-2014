@@ -806,4 +806,62 @@ function oo_comment($comment, $args, $depth) {
 
 
 
+<?php
+
+
+
+
+
+function give_user_edit() {
+	if(current_user_can('manage_options')) {
+		$role = get_role('administrator');
+		$role->add_cap("edit_venue");
+		$role->add_cap("edit_venues");
+		$role->add_cap("edit_others_venues");
+		$role->add_cap("publish_venues");
+		$role->add_cap("read_venues");
+		$role->add_cap("read_private_venues");
+		$role->add_cap("delete_venues");
+	}
+}
+add_action('admin_init', 'give_user_edit', 10, 0);
+
+
+function flo_no_user_dashboard() {
+	if (defined('DOING_AJAX') && DOING_AJAX) {
+		return;
+	}
+	if (!current_user_can('edit_posts')) {
+		if (current_user_can('advertiser')) {
+			wp_redirect(site_url('advertisers/dashboard'));
+		} else {
+			wp_redirect(home_url());
+		}
+		exit;
+	}
+}
+add_action('admin_init', 'flo_no_user_dashboard');
+
+
+function flo_deregister_scripts() {
+	wp_dequeue_style('cart66-css');
+}
+add_action('wp_enqueue_scripts', 'flo_deregister_scripts', 1000);
+
+
+function flo_hide_admin_bar($content) {
+	return (current_user_can('administrator')) ? $content : false;
+}
+add_filter( 'show_admin_bar' , 'flo_hide_admin_bar');
+
+
+
+
+
+
+?>
+
+
+
+
 
