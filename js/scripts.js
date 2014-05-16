@@ -2,7 +2,7 @@
 
 $( function() {
 
-    var _window = $(window);
+    var _window = jQuery(window);
 
 	/************************************
 	 *
