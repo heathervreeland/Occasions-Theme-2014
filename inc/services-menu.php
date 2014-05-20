@@ -9,7 +9,7 @@
 								<li class="service-title"><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/planning-and-coordination/"><h2>Planning & Coordination</h2></a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-planners/"><?php echo $city->name; ?> Wedding Planners</a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/party-planners/"><?php echo $city->name; ?> Party Planners</a></li>
-								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/event-planning-and-coordination/"><?php echo $city->name; ?> Day-Of Coordination</a></li>
+								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/day-of-coordination/"><?php echo $city->name; ?> Day-Of Coordination</a></li>
 								
 								<li class="service-title"><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/photographers/"><h2>Photographers</h2></a></li>
 								<li><a href="/<?php echo $state->slug; ?><? echo $stateonly ? '' : '/' . $city->slug ?>-weddings/wedding-photographers-2/"><?php echo $city->name; ?> Wedding Photographers</a></li>
