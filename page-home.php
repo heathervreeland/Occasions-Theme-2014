@@ -72,7 +72,7 @@ Template Name: Home
 
 	</div>
 
-	<div class="col-third">
+	<div class="col-third last">
 		<div class="pull-right">
 			<a href="#" id="sections-ad">
 				<div class="tile">

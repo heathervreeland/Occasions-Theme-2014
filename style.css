@@ -1254,7 +1254,7 @@ text-decoration:underline;
 	overflow: hidden;
 }
 
-#index-sections div.col-third:nth-child(3n) {
+#index-sections div.col-third.last {
 	margin-right: 0;
 }
 
