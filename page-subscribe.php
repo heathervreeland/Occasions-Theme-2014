@@ -1,4 +1,5 @@
 <?php
+	define('DONOTCACHEPAGE', true);
 	get_header();
 
  ?>
