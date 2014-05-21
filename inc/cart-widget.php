@@ -1,4 +1,5 @@
 <?php
+	define('DONOTCACHEPAGE', true);
 	$cart = Cart66Session::get('Cart66Cart');
 ?>
 <div id="cart-widget">
