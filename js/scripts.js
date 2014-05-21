@@ -2077,24 +2077,28 @@ jQuery(function($) {
       }
     });
   };
+
+
+  function updateCartInfo(url) {
+
+    $.ajax({
+          type: "POST",
+          url: url + '=3',
+          data: {},
+          dataType: 'json',
+          success: function(response) {
+            if(response.summary.count != 1)
+            {
+              $("#cart-widget .item-count").html(response.summary.count + " Items");
+            }
+            else {
+              $("#cart-widget .item-count").html(response.summary.count + " Item");
+            }
+            $("#cart-widget .amount").html(response.summary.amount);
+          }
+        });
+  }
+
+  
 });
 
-function updateCartInfo(url) {
-
-  $.ajax({
-        type: "POST",
-        url: url + '=3',
-        data: {},
-        dataType: 'json',
-        success: function(response) {
-          if(response.summary.count != 1)
-          {
-            $("#cart-widget .item-count").html(response.summary.count + " Items");
-          }
-          else {
-            $("#cart-widget .item-count").html(response.summary.count + " Item");
-          }
-          $("#cart-widget .amount").html(response.summary.amount);
-        }
-      });
-}
