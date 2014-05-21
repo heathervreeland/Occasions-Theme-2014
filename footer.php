@@ -47,18 +47,18 @@
 					<h2 class="brand">Occasions</h2>
 
 					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/about/">About</a></li>
-						<li><a href="/about/careers/">Careers</a></li>
-						<li><a href="/advertise/">Print Advertising</a></li>
-						<li><a href="/editorial/">Editorial</a></li>
-						<li><a href="/about/badges/">Link to Us</a></li>
-						<li><a href="/subscribe/">Purchase Copies</a></li>
-						<li><a href="/support/">Support</a></li>
-						<li><a href="/privacy-policy/">Privacy Policy</a></li>
-						<li><a href="/terms-of-use/">Terms of Use</a></li>
-						<li><a href="/editorial/overview/">Get Featured</a></li>
-						<li><a href="/support/">Update Address</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/">Home</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/about/">About</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/about/careers/">Careers</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/advertise/">Print Advertising</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/editorial/">Editorial</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/about/badges/">Link to Us</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/subscribe/">Purchase Copies</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/support/">Support</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/terms-of-use/">Terms of Use</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/editorial/overview/">Get Featured</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/support/">Update Address</a></li>
 					</ul>
 
 				</li>
@@ -106,8 +106,8 @@
 					<h2>Local Editions</h2>
 
 					<ul>
-						<li><a href="/florida/">Florida</a></li>
-						<li><a href="/georgia/">Georgia</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/florida/">Florida</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/georgia/">Georgia</a></li>
 					</ul>
 
 				</li>

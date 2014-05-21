@@ -87,7 +87,7 @@
 		<div id="top-bar">
 			<div class="container">
 
-				<form action="/search/" method="GET">
+				<form action="<?php echo get_site_url(); ?>/search/" method="GET">
 					<div id="search">
 						<input type="text" name="q" id="search_terms" placeholder="SEARCH"/>
 						<a href="#" id="search_go">GO</a>
@@ -99,13 +99,13 @@
 				</div>
 
 				<ul>
-					<li><a href="/coming-soon/">Planning Checklists</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/coming-soon/">Planning Checklists</a></li>
 					<li>&#8226;</li>
-					<li><a href="/from-the-editor/">Editor's Blog</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/from-the-editor/">Editor's Blog</a></li>
 					<li>&#8226;</li>
-					<li><a href="/editorial/overview/">Get Featured</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/editorial/overview/">Get Featured</a></li>
 					<li>&#8226;</li>
-					<li><a href="/advertise/">Advertise</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/advertise/">Advertise</a></li>
 				</ul>
 
 			</div>
@@ -126,7 +126,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo home_url(); ?>" alt="Occasions Online - Wedding Planning, Party Ideas, and Occasions" title="Occasions Online - Wedding Planning, Party Ideas, and Occasions">Occasions Online - Wedding Planning, Party Ideas, and Occasions</a>
+						<a class="navbar-brand" href="<?php echo get_site_url(); ?>" alt="Occasions Online - Wedding Planning, Party Ideas, and Occasions" title="Occasions Online - Wedding Planning, Party Ideas, and Occasions">Occasions Online - Wedding Planning, Party Ideas, and Occasions</a>
 					</div>
 			 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -134,7 +134,7 @@
 						<ul id="main-nav">
 
 							<li class="main-nav dept weddings">
-								<a href="/weddings/" class="hv"><span class="icon"></span>Weddings</a>
+								<a href="<?php echo get_site_url(); ?>/weddings/" class="hv"><span class="icon"></span>Weddings</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -151,7 +151,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/weddings/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(); ?>/weddings/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -218,7 +218,7 @@
 								</div>
 							</li>
 							<li class="main-nav dept parties">
-								<a href="/parties-and-celebrations/" class="hv"><span class="icon"></span>Parties</a>
+								<a href="<?php echo get_site_url(); ?>/parties-and-celebrations/" class="hv"><span class="icon"></span>Parties</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -235,7 +235,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/parties-and-celebrations/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(); ?>/parties-and-celebrations/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -303,7 +303,7 @@
 							</li>
 
 							<li class="main-nav dept entertaining">
-								<a href="/entertaining-and-holidays/" class="hv"><span class="icon"></span>Entertaining</a>
+								<a href="<?php echo get_site_url(); ?>/entertaining-and-holidays/" class="hv"><span class="icon"></span>Entertaining</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -319,7 +319,7 @@
 												<?php } ?>
 											</ul>
 
-											<a href="/entertaining-and-holidays/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(); ?>/entertaining-and-holidays/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -386,11 +386,11 @@
 								</div>
 							</li>
 							<li class="main-nav dept galleries">
-								<a href="/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
+								<a href="<?php echo get_site_url(); ?>/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 
 							<li class="main-nav dept cities">
-								<a href="/cities/" class="hv"><span class="icon"></span>Cities</a>
+								<a href="<?php echo get_site_url(); ?>/cities/" class="hv"><span class="icon"></span>Cities</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
@@ -409,7 +409,7 @@
 							
 						</ul>
 						<div class="search_secondary">
-							<form action="/search" method="GET">
+							<form action="<?php echo get_site_url(); ?>/search" method="GET">
 								<div id="search2">
 									<input type="text" name="q" id="search_terms" placeholder="SEARCH"/>
 									<a href="#" id="search_go2">GO</a>
