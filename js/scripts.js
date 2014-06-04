@@ -1024,7 +1024,7 @@ $.fn.flexslider = function(options) {
 
     if (typeof options === "object") {
       return this.each(function() {
-        var $this = $(this),
+        var $this = jQuery(this),
             selector = (options.selector) ? options.selector : ".slides > li",
             $slides = $this.find(selector);
 
@@ -1037,7 +1037,7 @@ $.fn.flexslider = function(options) {
       });
     } else {
       // Helper strings to quickly perform functions on the slider
-      var $slider = $(this).data('flexslider');
+      var $slider = jQuery(this).data('flexslider');
       switch (options) {
         case "play": $slider.play(); break;
         case "pause": $slider.pause(); break;
