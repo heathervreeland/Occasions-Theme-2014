@@ -175,6 +175,10 @@ jQuery( function($) {
 });
 
 
+(function ($) {
+   $(document);
+}(jQuery));
+
 /* FlexSlider */
 
 
