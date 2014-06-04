@@ -175,16 +175,13 @@ jQuery( function($) {
 });
 
 
-(function ($) {
-   $(document);
-}(jQuery));
-
 /* FlexSlider */
 
 
 
 //FlexSlider: Object Instance
 $.flexslider = function(el, options) {
+    function $ = jQuery();
     var slider = $(el),
         vars = $.extend({}, $.flexslider.defaults, options),
         namespace = vars.namespace,
