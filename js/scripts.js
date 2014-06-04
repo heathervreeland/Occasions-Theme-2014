@@ -1032,7 +1032,7 @@ $.fn.flexslider = function(options) {
           $slides.fadeIn(400);
           if (options.start) options.start($this);
         } else if ($this.data('flexslider') === undefined) {
-          new $.flexslider(this, options);
+          new jQuery.flexslider(this, options);
         }
       });
     } else {
