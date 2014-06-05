@@ -802,4 +802,17 @@ function oo_comment($comment, $args, $depth) {
 <?php }
 
 
+
+
+/**
+ * Post types where metaboxes should show
+ * 
+ * @return array
+ */
+function flotheme_get_post_types_with_gallery() {
+	return array('post', 'venue');
+}
+
+
+
 ?>
