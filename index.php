@@ -1,7 +1,10 @@
-<?php get_header(); 
+<?php
+debug_print_backtrace(); die(__FILE__ . ": here");
+    get_header();
 	/* recent featured posts */
 	global $recent_featured_posts;
 	uasort($recent_featured_posts, "sort_recent_posts");
+	
 ?>
 
 <div class="row" id="index-sections">

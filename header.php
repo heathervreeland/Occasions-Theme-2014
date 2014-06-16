@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- page rendered in line #3 get_header:
+<?php 
+debug_print_backtrace();
+?> -->
 <html>
 	<head>
 		<title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
