@@ -1,5 +1,4 @@
 <?php
-debug_print_backtrace(); die(__FILE__ . ": here");
     get_header();
 	/* recent featured posts */
 	global $recent_featured_posts;

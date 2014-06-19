@@ -614,29 +614,34 @@ add_filter('pre_get_posts', 'oo_query_post_types');
 function oo_add_rewrite_rules() {
 	global $wp_rewrite;
 	$new_rules = array(
-		/* vendors */
-	    // url /vendors per admin panel/pages uses page-vendors.php template
-	    // url /vendors/atlanta will be redirected to page vendors-in-city which per admin panel/pages uses page-vendors-city.php template 
+		// Vendors
+	    // /vendors per admin panel/pages uses page-vendors.php template
+	    // /vendors/atlanta => vendors-in-city which per admin panel/pages uses page-vendors-city.php template 
 		'vendors/([\w\d\-]+)/?$' => 'index.php?pagename=vendors-in-city&tag=' . $wp_rewrite->preg_index(1),
-	    // url /georgia/atlanta-weddings/photographers/  will be redirected to archive-venue.php (meaning archive-<<custom post type>> by per WP rules)
+	    
+	    // Redirection by Service Taxonomy
+	    // /georgia/atlanta-weddings/photographers/  => archive-venue.php ( archive-<<custom post type>> by per WP rules)
+	    // so it's redirected to show vendors/region/service
 		'(florida|georgia)/([\w\d\-]+)-weddings/([\w\d\-]+)/?$' => 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(2) . '&service=' . $wp_rewrite->preg_index(3),
 		'(florida|georgia)/([\w\d\-]+)-weddings/([\w\d\-]+)/page/([0-9]{1,})/?$' => 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(2) . '&service=' . $wp_rewrite->preg_index(3) . '&paged=' . $wp_rewrite->preg_index(4),
-	    // url /atlanta-weddings/photographers/ same that previous
+	    // /atlanta-weddings/photographers/ same that previous
 		'([\w\d\-]+)-weddings/([\w\d\-]+)/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&service=' . $wp_rewrite->preg_index(2),
 		'([\w\d\-]+)-weddings/([\w\d\-]+)/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=venue&region=' . $wp_rewrite->preg_index(1) . '&service=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
 
-        //TODO: are this going to be enabled in the new theme?
+	     //Events
+        //TODO: are urls /georgia/events going to be enabled in the new theme? this seems events by region not by city
 		'(florida|georgia)/events/?$'					   							=> 'index.php?post_type=event'. '&region=' . $wp_rewrite->preg_index(1) . '&norewrite=1',
 		'(florida|georgia)/events/page/([0-9]{1,})/?$' 								=> 'index.php?post_type=event&paged=' . $wp_rewrite->preg_index(2) . '&region=' . $wp_rewrite->preg_index(1) . '&norewrite=1', // . '&type=' . $wp_rewrite->preg_index(3),
 		
 		'(florida|georgia)/([\w\d\-]+)/events/?$'					   				=> 'index.php?post_type=event' . '&region=' . $wp_rewrite->preg_index(2) . '&norewrite=1',
 		'(florida|georgia)/([\w\d\-]+)/events/page/([0-9]{1,})/?$' 					=> 'index.php?post_type=event&paged=' . $wp_rewrite->preg_index(3) . '&region=' . $wp_rewrite->preg_index(2) . '&norewrite=1', // . '&type=' . $wp_rewrite->preg_index(3),
 
-        //url /georgia/ redirects to taxonomy-region-level-top.php
+	     //Region Taxonomies
+        // /georgia/ redirects to taxonomy-region-level-top.php
 		'(florida|georgia)/?$'    => 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(1) . '&paged=' . $wp_rewrite->preg_index(2),
 	    '(florida|georgia)/page/([0-9]{1,})/?$'    => 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(1) . '&paged=' . $wp_rewrite->preg_index(2),
 	    
-	    //url /georgia/atlanta/ redirects to taxonomy-region.php
+	    // /georgia/atlanta/ redirects to taxonomy-region.php
 		'(florida|georgia)/([\w\d\-]+)/?$'         => 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
 	    '(florida|georgia)/([\w\d\-]+)/page/([0-9]{1,})/?$'    => 'index.php?post_type=post&region=' . $wp_rewrite->preg_index(2) . '&paged=' . $wp_rewrite->preg_index(3),
 	);
@@ -802,5 +807,28 @@ function oo_comment($comment, $args, $depth) {
 	</li>
 <?php }
 
+
+//output to html a well formatted var/array/object for debug
+if (!function_exists("preprint")) { 
+    function preprint($s, $return=false) { 
+        $x = "<pre>"; 
+        $x .= print_r($s, 1); 
+        $x .= "</pre>"; 
+        if ($return) return $x; 
+        else print $x; 
+    } 
+}     
+
+function getUrlSubdomain($url){
+    $urlSegments = parse_url($url);
+    $urlHostSegments = explode('.', $urlSegments['host']);
+
+    if(count($urlHostSegments) > 2) {
+        return $urlHostSegments[0];
+    }
+    else{
+        return null;
+    }
+}
 
 ?>

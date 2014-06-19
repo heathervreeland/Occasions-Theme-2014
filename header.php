@@ -1,5 +1,9 @@
+<?php 
+?>
 <!DOCTYPE html>
-<!-- page rendered in line #3 get_header:
+<!-- 
+<?php echo "Theme: " . get_current_theme() . "\n"; ?>
+page rendered in line #3 get_header:
 <?php 
 debug_print_backtrace();
 ?> -->
@@ -398,12 +402,12 @@ debug_print_backtrace();
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
-										<li><a href="/georgia/atlanta/">Atlanta</a></li>
-										<li><a href="/georgia/savannah/">Savannah</a></li>
-										<li><a href="/florida/orlando/">Orlando</a></li>
-										<li><a href="/florida/south-florida/">South Florida</a></li>
-										<li><a href="/florida/tampa/">Tampa</a></li>
-										<li><a href="/florida/jacksonville/">Jacksonville</a></li>
+										<li><a href="/atlanta/">Atlanta</a></li>
+										<li><a href="/savannah/">Savannah</a></li>
+										<li><a href="/orlando/">Orlando</a></li>
+										<li><a href="/south-florida/">South Florida</a></li>
+										<li><a href="/tampa/">Tampa</a></li>
+										<li><a href="/jacksonville/">Jacksonville</a></li>
 									</ul>
 								</div>
 							</li>
