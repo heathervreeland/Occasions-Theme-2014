@@ -2,6 +2,7 @@
 //error_reporting(E_ALL);
 //ini_set("display_errors", 1);
 
+$main_site_url = parse_url(get_site_url(1));
 ?>
 <!DOCTYPE html>
 <!-- 
