@@ -1,4 +1,7 @@
-<?php 
+<?php
+//error_reporting(E_ALL);
+//ini_set("display_errors", 1);
+
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -134,7 +137,7 @@ debug_print_backtrace();
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo get_site_url(); ?>" alt="Occasions Online - Wedding Planning, Party Ideas, and Occasions" title="Occasions Online - Wedding Planning, Party Ideas, and Occasions">Occasions Online - Wedding Planning, Party Ideas, and Occasions</a>
+						<a class="navbar-brand" href="<?php echo get_site_url(1); ?>" alt="Occasions Online - Wedding Planning, Party Ideas, and Occasions" title="Occasions Online - Wedding Planning, Party Ideas, and Occasions">Occasions Online - Wedding Planning, Party Ideas, and Occasions</a>
 					</div>
 			 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -142,7 +145,7 @@ debug_print_backtrace();
 						<ul id="main-nav">
 
 							<li class="main-nav dept weddings">
-								<a href="<?php echo get_site_url(); ?>/weddings/" class="hv"><span class="icon"></span>Weddings</a>
+								<a href="<?php echo get_site_url(1); ?>/weddings/" class="hv"><span class="icon"></span>Weddings</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -155,11 +158,11 @@ debug_print_backtrace();
 													$cats = get_subcategories('weddings');
 													foreach($cats as $cat) {
 												?>
-												<li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
+												<li><a href="<?php echo getMainSiteCategoryLink($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
 												<?php } ?>
 											</ul>
 
-											<a href="<?php echo get_site_url(); ?>/weddings/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(1); ?>/weddings/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -226,7 +229,7 @@ debug_print_backtrace();
 								</div>
 							</li>
 							<li class="main-nav dept parties">
-								<a href="<?php echo get_site_url(); ?>/parties-and-celebrations/" class="hv"><span class="icon"></span>Parties</a>
+								<a href="<?php echo get_site_url(1); ?>/parties-and-celebrations/" class="hv"><span class="icon"></span>Parties</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -239,11 +242,11 @@ debug_print_backtrace();
 													$cats = get_subcategories('parties-and-celebrations');
 													foreach($cats as $cat) {
 												?>
-												<li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
+												<li><a href="<?php echo getMainSiteCategoryLink($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
 												<?php } ?>
 											</ul>
 
-											<a href="<?php echo get_site_url(); ?>/parties-and-celebrations/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(1); ?>/parties-and-celebrations/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -311,7 +314,7 @@ debug_print_backtrace();
 							</li>
 
 							<li class="main-nav dept entertaining">
-								<a href="<?php echo get_site_url(); ?>/entertaining-and-holidays/" class="hv"><span class="icon"></span>Entertaining</a>
+								<a href="<?php echo get_site_url(1); ?>/entertaining-and-holidays/" class="hv"><span class="icon"></span>Entertaining</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 
@@ -323,11 +326,11 @@ debug_print_backtrace();
 													$cats = get_subcategories('entertaining-and-holidays');
 													foreach($cats as $cat) {
 												?>
-												<li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
+												<li><a href="<?php echo getMainSiteCategoryLink($cat->cat_ID); ?>"><?php echo $cat->name; ?></a></li>
 												<?php } ?>
 											</ul>
 
-											<a href="<?php echo get_site_url(); ?>/entertaining-and-holidays/" class="nice-button">View All</a>
+											<a href="<?php echo get_site_url(1); ?>/entertaining-and-holidays/" class="nice-button">View All</a>
 										</div>
 									</div>
 
@@ -394,17 +397,17 @@ debug_print_backtrace();
 								</div>
 							</li>
 							<li class="main-nav dept galleries">
-								<a href="<?php echo get_site_url(); ?>/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
+								<a href="<?php echo get_site_url(1); ?>/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 
 							<li class="main-nav dept cities">
-								<a href="<?php echo get_site_url(); ?>/cities/" class="hv"><span class="icon"></span>Cities</a>
+								<a href="<?php echo get_site_url(1); ?>/cities/" class="hv"><span class="icon"></span>Cities</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
-										<li><a href="/atlanta/">Atlanta</a></li>
-										<li><a href="/savannah/">Savannah</a></li>
-										<li><a href="/orlando/">Orlando</a></li>
+										<li><a href="http://atlanta.<?php echo $main_site_url['host']; ?>">Atlanta</a></li>
+										<li><a href="http://savannah.<?php echo $main_site_url['host']; ?>">Savannah</a></li>
+										<li><a href="http://orlando.<?php echo $main_site_url['host']; ?>">Orlando</a></li>
 										<li><a href="/south-florida/">South Florida</a></li>
 										<li><a href="/tampa/">Tampa</a></li>
 										<li><a href="/jacksonville/">Jacksonville</a></li>

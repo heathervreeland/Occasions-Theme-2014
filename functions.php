@@ -831,6 +831,15 @@ function getUrlSubdomain($url){
     }
 }
 
+function getMainSiteCategoryLink($catId) {
+    $caturl = get_category_link($catId);
+    if (get_current_blog_id() != 1) {
+        $caturl = "http://". substr($caturl,strpos($caturl,'.')+1);
+    }
+    return $caturl; 	
+}
+
+
 /**
  * Post types where metaboxes should show
  * 
