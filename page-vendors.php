@@ -4,7 +4,10 @@
 Template Name: Vendors
 */
 
- 	get_header(); ?>
+ 	get_header(); 
+ 	
+    $main_site_url = parse_url(get_site_url(1));
+ 	?>
 
 <div class="row venue" id="vendors-page">
 	<?php if(have_posts()) : ?>
@@ -64,18 +67,18 @@ Template Name: Vendors
 						<div class="location-box georgia">
 							<h2>Georgia</h2>
 							<ul>
-								<li><a href="/vendors/atlanta/">Atlanta</a></li>
-								<li><a href="/vendors/savannah/">Savannah</a></li>
+								<li><a href="http://atlanta.<?php echo $main_site_url['host']; ?>/vendors">Atlanta</a></li>
+								<li><a href="http://savannah.<?php echo $main_site_url['host']; ?>/vendors">Savannah</a></li>
 							</ul>
 						</div>
 
 						<div class="location-box florida">
 							<h2>Florida</h2>
 							<ul>
-								<li><a href="/vendors/orlando/">Orlando</a></li>
-								<li><a href="/vendors/tampa/">Tampa</a></li>
-								<li><a href="/vendors/south-florida/">South Florida</a></li>
-								<li><a href="/vendors/jacksonville/">Jacksonville</a></li>
+								<li><a href="http://orlando.<?php echo $main_site_url['host']; ?>/vendors">Orlando</a></li>
+								<li><a href="http://tampa.<?php echo $main_site_url['host']; ?>/vendors">Tampa</a></li>
+								<li><a href="http://south-florida.<?php echo $main_site_url['host']; ?>/vendors">South Florida</a></li>
+								<li><a href="http://jacksonville.<?php echo $main_site_url['host']; ?>/vendors">Jacksonville</a></li>
 							</ul>
 						</div>
 
