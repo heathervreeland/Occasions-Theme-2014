@@ -7,10 +7,7 @@ $main_site_url = parse_url(get_site_url(1));
 <!DOCTYPE html>
 <!-- 
 <?php echo "Theme: " . get_current_theme() . "\n"; ?>
-page rendered in line #3 get_header:
-<?php 
-debug_print_backtrace();
-?> -->
+-->
 <html>
 	<head>
 		<title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
@@ -401,8 +398,8 @@ debug_print_backtrace();
 								<a href="<?php echo get_site_url(1); ?>/coming-soon/" class="hv"><span class="icon"></span>Galleries</a>
 							</li>
 
-							<li class="main-nav dept cities">
-								<a href="<?php echo get_site_url(1); ?>/cities/" class="hv"><span class="icon"></span>Cities</a>
+							<li class="main-nav dept vendors">
+								<a href="<?php echo get_permalink( get_page_by_path( 'vendors' ) ) ?>" class="hv"><span class="icon"></span>Vendors</a>
 								<div class="preview-window">
 									<div class="menu-arrow"></div>
 									<ul>
@@ -415,8 +412,9 @@ debug_print_backtrace();
 									</ul>
 								</div>
 							</li>
-							<li class="main-nav dept vendors">
-								<a href="<?php echo get_permalink( get_page_by_path( 'vendors' ) ) ?>" class="hv"><span class="icon"></span>Vendors</a>
+
+							<li class="main-nav dept magazine">
+								<a href="http://issuu.com/occasionsmagazine/docs/occasions_weddings_summer2014_onlin" class="hv" target="_blank"><span class="icon"></span>Magazine</a>
 							</li>
 							
 						</ul>

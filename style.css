@@ -497,12 +497,12 @@ ul#main-nav li.galleries span.icon {
 	background-position: -180px 0;
 }
 
-ul#main-nav li.cities span.icon {
+ul#main-nav li.vendors span.icon {
 	background-position: -240px 0;
 }
 
-ul#main-nav li.vendors span.icon {
-	background-position: -300px 0;
+ul#main-nav li.magazine span.icon {
+        background-position: -300px 0;
 }
 
 .main-nav a.hv:hover {
@@ -525,11 +525,11 @@ ul#main-nav li.vendors span.icon {
 	color: #a2c7e4;
 }
 
-.main-nav.cities a.hv {
+.main-nav.vendors a.hv {
 	color: #f7c97c;
 }
 
-.main-nav.vendors a.hv {
+.main-nav.magazine a.hv {
 	color: #afa4ce;
 }
 
