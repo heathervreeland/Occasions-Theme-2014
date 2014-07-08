@@ -1,6 +1,5 @@
 <?php 
 
-
 /****************************************************************
  * DO NOT DELETE
  ****************************************************************/
@@ -524,16 +523,6 @@ if ( ! function_exists("get_nice_image") ) {
 		}
 	}
 }
-
-
-function flo_exclude_search_pages($query) {
-	if ($query->is_search) {
-		$query->set('post_type', 'post');
-	}
-
-	return $query;
-}
-if( !is_admin() ) add_filter('pre_get_posts', 'flo_exclude_search_pages');
 
 
 function oo_custom_posts_per_page($query)

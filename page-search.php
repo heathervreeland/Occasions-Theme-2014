@@ -24,13 +24,8 @@ get_header(); ?>
         $args = array(
             'post_type' => 'venue',
             'post_status' => 'publish',
+            's' => $s,
             'posts_per_page' => 20
-        );
-        //search post_meta field 'flo_description' for venues.
-        $args['meta_query'][] = array(
-            'key' => 'flo_description',
-            'value' => $s,
-            'compare' => 'LIKE',
         );
 ?>
           <div class="post-content story ">
