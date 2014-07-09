@@ -57,7 +57,7 @@ get_header(); ?>
 					</section>
 
 					<?php oo_part('about-nav') ?>
-					<?php get_sidebar('blog'); ?>
+					<?php get_sidebar('about'); ?>
 
 				</div>
 
