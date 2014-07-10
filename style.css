@@ -497,12 +497,12 @@ ul#main-nav li.galleries span.icon {
 	background-position: -180px 0;
 }
 
-ul#main-nav li.cities span.icon {
+ul#main-nav li.vendors span.icon {
 	background-position: -240px 0;
 }
 
-ul#main-nav li.vendors span.icon {
-	background-position: -300px 0;
+ul#main-nav li.magazine span.icon {
+        background-position: -300px 0;
 }
 
 .main-nav a.hv:hover {
@@ -525,11 +525,11 @@ ul#main-nav li.vendors span.icon {
 	color: #a2c7e4;
 }
 
-.main-nav.cities a.hv {
+.main-nav.vendors a.hv {
 	color: #f7c97c;
 }
 
-.main-nav.vendors a.hv {
+.main-nav.magazine a.hv {
 	color: #afa4ce;
 }
 
@@ -549,12 +549,8 @@ ul#main-nav li.vendors span.icon {
 	background-color: #a2c7e4;
 }
 
-.main-nav.cities .nice-button {
-	background-color: #f7c97c;
-}
-
 .main-nav.vendors .nice-button {
-	background-color: #afa4ce;
+	background-color: #f7c97c;
 }
 
 #main-navigation .preview-window {
@@ -599,12 +595,8 @@ ul#main-nav li.vendors span.icon {
 	color: #a2c7e4;
 }
 
-.main-nav.cities .preview-window h2 {
-	color: #f7c97c;
-}
-
 .main-nav.vendors .preview-window h2 {
-	color: #afa4ce;
+	color: #f7c97c;
 }
 
 #main-navigation .preview-window .menu-arrow {
@@ -615,33 +607,29 @@ ul#main-nav li.vendors span.icon {
 	top: -18px;
 }
 
-#main-navigation .cities .preview-window {
+#main-navigation .vendors .preview-window {
 	width: 150px!important;
 	left: auto !important;
 	margin-left: -42px;
 	height: auto !important;
 }
 
-#main-navigation .cities ul li {
+#main-navigation .vendors ul li {
 	display: block;
 	border-bottom: 1px solid #cfcfcf;
 	text-align: center;
 	padding: 10px;
 }
 
-#main-navigation .cities ul li:last-child {
+#main-navigation .vendors ul li:last-child {
 	border-bottom: 0;
 }
 
-#main-navigation .cities ul li a {
+#main-navigation .vendors ul li a {
 	font-family: "Raleway";
 	font-size: 13px;
 	color: #9e9993;
 	text-transform: uppercase;
-}
-
-#main-navigation .cities ul li a:hover {
-	color: #f7c97c!important;
 }
 
 .main-nav.weddings .preview-window .menu-arrow {
@@ -660,12 +648,8 @@ ul#main-nav li.vendors span.icon {
 	left: 733px;
 }
 
-.main-nav.cities .preview-window .menu-arrow {
-	left: 55px;
-}
-
 .main-nav.vendors .preview-window .menu-arrow {
-	left: 956px;
+	left: 55px;
 }
 
 .submenu_categories, .submenu_recent, .submenu_features {

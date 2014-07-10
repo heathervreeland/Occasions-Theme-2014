@@ -1,106 +1,26 @@
-<?php get_header(); 
+<?php
+    get_header();
 	/* recent featured posts */
 	global $recent_featured_posts;
 	uasort($recent_featured_posts, "sort_recent_posts");
+	
 ?>
 
-<div class="row" id="index-sections">
-
-	<div class="col-md-4">
-		<div class="pull-left">
-			<a href="#">
-				<div class="tile">
-					<div class="title-cont">
-						<div class="title">Venue &amp; Vendor<br/>Guide</div>
-					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_vendors.jpg"/>
-				</div>
-			</a>
-			<a href="#">
-				<div class="tile">
-					<div class="title-cont">
-						<div class="title">City Blog <span>Find Inspiration</span></div>
-					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_blog.jpg"/>
-				</div>
-			</a>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div id="sections-carousel-container">
-			<div id="sections-carousel">
-				<div class="sections-skdslider">
-					<ul class="slides">
-					<?php
-						
-						// Get the latest featured posts
-						if($recent_featured_posts) : 
-							$counter = 0;
-							foreach($recent_featured_posts as $post) {
-					?>
-						<li>
-							<a href="<?php echo get_permalink($post->ID); ?>"><div class="sections-slide-overlay"></div></a>
-							<div class="featured-image"><?php get_nice_image("large"); ?></div>
-						</li>
-					<?php
-							}
-						endif;
-					?>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="col-md-4">
-		<div class="pull-right">
-			<a href="#">
-				<div class="tile">
-					<div class="title-cont">
-						<div class="title">Galleries</div>
-					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_galleries.jpg"/>
-				</div>
-			</a>
-			<a href="#">
-				<div class="tile">
-					<div class="title-cont">
-						<div class="title">Shop - Magazine <span>Subscribe to Occasions</span></div>
-					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/top_section_shop.jpg"/>
-				</div>
-			</a>
-		</div>
-	</div>
-
-</div>
 
 <div class="row">
 	
 	<div class="section-divider">
 		<div class="line"></div>
 		<span class="before">&#8226;</span>
-		<span class="heading">Venue &amp; Vendor</span>
+		<span class="heading">Page Not Found</span>
 		<span class="after">&#8226;</span>
 	</div>
 
-	<div id="index_vv">
-		<div id="index_vv_celebration">
-			<h2>The Celebration Society</h2>
-			<span class="pink cele1">Best Venues &#8226; Most Reputable Vendors</span>
-			<p class="cele2">
-				So that you can quickly find that trustworthy team of event vendors without worry<br/>
-				of their reputation and skills, we created the Celebration Society, a carefully curated<br/>
-				network of only the most talented, quality-centric wedding venues and party<br/>
-				services in the special events industry.
-			</p>
-			<a href="#" class="nice-button">Find my Vendors</a>
-			<span class="pink cele3">Don't see your company listed? Click to learn about our memberships</span>
-		</div>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/map_picture_vendors_section.png" id="index_vv_map"/>
-	</div>
+	<div>
+          <h4>We are sorry! The page you're looking for does not
+          exist. Visit the <a href="/">home page</a> for great ideas on
+          planning your next event!</h4>
+        </div>
 
 </div>
 
